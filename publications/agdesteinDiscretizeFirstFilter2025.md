@@ -1,7 +1,7 @@
 +++
 title = "Discretize first, filter next: learning divergence-consistent closure models for large-eddy simulation"
-published = "2024-03-26"
-rss = "Syver Døving Agdestein, Benjamin Sanderse, arXiv preprint arXiv:2403.18088"
+published = "2025-02-01"
+rss = "Syver Døving Agdestein, Benjamin Sanderse, Journal of Computational Physics, 2025"
 reeval = true
 +++
 
@@ -9,4 +9,4 @@ reeval = true
 
 Syver Døving Agdestein, Benjamin Sanderse
 
-<https://arxiv.org/abs/2403.18088>
+<https://doi.org/10.1016/j.jcp.2024.113577>
