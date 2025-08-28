@@ -9,4 +9,4 @@ Turbulence is everywhere, from the swirl of smoke in air to the turbulent flows 
 
 Sanderse has been awarded a €50,000 Open Competition Domain Science – XS grant, which is intended to support promising ideas and to facilitate innovative and more speculative initiatives. The proposed research is both ground-breaking and high-risk. What counts is that all results, whether positive or negative, must contribute to the advancement of science.
 
-With his research proposal, Sanderse aims to discover the hidden mathematical equations behind turbulence using a class of models known as neural stochastic differential equations. For more information, see <https://www.cwi.nl/en/news/combining-physics-and-ai-to-unravel-turbulence-cwi-receives-nwo-grant/>.
+With his research proposal, Sanderse aims to discover the hidden mathematical equations behind turbulence using a class of models known as neural stochastic differential equations. For more information, see <https://www.cwi.nl/en/news/combining-physics-and-ai-to-unravel-turbulence-cwi-receives-nwo-grant/> and <https://www.nwo.nl/en/news/48-grants-for-the-open-competition-doman-science-xs-round-25-1>.
