@@ -13,7 +13,7 @@ file in the `news`/`seminars`/`publications` folder
 (see existing files for adding date etc.).
 
 Add images to `public/myimage.png` and include it in the
-markdown with `![Description](myimage.png)` (no need for path).
+markdown with `![Description](/myimage.png)` (use slash, but not path).
 
 See <https://vitepress.dev/> for details about the template.
 
