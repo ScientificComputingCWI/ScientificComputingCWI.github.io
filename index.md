@@ -63,7 +63,7 @@ Robin Klein (PhD candidate),
 Barry Koren (advisor).
 **News**: Dimitris Loukrezis will join our group as a tenure track researcher, starting March 1st, 2025. Welcome Dimitris!
 
-![SC group at ECCOMAS 2024](group_picture.jpg)
+<!-- ![SC group at ECCOMAS 2024](group_picture.jpg) -->
 
 ## Group seminar
 
