@@ -1,5 +1,11 @@
-+++ title = "Exact operator inference with minimal data" published = "2025-06-26" rss = "Henrik Rosenberger, Benjamin Sanderse, Giovanni Stabile" reeval = true +++
-Exact operator inference with minimal data
++++ 
+title = "Exact operator inference with minimal data" 
+published = "2025-06-26" 
+rss = "Henrik Rosenberger, Benjamin Sanderse, Giovanni Stabile" 
+reeval = true 
++++
+
+# Exact operator inference with minimal data
 
 Henrik Rosenberger, Benjamin Sanderse, Giovanni Stabile
 
