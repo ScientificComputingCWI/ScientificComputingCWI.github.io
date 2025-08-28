@@ -35,4 +35,10 @@ npm run dev
 This opens the site in a browser.
 The site detects changes to the source files and updates automatically while running.
 
-Please check that the site builds correctly before pushing.
+Please check that the site builds correctly before pushing by running
+
+```sh
+npm run build
+```
+
+This errors if there are dead links etc.
