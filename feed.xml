@@ -31,7 +31,7 @@
     <![CDATA[  Syver Døving Agdestein, Benjamin Sanderse, in Eccomas 2022  ]]>
   </description>  
     
-  <pubDate>Tue, 04 Feb 2025 00:00:00 +0000</pubDate>  
+  <pubDate>Thu, 28 Aug 2025 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -50,7 +50,45 @@
     <![CDATA[  Keith, O&#39;Leary-Roseberry, Sanderse, Scheichl, van Bloemen Waanders, Scientific Machine Learning: A Symbiosis  ]]>
   </description>  
     
-  <pubDate>Tue, 04 Feb 2025 00:00:00 +0000</pubDate>  
+  <pubDate>Thu, 28 Aug 2025 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Scientitic Computing Group CWI</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  Discretize first, filter next: learning divergence-consistent closure models for large-eddy simulation  ]]>
+  </title>
+  <link> https://ScientificComputingCWI.github.io/publications/agdesteinDiscretizeFirstFilter2025/index.html </link>
+  <guid> https://ScientificComputingCWI.github.io/publications/agdesteinDiscretizeFirstFilter2025/index.html </guid>
+  <description>
+    <![CDATA[  Syver Døving Agdestein, Benjamin Sanderse, Journal of Computational Physics, 2025  ]]>
+  </description>  
+    
+  <pubDate>Thu, 28 Aug 2025 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Scientitic Computing Group CWI</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  Exact closure for discrete large-eddy simulation  ]]>
+  </title>
+  <link> https://ScientificComputingCWI.github.io/publications/agdesteinExactClosureDiscrete2025/index.html </link>
+  <guid> https://ScientificComputingCWI.github.io/publications/agdesteinExactClosureDiscrete2025/index.html </guid>
+  <description>
+    <![CDATA[  Syver Døving Agdestein, Roel Verstappen, Benjamin Sanderse, arXiv preprint arXiv:2507.17051  ]]>
+  </description>  
+    
+  <pubDate>Thu, 28 Aug 2025 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -69,7 +107,7 @@
     <![CDATA[  Exploiting Symmetries for Personalized Hemodynamics Modeling in Cardiovascular Disease  ]]>
   </description>  
     
-  <pubDate>Tue, 04 Feb 2025 00:00:00 +0000</pubDate>  
+  <pubDate>Thu, 28 Aug 2025 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -88,7 +126,7 @@
     <![CDATA[  AINed XS funding for generative AI  ]]>
   </description>  
     
-  <pubDate>Tue, 04 Feb 2025 00:00:00 +0000</pubDate>  
+  <pubDate>Thu, 28 Aug 2025 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -107,7 +145,7 @@
     <![CDATA[  Representation Equivalent Neural Operators: A Framework for Alias-free Operator Learning  ]]>
   </description>  
     
-  <pubDate>Tue, 04 Feb 2025 00:00:00 +0000</pubDate>  
+  <pubDate>Thu, 28 Aug 2025 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -126,26 +164,7 @@
     <![CDATA[  Sanderse, Stinis, Maulik, Ahmed, Scientific machine learning for closure models in multiscale problems: A review  ]]>
   </description>  
     
-  <pubDate>Tue, 04 Feb 2025 00:00:00 +0000</pubDate>  
-  
-  
-  <atom:author>
-    <atom:name>Scientitic Computing Group CWI</atom:name>
-  </atom:author>
-        
-</item>
-
-<item>
-  <title>
-    <![CDATA[  Discretize first, filter next: learning divergence-consistent closure models for large-eddy simulation  ]]>
-  </title>
-  <link> https://ScientificComputingCWI.github.io/publications/agdestein2024/index.html </link>
-  <guid> https://ScientificComputingCWI.github.io/publications/agdestein2024/index.html </guid>
-  <description>
-    <![CDATA[  Syver Døving Agdestein, Benjamin Sanderse, arXiv preprint arXiv:2403.18088  ]]>
-  </description>  
-    
-  <pubDate>Tue, 04 Feb 2025 00:00:00 +0000</pubDate>  
+  <pubDate>Thu, 28 Aug 2025 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -164,7 +183,7 @@
     <![CDATA[  Scientific Machine Learning and Uncertainty Quantification for Predictive Digital Twins  ]]>
   </description>  
     
-  <pubDate>Tue, 04 Feb 2025 00:00:00 +0000</pubDate>  
+  <pubDate>Thu, 28 Aug 2025 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -183,7 +202,7 @@
     <![CDATA[  Exploring the role of geometric and learning biases in Model Order Reduction and Data-Driven simulation  ]]>
   </description>  
     
-  <pubDate>Tue, 04 Feb 2025 00:00:00 +0000</pubDate>  
+  <pubDate>Thu, 28 Aug 2025 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -202,7 +221,7 @@
     <![CDATA[  Toby van Gastelen, Wouter Edeling, Benjamin Sanderse, in Journal of Computational Physics  ]]>
   </description>  
     
-  <pubDate>Tue, 04 Feb 2025 00:00:00 +0000</pubDate>  
+  <pubDate>Thu, 28 Aug 2025 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -221,7 +240,7 @@
     <![CDATA[  Neural Green&#39;s Operators for Parametric Partial Differential Equations  ]]>
   </description>  
     
-  <pubDate>Tue, 04 Feb 2025 00:00:00 +0000</pubDate>  
+  <pubDate>Thu, 28 Aug 2025 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -240,7 +259,7 @@
     <![CDATA[  Semester programme on uncertainty quantification 2024  ]]>
   </description>  
     
-  <pubDate>Tue, 04 Feb 2025 00:00:00 +0000</pubDate>  
+  <pubDate>Thu, 28 Aug 2025 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
