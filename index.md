@@ -52,6 +52,7 @@ Current members:
 Benjamin Sanderse (group leader),
 Wouter Edeling (staff),
 Daan Crommelin (staff),
+Dimitris Loukrezis (staff),
 Syver Agdestein (PhD candidate),
 Toby van Gastelen (PhD candidate),
 Rik Hoekstra (PhD candidate),
@@ -61,7 +62,6 @@ Nikolaj Mücke (postdoc),
 Henrik Rosenberger (PhD candidate),
 Robin Klein (PhD candidate),
 Barry Koren (advisor).
-**News**: Dimitris Loukrezis will join our group as a tenure track researcher, starting March 1st, 2025. Welcome Dimitris!
 
 ![SC group at ECCOMAS 2024](/group_picture.jpg)
 
