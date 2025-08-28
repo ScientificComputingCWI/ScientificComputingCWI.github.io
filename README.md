@@ -2,33 +2,37 @@
 
 Source files for [group website](https://scientificcomputingcwi.github.io/).
 
-## Page development
+## Page structure
 
-Edit `.md` files directly to add content. See the `examples` folder for examples
-of allowed markdown syntax (including LaTeX).
+Edit markdown files (`.md`) directly to add content.
 
-To add more pages in the top bar, edit `_layout/header.html`.
+To add more pages in the top bar, edit the `nav` section in  `.vitepress/config.ts`.
 
-To add news items, make a new `.md` file in the `news` folder (see existing
-files for adding date etc.).
+To add news, seminars, and publication items, make a new `.md`
+file in the `news`/`seminars`/`publications` folder
+(see existing files for adding date etc.).
 
-To build the website locally, install [Julia](https://julialang.org/downloads/)
-and then Franklin.jl (here in the `@Franklin` environment):
+Add images to `public/myimage.png` and include it in the
+markdown with `![Description](myimage.png)` (no need for path).
 
-```sh
-julia --project=@Franklin -e 'using Pkg; Pkg.add("Franklin")'
-```
+See <https://vitepress.dev/> for details about the template.
 
-Then run the following command to build the website and listen to changes:
+## Building the site locally
 
-```sh
-julia --project=@Franklin -e 'using Franklin; serve()'
-```
-
-You can also make an alias in the `.bashrc` or `.zshrc` file, then run
-`franklin` to build the website:
+To build the website locally, you need [node](https://nodejs.org/en).
+First run
 
 ```sh
-# In .bashrc or .zshrc:
-alias franklin="julia --project=@Franklin -e 'using Franklin; serve()'"
+npm install
 ```
+
+To serve the site locally, run
+
+```sh
+npm run dev
+```
+
+This opens the site in a browser.
+The site detects changes to the source files and updates automatically while running.
+
+Please check that the site builds correctly before pushing.
