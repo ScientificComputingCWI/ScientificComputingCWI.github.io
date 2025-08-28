@@ -1,9 +1,8 @@
-+++
-title = "Scientific Machine Learning: A Symbiosis"
-published = "2025-03"
-rss = "Keith, O'Leary-Roseberry, Sanderse, Scheichl, van Bloemen Waanders, Scientific Machine Learning: A Symbiosis"
-reeval = true
-+++
+---
+title: "Scientific Machine Learning: A Symbiosis"
+date: "2025-03"
+rss: "Keith, O'Leary-Roseberry, Sanderse, Scheichl, van Bloemen Waanders, Scientific Machine Learning: A Symbiosis"
+---
 
 # Scientific Machine Learning: A Symbiosis
 

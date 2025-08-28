@@ -1,9 +1,8 @@
-+++
-title = "Scientific machine learning for closure models in multiscale problems: A review"
-published = "2025-03"
-rss = "Sanderse, Stinis, Maulik, Ahmed, Scientific machine learning for closure models in multiscale problems: A review"
-reeval = true
-+++
+---
+title: "Scientific machine learning for closure models in multiscale problems: A review"
+date: 2025-03
+rss: "Sanderse, Stinis, Maulik, Ahmed, Scientific machine learning for closure models in multiscale problems: A review"
+---
 
 # Scientific machine learning for closure models in multiscale problems: A review
 

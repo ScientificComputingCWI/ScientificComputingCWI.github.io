@@ -1,4 +1,6 @@
 __site/
 .DS_Store
 node_modules/
-package-lock.json
+# package-lock.json
+.vitepress/cache
+.vitepress/dist

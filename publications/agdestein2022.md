@@ -1,9 +1,8 @@
-+++
-title = "Discretize first, filter next – a new closure model approach"
-published = "2022-11-24"
-rss = "Syver Døving Agdestein, Benjamin Sanderse, in Eccomas 2022"
-reeval = true
-+++
+---
+title: "Discretize first, filter next – a new closure model approach"
+date: "2022-11-24"
+rss: "Syver Døving Agdestein, Benjamin Sanderse, in Eccomas 2022"
+---
 
 # Discretize first, filter next – a new closure model approach
 

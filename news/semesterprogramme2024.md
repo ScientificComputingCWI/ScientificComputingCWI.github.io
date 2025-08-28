@@ -1,9 +1,8 @@
-+++
-title = "Semester programme 2024"
-published = "2024-06-19"
-rss = "Semester programme on uncertainty quantification 2024"
-reeval = true
-+++
+---
+title: "Semester programme 2024"
+date: "2024-06-19"
+rss: "Semester programme on uncertainty quantification 2024"
+---
 
 # Semester programme 2024
 
