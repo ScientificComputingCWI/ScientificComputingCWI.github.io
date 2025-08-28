@@ -9,4 +9,4 @@ reeval = true
 
 Henrik Rosenberger, Benjamin Sanderse, Giovanni Stabile
 
-https://arxiv.org/abs/2506.01244v2
+<https://arxiv.org/abs/2506.01244v2>
