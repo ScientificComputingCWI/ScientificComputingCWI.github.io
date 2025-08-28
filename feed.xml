@@ -156,6 +156,25 @@
 
 <item>
   <title>
+    <![CDATA[  Reduced Data-Driven Turbulence Closure for Capturing Long-Term Statistics  ]]>
+  </title>
+  <link> https://ScientificComputingCWI.github.io/publications/rik/index.html </link>
+  <guid> https://ScientificComputingCWI.github.io/publications/rik/index.html </guid>
+  <description>
+    <![CDATA[  Rik Hoekstra, Daan Crommelin, Wouter Edeling, in Computers and Fluids  ]]>
+  </description>  
+    
+  <pubDate>Thu, 28 Aug 2025 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Scientitic Computing Group CWI</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
     <![CDATA[  Scientific machine learning for closure models in multiscale problems: A review  ]]>
   </title>
   <link> https://ScientificComputingCWI.github.io/publications/sanderse2024/index.html </link>

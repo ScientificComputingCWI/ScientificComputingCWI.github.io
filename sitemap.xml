@@ -62,6 +62,12 @@
     <priority>0.5</priority>
 </url>
 <url>
+    <loc>https://ScientificComputingCWI.github.io/publications/rik/index.html</loc>
+    <lastmod>2025-08-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
     <loc>https://ScientificComputingCWI.github.io/examples/menu2/index.html</loc>
     <lastmod>2025-08-28</lastmod>
     <changefreq>monthly</changefreq>
