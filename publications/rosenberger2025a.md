@@ -1,7 +1,7 @@
 ---
 title: "Exact operator inference with minimal data"
 date: "2025-06-26"
-rss: "Henrik Rosenberger, Benjamin Sanderse, Giovanni Stabile"
+authors: "Henrik Rosenberger, Benjamin Sanderse, Giovanni Stabile"
 ---
 
 # Exact operator inference with minimal data

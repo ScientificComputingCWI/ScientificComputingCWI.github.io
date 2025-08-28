@@ -1,7 +1,7 @@
 ---
 title: "Exact closure for discrete large-eddy simulation"
 date: "2025-07-22"
-rss: "Syver Døving Agdestein, Roel Verstappen, Benjamin Sanderse, arXiv preprint arXiv:2507.17051"
+authors: "Syver Døving Agdestein, Roel Verstappen, Benjamin Sanderse"
 ---
 
 # Exact closure for discrete large-eddy simulation

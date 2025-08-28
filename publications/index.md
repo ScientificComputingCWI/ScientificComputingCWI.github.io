@@ -1,6 +1,6 @@
 # Publications
 
-For all our publications, please visit 
+For all our publications, please visit
 [CWI's repository](https://ir.cwi.nl/#facet=affiliation_label_partOf:Scientific%20Computing).
 
 <!-- ## Latest publications -->
@@ -14,8 +14,12 @@ const sortedPosts = getSorted( posts );
 
 <ul>
     <li v-for="post of sortedPosts">
-        <strong><a :href="post.url">{{ post.frontmatter.title }}</a></strong><br/>
-        <span>{{ formatDate( post.frontmatter.date ) }}</span>
+        <!-- <div> -->
+        <strong><a :href="post.url">{{ post.frontmatter.title }}</a></strong>
+        <!-- <br/> -->
+        <!-- {{ post.frontmatter.authors }} -->
+        <!-- </div> -->
+        <span>{{ formatDate(post.frontmatter.date) }}</span>
     </li>
 </ul>
 
@@ -35,5 +39,6 @@ li {
 li span {
     font-family: var(--vp-font-family-mono);
     font-size: var(--vp-code-font-size);
+    min-width: 6em;
 }
 </style>

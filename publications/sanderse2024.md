@@ -1,7 +1,7 @@
 ---
 title: "Scientific machine learning for closure models in multiscale problems: A review"
 date: 2025-03
-rss: "Sanderse, Stinis, Maulik, Ahmed, Scientific machine learning for closure models in multiscale problems: A review"
+authors: "Sanderse, Stinis, Maulik, Ahmed"
 ---
 
 # Scientific machine learning for closure models in multiscale problems: A review
