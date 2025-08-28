@@ -1,9 +1,8 @@
-+++
-title = "AINed XS funding"
-published = "2024-07-26"
-rss = "AINed XS funding for generative AI"
-reeval = true
-+++
+---
+title: "AINed XS funding"
+date: "2024-07-26"
+rss: "AINed XS funding for generative AI"
+---
 
 # AiNed XS funding for generative AI for physics simulations
 In this project, proposed by Benjamin Sanderse and Nikolaj Mücke of CWI’s Scientific Computing group, a physics-aware generative AI model capable of generating physics simulations will be developed.

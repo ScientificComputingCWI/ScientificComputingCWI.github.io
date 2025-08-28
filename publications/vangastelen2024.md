@@ -1,9 +1,8 @@
-+++
-title = "Energy-Conserving Neural Network for Turbulence Closure Modeling"
-published = "2024-07-01"
-rss = "Toby van Gastelen, Wouter Edeling, Benjamin Sanderse, in Journal of Computational Physics"
-reeval = true
-+++
+---
+title: "Energy-Conserving Neural Network for Turbulence Closure Modeling"
+date: "2024-07-01"
+rss: "Toby van Gastelen, Wouter Edeling, Benjamin Sanderse, in Journal of Computational Physics"
+---
 
 # Energy-Conserving Neural Network for Turbulence Closure Modeling
 

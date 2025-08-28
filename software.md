@@ -1,4 +1,6 @@
-@def title="Software"
+---
+title: "Software"
+---
 
 # Software developed in the Scientific Computing Group
 
@@ -15,7 +17,7 @@
 - [INS2D](https://github.com/bsanderse/INS2D): Incompressible Navier-Stokes solver in MATLAB.
 - [Spectral solver](https://github.com/agdestein/NeuralClosureTutorials/blob/main/tutorials/navier_stokes_spectral.md): spectral solver.
 
-![Screenshot of our incompressible Navier-Stokes solver in Julia](../pictures/INS_screenshot.png)
+![Screenshot of our incompressible Navier-Stokes solver in Julia](INS_screenshot.png)
 
 ## 1D compressible flow solvers
 - [HELMEOS](https://github.com/rbklein/HELMEOS): An entropy stable solver for the compressible Euler equations using a real gas equations of state based on the Helmholtz free energy.
