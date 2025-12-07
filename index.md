@@ -48,19 +48,19 @@ Please check our [GitHub page](https://github.com/ScientificComputingCWI) with g
 
 ## Members
 
-Current members:
-Benjamin Sanderse (group leader),
-Wouter Edeling (staff),
-Daan Crommelin (staff),
-Dimitris Loukrezis (staff),
-Syver Agdestein (PhD candidate),
-Toby van Gastelen (PhD candidate),
-Rik Hoekstra (PhD candidate),
-Pardeep Kumar (PhD candidate),
-Nikolaj Mücke (visiting postdoc),
-Henrik Rosenberger (PhD candidate),
-Robin Klein (PhD candidate),
-Barry Koren (advisor),
+Current members:  
+Benjamin Sanderse (group leader),  
+Wouter Edeling (staff),  
+Daan Crommelin (staff),  
+Dimitris Loukrezis (staff),  
+Syver Agdestein (PhD candidate),  
+Toby van Gastelen (PhD candidate),  
+Rik Hoekstra (PhD candidate),  
+Pardeep Kumar (PhD candidate),  
+Nikolaj Mücke (visiting postdoc),  
+Henrik Rosenberger (PhD candidate),  
+Robin Klein (PhD candidate),  
+Barry Koren (advisor),  
 Bernard Geurts (visiting professor).
 
 ![SC group at ECCOMAS 2024](/group_picture.jpg)
@@ -124,6 +124,7 @@ li span {
 Anna Ivagnes (at SISSA)  
 Josep Plana-Riu (at UPC)  
 Marius Kurz (now at AMD)  
+Kelbij Start (now at Deltares)  
 Laurent van den Bos (now at ASML)  
 Yous van Halder (now at Univé)  
 Anne Eggels  
