@@ -117,16 +117,20 @@ li span {
 </style>
 
 ## Former members
-Anna Ivagnes (at SISSA)
-Josep Plana-Riu (at UPC)
-Marius Kurz (now at AMD)
-Laurent van den Bos (now at ASML)
-Yous van Halder (now at Univé)
-Anne Eggels
-Svetlana Dubinkina (now at VU)
-Kees Oosterlee (now at Utrecht University)
-Barry Koren (retired from Eindhoven University)
-Prashant Kumar
-Sangeetika Ruchi
+Anna Ivagnes (at SISSA)  
+Josep Plana-Riu (at UPC)  
+Marius Kurz (now at AMD)  
+Laurent van den Bos (now at ASML)  
+Yous van Halder (now at Univé)  
+Anne Eggels  
+Svetlana Dubinkina (now at VU)  
+Kees Oosterlee (now at Utrecht University)  
+Barry Koren (retired from Eindhoven University)  
+Prashant Kumar  
+Sangeetika Ruchi  
+Bart de Leeuw  
+Jesse Dorrestijn  
+Keith Meyerscough  
+
 
 
