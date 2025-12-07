@@ -42,7 +42,7 @@ const sortedSeminars = getSorted( seminars );
 
 The Scientific Computing group at CWI develops efficient mathematical methods to simulate and predict real-world phenomena with inherent uncertainties. Our two main research themes are **scientific machine learning** and **uncertainty quantification**, and the topics within these themes are neural ODEs, closure models for turbulence, reduced-order models, discretization techniques, stochastic parameterizations, generative models, data assimilation.
 
-Our official CWI page with general information can be found [here](https://www.cwi.nl/en/groups/scientific-computing/). On the current page, you can find more detailed information such as the software that we develop in the group and other useful information such as the material used in the [semester programmes](https://github.com/ScientificComputingCWI) that we organize, in particular the [SciML](https://github.com/ScientificComputingCWI/SemesterProgramme-SciML) and [UQ](https://github.com/ScientificComputingCWI/SemesterProgramme-UQ) semester programmes. Note the upcoming semester programme 2025 on [Synergies in numerical linear algebra and machine learning](https://www.cwi.nl/en/education/semester-programmes/cwi-research-semester-programs/synergies-in-numerical-linear-algebra-and-machine-learning/)!
+Our official CWI page with general information can be found [here](https://www.cwi.nl/en/groups/scientific-computing/). On the current page, you can find more detailed information such as the software that we develop in the group and other useful information such as the material used in the [semester programmes](https://github.com/ScientificComputingCWI) that we organize, in particular the [SciML](https://github.com/ScientificComputingCWI/SemesterProgramme-SciML) and [UQ](https://github.com/ScientificComputingCWI/SemesterProgramme-UQ) semester programmes. Note the recent semester programme 2025 on [Synergies in numerical linear algebra and machine learning](https://www.cwi.nl/en/education/semester-programmes/cwi-research-semester-programs/synergies-in-numerical-linear-algebra-and-machine-learning/)!
 
 Please check our [GitHub page](https://github.com/ScientificComputingCWI) with group repositories and our [software page](/software).
 
@@ -57,11 +57,11 @@ Syver Agdestein (PhD candidate),
 Toby van Gastelen (PhD candidate),
 Rik Hoekstra (PhD candidate),
 Pardeep Kumar (PhD candidate),
-Marius Kurz (postdoc),
-Nikolaj Mücke (postdoc),
+Nikolaj Mücke (visiting postdoc),
 Henrik Rosenberger (PhD candidate),
 Robin Klein (PhD candidate),
-Barry Koren (advisor).
+Barry Koren (advisor),
+Bernard Geurts (visiting professor).
 
 ![SC group at ECCOMAS 2024](/group_picture.jpg)
 
@@ -115,3 +115,18 @@ li span {
     font-size: var(--vp-code-font-size);
 }
 </style>
+
+## Former members
+Anna Ivagnes (at SISSA)
+Josep Plana-Riu (at UPC)
+Marius Kurz (now at AMD)
+Laurent van den Bos (now at ASML)
+Yous van Halder (now at Univé)
+Anne Eggels
+Svetlana Dubinkina (now at VU)
+Kees Oosterlee (now at Utrecht University)
+Barry Koren (retired from Eindhoven University)
+Prashant Kumar
+Sangeetika Ruchi
+
+
