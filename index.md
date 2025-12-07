@@ -76,6 +76,10 @@ To receive news and Zoom links for our group seminar, you can contact Wouter Ede
 <!--     </li> -->
 <!-- </ul> -->
 
+## Group challenges
+Our group is regularly involved in **group challenges**, in which we, as a group, tackle an outstanding societal challenge that is given to us by a research institute or industry. These are short-term projects, typically 3-6 months in duration, on which we work in a team of approximately 5 people on Friday afternoons. We add value through our extensive knowledge of scientific computing, uncertainty quantification and scientific machine learning, and our strong programming skills in modern languages such as Python and Julia. 
+Over the last year, we worked with **Deltares** on predicting failure probabilities of Dutch dikes, and with **KNMI** on the fine-grained temperature prediction in Europe using Gaussian process regression.  
+
 ## News
 
 <ul>
