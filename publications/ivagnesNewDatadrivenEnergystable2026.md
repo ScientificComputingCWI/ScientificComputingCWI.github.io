@@ -1,7 +1,7 @@
 ---
 title: "A new data-driven energy-stable evolve-filter-relax model for turbulent flow simulation"
 date: "2026-03-01"
-authors: "Toby van Gastelen, Wouter Edeling, Benjamin Sanderse"
+authors: "Anna Ivagnes, Toby van Gastelen, Syver Døving Agdestein, Benjamin Sanderse, Giovanni Stabile, Gianluigi Rozza"
 ---
 
 # A new data-driven energy-stable evolve-filter-relax model for turbulent flow simulation
