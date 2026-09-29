@@ -17,6 +17,9 @@ hero:
       text: Publications
       link: /publications/
     - theme: alt
+      text: Members
+      link: /members
+    - theme: alt
       text: Software
       link: /software
 
@@ -33,11 +36,22 @@ hero:
 import { data as news } from '/data/news.data'
 import { data as publications } from '/data/publications.data'
 import { data as seminars } from '/data/seminars.data'
+import { data as members } from '/data/members.data'
+import { data as generated } from '/data/generatedPublications.data'
+import { computed } from 'vue'
 import formatDate from '/.vitepress/theme/utils/formatDate';
 import getSorted from '/.vitepress/theme/utils/getSorted';
 const sortedNews = getSorted( news );
 const sortedPublications = getSorted( publications );
 const sortedSeminars = getSorted( seminars );
+const curatedByDoi = computed(() => {
+  const map = {}
+  for (const page of publications) {
+    const doi = page.frontmatter?.doi
+    if (doi) map[String(doi).toLowerCase().replace(/^https?:\/\/(dx\.)?doi\.org\//, '')] = page.url
+  }
+  return map
+});
 </script>
 
 The Scientific Computing group at CWI develops efficient mathematical methods to simulate and predict real-world phenomena with inherent uncertainties. Our two main research themes are **scientific machine learning** and **uncertainty quantification**, and the topics within these themes are neural ODEs, closure models for turbulence, reduced-order models, discretization techniques, stochastic parameterizations, generative models, data assimilation.
@@ -48,20 +62,10 @@ Please check our [GitHub page](https://github.com/ScientificComputingCWI) with g
 
 ## Members
 
-Current members:  
-Benjamin Sanderse (group leader),  
-Wouter Edeling (staff),  
-Daan Crommelin (staff),  
-Dimitris Loukrezis (staff),  
-Syver Agdestein (PhD candidate),  
-Toby van Gastelen (PhD candidate),  
-Rik Hoekstra (PhD candidate),  
-Pardeep Kumar (PhD candidate),  
-Nikolaj Mücke (visiting postdoc),  
-Henrik Rosenberger (PhD candidate),  
-Robin Klein (PhD candidate),  
-Barry Koren (advisor),  
-Bernard Geurts (visiting professor).
+<p>
+  The group currently has {{ members.current.length }} members. See the
+  <a href="/members">members page</a> for everyone's role and links.
+</p>
 
 ![SC group at ECCOMAS 2024](/group_picture.jpg)
 
@@ -89,17 +93,13 @@ Over the last year, we worked with **Deltares** on predicting failure probabilit
     </li>
 </ul>
 
-## Publications
+## Recent publications
 
-Full list of publications can be found at
-[CWI's institutional repository](https://ir.cwi.nl/#facet=affiliation_label_partOf:Scientific%20Computing).
+<PublicationList :publications="generated.publications.slice(0, 8)" :curated-by-doi="curatedByDoi" />
 
-<ul>
-    <li v-for="post of sortedPublications">
-        <strong><a :href="post.url">{{ post.frontmatter.title }}</a></strong><br/>
-        <span>{{ formatDate( post.frontmatter.date ) }}</span>
-    </li>
-</ul>
+See [all recent publications](/publications/), or
+[the full list](https://ir.cwi.nl/#facet=affiliation_label_partOf:Scientific%20Computing)
+in CWI's institutional repository.
 
 <style scoped>
 ul {
@@ -118,24 +118,6 @@ li span {
     font-family: var(--vp-font-family-mono);
     font-size: var(--vp-code-font-size);
 }
+
 </style>
-
-## Former members
-Anna Ivagnes (at SISSA)  
-Josep Plana-Riu (at UPC)  
-Marius Kurz (now at AMD)  
-Kelbij Start (now at Deltares)  
-Laurent van den Bos (now at ASML)  
-Yous van Halder (now at Univé)  
-Anne Eggels  
-Svetlana Dubinkina (now at VU)  
-Kees Oosterlee (now at Utrecht University)  
-Barry Koren (retired from Eindhoven University)  
-Prashant Kumar  
-Sangeetika Ruchi  
-Bart de Leeuw  
-Jesse Dorrestijn  
-Keith Meyerscough  
-
-
 

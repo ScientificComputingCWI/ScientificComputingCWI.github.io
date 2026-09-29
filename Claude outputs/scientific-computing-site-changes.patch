@@ -1,0 +1,1886 @@
+From 55d7960517d08c1470f8c8491c0bf0cd5cd5d793 Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Tue, 29 Sep 2026 09:49:08 +0200
+Subject: [PATCH 1/2] Fetch publications automatically from OpenAlex; add
+ members page
+
+- data/members.json is now the single source for the members page and the
+  publication fetch, holding each member's OpenAlex author id(s) and ORCID.
+- scripts/fetch-publications.mjs queries OpenAlex per member, keeps CWI-affiliated
+  work, merges each preprint with its published version, and writes
+  data/publications.generated.json. No dependencies, no API key.
+- .github/workflows/publications.yml refreshes that file weekly and on demand;
+  Deploy.yml now also rebuilds on its completion, since a GITHUB_TOKEN push
+  cannot re-trigger the push event.
+- New /publications/all page renders the generated list with search, a per-member
+  filter and a preprint toggle. The hand-written pages under /publications/ are
+  untouched and are now the 'Selected publications' page; adding a doi: to their
+  frontmatter links them from the generated list.
+- New /members page, driven by data/members.json.
+
+Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_011yb3XX2yCMnhwLkSTaZ5sd
+---
+ .github/workflows/Deploy.yml                  |   7 +
+ .github/workflows/publications.yml            |  43 +++
+ .vitepress/config.ts                          |  10 +-
+ README.md                                     |  59 ++++
+ data/generatedPublications.data.ts            |  53 ++++
+ data/members.data.ts                          |  49 ++++
+ data/members.json                             | 125 ++++++++
+ data/publications.config.json                 |  41 +++
+ data/publications.data.ts                     |  18 +-
+ index.md                                      |  85 +++---
+ members.md                                    | 195 +++++++++++++
+ package.json                                  |   4 +-
+ publications/agdestein2022.md                 |   1 +
+ .../agdesteinDiscretizeFirstFilter2025.md     |   1 +
+ ...agdesteinExactExpressionsUnresolved2026.md |   1 +
+ publications/all.md                           | 266 ++++++++++++++++++
+ publications/index.md                         |   6 +-
+ .../ivagnesNewDatadrivenEnergystable2026.md   |   1 +
+ publications/keith2025.md                     |   1 +
+ publications/rik2025.md                       |   1 +
+ publications/rosenberger2025a.md              |   1 +
+ publications/sanderse2024.md                  |   1 +
+ publications/vangastelen2024.md               |   1 +
+ publications/vangastelen2024_2.md             |   1 +
+ publications/vangastelen2025.md               |   1 +
+ scripts/fetch-publications.mjs                | 265 +++++++++++++++++
+ 26 files changed, 1187 insertions(+), 50 deletions(-)
+ create mode 100644 .github/workflows/publications.yml
+ create mode 100644 data/generatedPublications.data.ts
+ create mode 100644 data/members.data.ts
+ create mode 100644 data/members.json
+ create mode 100644 data/publications.config.json
+ create mode 100644 members.md
+ create mode 100644 publications/all.md
+ create mode 100644 scripts/fetch-publications.mjs
+
+diff --git a/.github/workflows/Deploy.yml b/.github/workflows/Deploy.yml
+index b801274..5833795 100644
+--- a/.github/workflows/Deploy.yml
++++ b/.github/workflows/Deploy.yml
+@@ -11,6 +11,13 @@ on:
+   # Allows you to run this workflow manually from the Actions tab
+   workflow_dispatch:
+ 
++  # A push made by the "Update publications" workflow uses GITHUB_TOKEN, and GitHub
++  # deliberately does not let that re-trigger the `push` event above. So we rebuild
++  # whenever that workflow finishes instead.
++  workflow_run:
++    workflows: ["Update publications"]
++    types: [completed]
++
+ # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+ permissions:
+   contents: read
+diff --git a/.github/workflows/publications.yml b/.github/workflows/publications.yml
+new file mode 100644
+index 0000000..3eb0cdc
+--- /dev/null
++++ b/.github/workflows/publications.yml
+@@ -0,0 +1,43 @@
++name: Update publications
++
++on:
++  # Every Monday at 05:17 UTC. OpenAlex updates roughly weekly, so there is no
++  # point running this more often.
++  schedule:
++    - cron: "17 5 * * 1"
++  # Lets you refresh the list on demand from the Actions tab.
++  workflow_dispatch:
++
++permissions:
++  contents: write
++
++concurrency:
++  group: update-publications
++  cancel-in-progress: false
++
++jobs:
++  fetch:
++    runs-on: ubuntu-latest
++    steps:
++      - name: Checkout
++        uses: actions/checkout@v4
++
++      - name: Setup Node
++        uses: actions/setup-node@v4
++        with:
++          node-version: 20
++
++      - name: Fetch publications from OpenAlex
++        run: npm run publications
++
++      - name: Commit if the list changed
++        run: |
++          if git diff --quiet -- data/publications.generated.json; then
++            echo "No change in the publication list."
++            exit 0
++          fi
++          git config user.name  "github-actions[bot]"
++          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
++          git add data/publications.generated.json
++          git commit -m "Update publications from OpenAlex"
++          git push
+diff --git a/.vitepress/config.ts b/.vitepress/config.ts
+index cf620b1..54c9f95 100644
+--- a/.vitepress/config.ts
++++ b/.vitepress/config.ts
+@@ -31,8 +31,16 @@ export default defineConfig({
+ 
+     nav: [
+       { text: "Home", link: "/" },
++      { text: "Members", link: "/members", activeMatch: "/members" },
+       { text: "News", link: "/news/", activeMatch: "/news/.*" },
+-      { text: "Publications", link: "/publications/", activeMatch: "/publications/.*" },
++      {
++        text: "Publications",
++        activeMatch: "/publications/.*",
++        items: [
++          { text: "All publications", link: "/publications/all" },
++          { text: "Selected publications", link: "/publications/" },
++        ],
++      },
+       { text: "Seminars", link: "/seminars/", activeMatch: "/seminars/.*" },
+       { text: "Software", link: "/software" },
+     ],
+diff --git a/README.md b/README.md
+index 4270831..bf09ce0 100644
+--- a/README.md
++++ b/README.md
+@@ -12,6 +12,65 @@ To add news, seminars, and publication items, make a new `.md`
+ file in the `news`/`seminars`/`publications` folder
+ (see existing files for adding date etc.).
+ 
++## Members
++
++`data/members.json` is the single source of truth for both the
++[members page](https://scientificcomputingcwi.github.io/members) and the automatic
++publication fetch. To add or remove someone, edit that file — nothing else needs touching.
++
++Each entry may carry `orcid`, `email`, `github`, `website` and `photo` (put the image in
++`public/` and reference it as `/name.jpg`). `role` groups people on the page; the grouping
++order is set by `ROLE_ORDER` in `data/members.data.ts`.
++
++## Publications
++
++There are two publication pages:
++
++- **`/publications/all`** — generated automatically from [OpenAlex](https://openalex.org),
++  refreshed weekly. Nobody edits this by hand.
++- **`/publications/`** — the hand-written selection, one `.md` file per paper, with
++  abstracts, code and data links. Add a `doi: "10.xxxx/yyyy"` line to a page's frontmatter
++  and the matching entry on the *all publications* page grows a **Details** link to it.
++
++### How the automatic list works
++
++`data/members.json` lists each member's OpenAlex author id(s). `scripts/fetch-publications.mjs`
++asks OpenAlex for their work, keeps what is affiliated with CWI, merges each preprint with
++its published version, and writes `data/publications.generated.json`, which is committed to
++the repository. The `.github/workflows/publications.yml` workflow does this every Monday and
++can also be run on demand from the Actions tab; when it commits a change it triggers a
++redeploy.
++
++To refresh the list locally:
++
++```sh
++npm run publications        # fetch and write the data file
++npm run publications:dry    # fetch and print a summary, write nothing
++```
++
++### Tuning what appears
++
++Edit `data/publications.config.json` — not the script. The setting that matters most is
++`affiliationMode`:
++
++| mode | what it keeps |
++| --- | --- |
++| `strict` | only work where the member's *own* authorship line says CWI. Most precise, but arXiv preprints disappear, because arXiv publishes no affiliation data. |
++| `balanced` *(default)* | CWI appears anywhere on the paper, **or** the record has no institutional metadata at all (which is what an arXiv preprint looks like). |
++| `any` | everything by everyone listed, affiliation ignored. |
++
++A member whose OpenAlex record is conflated with a namesake can be marked `"strict": true`
++in `data/members.json`; they are then always judged strictly, whatever the global mode says.
++`fromYear` drops older work, and `excludeDois` / `excludeOpenAlexIds` remove individual
++items.
++
++Finding an OpenAlex author id: <https://api.openalex.org/authors?search=Firstname+Lastname>.
++One person is sometimes split across several ids, which is why `openalex` takes a list.
++
++A caveat worth knowing: every GitHub release archived to Zenodo becomes a separate "work" in
++OpenAlex, so a single Julia package can contribute hundreds of entries. That is why the
++`types` list in the config excludes `software` and `dataset`.
++
+ Add images to `public/myimage.png` and include it in the
+ markdown with `![Description](/myimage.png)` (use slash, but not path).
+ 
+diff --git a/data/generatedPublications.data.ts b/data/generatedPublications.data.ts
+new file mode 100644
+index 0000000..7b848a3
+--- /dev/null
++++ b/data/generatedPublications.data.ts
+@@ -0,0 +1,53 @@
++import fs from 'node:fs'
++import path from 'node:path'
++import { fileURLToPath } from 'node:url'
++import { defineLoader } from 'vitepress'
++
++export interface GeneratedPublication {
++  id: string | null
++  doi: string | null
++  title: string
++  authors: string[]
++  members: string[]
++  year: number | null
++  date: string | null
++  type: string | null
++  isPreprint: boolean
++  venue: string | null
++  volume: string | null
++  issue: string | null
++  pages: string | null
++  citedBy: number
++  isOpenAccess: boolean
++  links: { doi?: string; arxiv?: string; pdf?: string; openAccess?: string }
++}
++
++export interface GeneratedPublicationData {
++  generatedAt: string | null
++  count: number
++  publications: GeneratedPublication[]
++}
++
++declare const data: GeneratedPublicationData
++export { data }
++
++const here = path.dirname(fileURLToPath(import.meta.url))
++const file = path.join(here, 'publications.generated.json')
++
++export default defineLoader({
++  watch: ['./publications.generated.json'],
++  async load(): Promise<GeneratedPublicationData> {
++    if (!fs.existsSync(file)) {
++      console.warn(
++        '[publications] data/publications.generated.json not found — run `npm run publications` to create it.'
++      )
++      return { generatedAt: null, count: 0, publications: [] }
++    }
++    const parsed = JSON.parse(fs.readFileSync(file, 'utf8'))
++    return {
++      generatedAt: parsed.generatedAt ?? null,
++      count: parsed.publications?.length ?? 0,
++      publications: parsed.publications ?? []
++    }
++  }
++})
+diff --git a/data/members.data.ts b/data/members.data.ts
+new file mode 100644
+index 0000000..bb84cbb
+--- /dev/null
++++ b/data/members.data.ts
+@@ -0,0 +1,49 @@
++import fs from 'node:fs'
++import path from 'node:path'
++import { fileURLToPath } from 'node:url'
++import { defineLoader } from 'vitepress'
++
++export interface Member {
++  name: string
++  role: string
++  orcid: string | null
++  openalex?: string[]
++  email?: string
++  github?: string
++  website?: string
++  photo?: string
++}
++
++export interface Alumnus {
++  name: string
++  now: string | null
++}
++
++export interface MemberData {
++  current: Member[]
++  alumni: Alumnus[]
++}
++
++declare const data: MemberData
++export { data }
++
++const here = path.dirname(fileURLToPath(import.meta.url))
++const file = path.join(here, 'members.json')
++
++/** Order the Members page groups by seniority rather than alphabetically. */
++const ROLE_ORDER = ['Group leader', 'Staff', 'Postdoc', 'PhD candidate', 'Visiting postdoc', 'Visiting professor', 'Advisor']
++
++export default defineLoader({
++  watch: ['./members.json'],
++  async load(): Promise<MemberData> {
++    const parsed = JSON.parse(fs.readFileSync(file, 'utf8'))
++    const current: Member[] = (parsed.current ?? []).map((m: Member) => ({ ...m }))
++    current.sort((a, b) => {
++      const ra = ROLE_ORDER.indexOf(a.role)
++      const rb = ROLE_ORDER.indexOf(b.role)
++      if (ra !== rb) return (ra < 0 ? 99 : ra) - (rb < 0 ? 99 : rb)
++      return a.name.localeCompare(b.name)
++    })
++    return { current, alumni: parsed.alumni ?? [] }
++  }
++})
+diff --git a/data/members.json b/data/members.json
+new file mode 100644
+index 0000000..f5f79cb
+--- /dev/null
++++ b/data/members.json
+@@ -0,0 +1,125 @@
++{
++  "$comment": [
++    "Single source of truth for the Members page AND the automatic publication fetch.",
++    "",
++    "openalex : one or more OpenAlex author IDs. OpenAlex sometimes splits one person",
++    "           across several records, so a list is allowed. Find yours at",
++    "           https://api.openalex.org/authors?search=Your+Name",
++    "strict   : set to true when the OpenAlex record is known to be conflated with a",
++    "           different researcher of the same/similar name. Strict members only",
++    "           contribute works where their OWN authorship line carries a CWI",
++    "           affiliation, which is safe but drops arXiv preprints (arXiv supplies",
++    "           no affiliation data).",
++    "alumni   : listed on the Members page under 'Former members'; set publications",
++    "           to false if their work should not feed the publication list."
++  ],
++  "current": [
++    {
++      "name": "Benjamin Sanderse",
++      "role": "Group leader",
++      "orcid": "0000-0001-9483-1988",
++      "openalex": ["A5001549702"],
++      "email": "b.sanderse@cwi.nl",
++      "github": "bsanderse",
++      "website": "https://www.cwi.nl/en/people/benjamin-sanderse/"
++    },
++    {
++      "name": "Wouter Edeling",
++      "role": "Staff",
++      "orcid": "0000-0003-4734-7960",
++      "openalex": ["A5076493238", "A5143995334"],
++      "email": "wouter.edeling@cwi.nl"
++    },
++    {
++      "name": "Daan Crommelin",
++      "role": "Staff",
++      "orcid": "0000-0003-0542-6337",
++      "openalex": ["A5037435544", "A5136769067"]
++    },
++    {
++      "name": "Dimitris Loukrezis",
++      "role": "Staff",
++      "orcid": "0000-0003-1264-1182",
++      "openalex": ["A5013517565"]
++    },
++    {
++      "name": "Syver Døving Agdestein",
++      "role": "PhD candidate",
++      "orcid": "0000-0002-1589-2916",
++      "openalex": ["A5067473170", "A5137401380"],
++      "github": "agdestein"
++    },
++    {
++      "name": "Toby van Gastelen",
++      "role": "PhD candidate",
++      "orcid": "0000-0001-5301-4981",
++      "openalex": ["A5083830004"]
++    },
++    {
++      "name": "Rik Hoekstra",
++      "role": "PhD candidate",
++      "orcid": "0009-0006-5531-632X",
++      "openalex": ["A5103483355"],
++      "strict": true,
++      "note": "OpenAlex record is conflated with another researcher; kept strict on purpose."
++    },
++    {
++      "name": "Pardeep Kumar",
++      "role": "PhD candidate",
++      "orcid": "0009-0009-7574-7102",
++      "openalex": ["A5103422486"],
++      "strict": true,
++      "note": "OpenAlex record is conflated with a namesake; kept strict on purpose."
++    },
++    {
++      "name": "Nikolaj Mücke",
++      "role": "Visiting postdoc",
++      "orcid": "0000-0002-2635-9586",
++      "openalex": ["A5008977631", "A5093917330"]
++    },
++    {
++      "name": "Henrik Rosenberger",
++      "role": "PhD candidate",
++      "orcid": "0000-0003-2963-4544",
++      "openalex": ["A5087816139"]
++    },
++    {
++      "name": "Robin Klein",
++      "role": "PhD candidate",
++      "orcid": null,
++      "openalex": ["A5087831049", "A5139070675"]
++    },
++    {
++      "name": "Barry Koren",
++      "role": "Advisor",
++      "orcid": "0009-0008-1169-1157",
++      "openalex": ["A5013769349"],
++      "strict": true,
++      "note": "Long CWI back catalogue; strict keeps the list to genuinely CWI-affiliated work."
++    },
++    {
++      "name": "Bernard Geurts",
++      "role": "Visiting professor",
++      "orcid": null,
++      "openalex": ["A5111845865"],
++      "strict": true
++    }
++  ],
++  "alumni": [
++    { "name": "Anna Ivagnes", "now": "at SISSA" },
++    { "name": "Josep Plana-Riu", "now": "at UPC" },
++    { "name": "Marius Kurz", "now": "at AMD" },
++    { "name": "Kelbij Start", "now": "at Deltares" },
++    { "name": "Laurent van den Bos", "now": "at ASML" },
++    { "name": "Yous van Halder", "now": "at Univé" },
++    { "name": "Anne Eggels", "now": null },
++    { "name": "Svetlana Dubinkina", "now": "at VU" },
++    { "name": "Kees Oosterlee", "now": "at Utrecht University" },
++    { "name": "Barry Koren", "now": "retired from Eindhoven University" },
++    { "name": "Prashant Kumar", "now": null },
++    { "name": "Sangeetika Ruchi", "now": null },
++    { "name": "Bart de Leeuw", "now": null },
++    { "name": "Jesse Dorrestijn", "now": null },
++    { "name": "Keith Meyerscough", "now": null }
++  ]
++}
+diff --git a/data/publications.config.json b/data/publications.config.json
+new file mode 100644
+index 0000000..703a775
+--- /dev/null
++++ b/data/publications.config.json
+@@ -0,0 +1,41 @@
++{
++  "$comment": [
++    "Settings for scripts/fetch-publications.mjs. Edit this file (not the script) to",
++    "change what ends up on the 'All publications' page, then re-run `npm run publications`",
++    "or trigger the 'Update publications' workflow on GitHub.",
++    "",
++    "affiliationMode:",
++    "  'strict'   - only works where the group member's OWN authorship line carries a CWI",
++    "               affiliation. Most precise, but arXiv preprints are dropped because",
++    "               arXiv does not supply affiliation data at all.",
++    "  'balanced' - (default) a work counts when CWI appears anywhere on it, OR when the",
++    "               work carries no institutional metadata whatsoever (which is how",
++    "               arXiv preprints look). Members flagged \"strict\" in members.json are",
++    "               always evaluated strictly, whatever this setting says.",
++    "  'any'      - every work by every listed member, regardless of affiliation.",
++    "",
++    "fromYear: drop anything published before this year. null = no cut-off.",
++    "types:    OpenAlex work types to keep. Note that every archived GitHub release shows",
++    "          up in OpenAlex as a 'software'/'dataset' work, which is why those are",
++    "          excluded by default."
++  ],
++  "institution": {
++    "name": "Centrum Wiskunde & Informatica",
++    "openalexId": "I1341640284",
++    "ror": "https://ror.org/00x7ekv49"
++  },
++  "affiliationMode": "balanced",
++  "fromYear": null,
++  "types": [
++    "article",
++    "preprint",
++    "review",
++    "book",
++    "book-chapter",
++    "dissertation"
++  ],
++  "mailto": "b.sanderse@cwi.nl",
++  "excludeDois": [],
++  "excludeOpenAlexIds": [],
++  "extra": []
++}
+diff --git a/data/publications.data.ts b/data/publications.data.ts
+index 48e0ae0..b870bbc 100644
+--- a/data/publications.data.ts
++++ b/data/publications.data.ts
+@@ -1,10 +1,16 @@
+ import { createContentLoader } from 'vitepress'
++
++/** Pages under /publications/ that are indexes rather than individual publications. */
++const NOT_A_PUBLICATION = new Set([
++  '/publications/',
++  '/publications',
++  '/publications/index',
++  '/publications/all/',
++  '/publications/all'
++])
++
+ export default createContentLoader('/publications/*.md', {
+-  transform (items) {
+-    return items.filter(({ url }) =>
+-      url !== '/publications/' && // most setups
+-      url !== '/publications' &&  // just in case cleanUrls affects trailing slash
+-      url !== '/publications/index' // extra safeguard
+-    )
++  transform(items) {
++    return items.filter(({ url }) => !NOT_A_PUBLICATION.has(url))
+   }
+ })
+diff --git a/index.md b/index.md
+index b22d48a..ecea9c5 100644
+--- a/index.md
++++ b/index.md
+@@ -15,7 +15,10 @@ hero:
+       link: /news/
+     - theme: alt
+       text: Publications
+-      link: /publications/
++      link: /publications/all
++    - theme: alt
++      text: Members
++      link: /members
+     - theme: alt
+       text: Software
+       link: /software
+@@ -33,6 +36,8 @@ hero:
+ import { data as news } from '/data/news.data'
+ import { data as publications } from '/data/publications.data'
+ import { data as seminars } from '/data/seminars.data'
++import { data as members } from '/data/members.data'
++import { data as generated } from '/data/generatedPublications.data'
+ import formatDate from '/.vitepress/theme/utils/formatDate';
+ import getSorted from '/.vitepress/theme/utils/getSorted';
+ const sortedNews = getSorted( news );
+@@ -48,20 +53,10 @@ Please check our [GitHub page](https://github.com/ScientificComputingCWI) with g
+ 
+ ## Members
+ 
+-Current members:  
+-Benjamin Sanderse (group leader),  
+-Wouter Edeling (staff),  
+-Daan Crommelin (staff),  
+-Dimitris Loukrezis (staff),  
+-Syver Agdestein (PhD candidate),  
+-Toby van Gastelen (PhD candidate),  
+-Rik Hoekstra (PhD candidate),  
+-Pardeep Kumar (PhD candidate),  
+-Nikolaj Mücke (visiting postdoc),  
+-Henrik Rosenberger (PhD candidate),  
+-Robin Klein (PhD candidate),  
+-Barry Koren (advisor),  
+-Bernard Geurts (visiting professor).
++<p>
++  The group currently has {{ members.current.length }} members. See the
++  <a href="/members">members page</a> for everyone's role and links.
++</p>
+ 
+ ![SC group at ECCOMAS 2024](/group_picture.jpg)
+ 
+@@ -89,18 +84,19 @@ Over the last year, we worked with **Deltares** on predicting failure probabilit
+     </li>
+ </ul>
+ 
+-## Publications
+-
+-Full list of publications can be found at
+-[CWI's institutional repository](https://ir.cwi.nl/#facet=affiliation_label_partOf:Scientific%20Computing).
++## Recent publications
+ 
+-<ul>
+-    <li v-for="post of sortedPublications">
+-        <strong><a :href="post.url">{{ post.frontmatter.title }}</a></strong><br/>
+-        <span>{{ formatDate( post.frontmatter.date ) }}</span>
++<ul class="recent-pubs">
++    <li v-for="pub of generated.publications.slice(0, 8)" :key="pub.id">
++        <strong><a :href="pub.links.doi || pub.links.arxiv">{{ pub.title }}</a></strong>
++        <span>{{ [pub.venue, pub.year].filter(Boolean).join(' · ') }}</span>
+     </li>
+ </ul>
+ 
++See [all {{ generated.count }} publications](/publications/all), a
++[selected list with abstracts and code](/publications/), or
++[CWI's institutional repository](https://ir.cwi.nl/#facet=affiliation_label_partOf:Scientific%20Computing).
++
+ <style scoped>
+ ul {
+     list-style-type: none;
+@@ -118,24 +114,33 @@ li span {
+     font-family: var(--vp-font-family-mono);
+     font-size: var(--vp-code-font-size);
+ }
+-</style>
+ 
+-## Former members
+-Anna Ivagnes (at SISSA)  
+-Josep Plana-Riu (at UPC)  
+-Marius Kurz (now at AMD)  
+-Kelbij Start (now at Deltares)  
+-Laurent van den Bos (now at ASML)  
+-Yous van Halder (now at Univé)  
+-Anne Eggels  
+-Svetlana Dubinkina (now at VU)  
+-Kees Oosterlee (now at Utrecht University)  
+-Barry Koren (retired from Eindhoven University)  
+-Prashant Kumar  
+-Sangeetika Ruchi  
+-Bart de Leeuw  
+-Jesse Dorrestijn  
+-Keith Meyerscough  
++/* Recent publications: title on its own line, venue underneath. */
++.recent-pubs li {
++    display: block;
++    margin-bottom: 0.6rem;
++}
++
++.recent-pubs strong {
++    font-weight: 600;
++    line-height: 1.45;
++}
++
++.recent-pubs strong a {
++    color: var(--vp-c-text-1);
++    text-decoration: none;
++}
+ 
++.recent-pubs strong a:hover {
++    color: var(--vp-c-brand-1);
++    text-decoration: underline;
++}
+ 
++.recent-pubs span {
++    display: block;
++    font-family: inherit;
++    font-size: 0.85rem;
++    color: var(--vp-c-text-3);
++}
++</style>
+ 
+diff --git a/members.md b/members.md
+new file mode 100644
+index 0000000..8db3feb
+--- /dev/null
++++ b/members.md
+@@ -0,0 +1,195 @@
++---
++title: Members
++---
++
++# Members
++
++<script setup>
++import { computed } from 'vue'
++import { data as members } from '/data/members.data'
++
++const groups = computed(() => {
++  const out = []
++  for (const m of members.current) {
++    const last = out[out.length - 1]
++    if (last && last.role === m.role) last.people.push(m)
++    else out.push({ role: m.role, people: [m] })
++  }
++  return out
++})
++
++const plural = (role) =>
++  ({
++    'Group leader': 'Group leader',
++    Staff: 'Staff',
++    'PhD candidate': 'PhD candidates',
++    Postdoc: 'Postdocs',
++    'Visiting postdoc': 'Visiting postdocs',
++    'Visiting professor': 'Visiting professors',
++    Advisor: 'Advisors'
++  })[role] || role
++
++// First + last initial ("Syver Døving Agdestein" -> "SA", not "SD").
++const initials = (name) => {
++  const words = name.split(/\s+/).filter((w) => /^[A-ZÀ-Þ]/.test(w))
++  if (!words.length) return '?'
++  if (words.length === 1) return words[0][0]
++  return words[0][0] + words[words.length - 1][0]
++}
++</script>
++
++The Scientific Computing group at CWI works on **scientific machine learning** and
++**uncertainty quantification** — neural ODEs, closure models for turbulence,
++reduced-order models, discretization techniques, stochastic parameterizations,
++generative models and data assimilation.
++
++<section v-for="group of groups" :key="group.role" class="mem-group">
++  <h2>{{ plural(group.role) }}</h2>
++  <ul class="mem-grid">
++    <li v-for="m of group.people" :key="m.name" class="mem-card">
++      <div class="mem-avatar" :aria-hidden="true">
++        <img v-if="m.photo" :src="m.photo" :alt="m.name" />
++        <span v-else>{{ initials(m.name) }}</span>
++      </div>
++      <div class="mem-body">
++        <p class="mem-name">
++          <a v-if="m.website" :href="m.website">{{ m.name }}</a>
++          <span v-else>{{ m.name }}</span>
++        </p>
++        <p class="mem-role">{{ m.role }}</p>
++        <p class="mem-links">
++          <a v-if="m.email" :href="'mailto:' + m.email">Email</a>
++          <a v-if="m.orcid" :href="'https://orcid.org/' + m.orcid">ORCID</a>
++          <a v-if="m.github" :href="'https://github.com/' + m.github">GitHub</a>
++          <a :href="'/publications/all?member=' + encodeURIComponent(m.name)">Publications</a>
++        </p>
++      </div>
++    </li>
++  </ul>
++</section>
++
++![The Scientific Computing group at ECCOMAS 2024](/group_picture.jpg)
++
++## Group seminar
++
++To receive news and Zoom links for our group seminar, contact Wouter Edeling at
++`wouter.edeling@cwi.nl`. For more information, see the
++[seminar page](https://www.cwi.nl/en/groups/scientific-computing/uq-seminar/seminar-ml-uq-sc/).
++
++## Former members
++
++<ul class="mem-alumni">
++  <li v-for="a of members.alumni" :key="a.name">
++    {{ a.name }}<span v-if="a.now" class="mem-now"> — {{ a.now }}</span>
++  </li>
++</ul>
++
++<style scoped>
++.mem-group h2 {
++  border-top: 1px solid var(--vp-c-divider);
++  margin-top: 2.25rem;
++  padding-top: 1.25rem;
++  font-size: 1.25rem;
++}
++
++.mem-grid {
++  list-style: none;
++  padding: 0;
++  margin: 1rem 0 0;
++  display: grid;
++  gap: 1rem;
++  grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
++}
++
++.mem-card {
++  display: flex;
++  gap: 0.9rem;
++  align-items: center;
++  padding: 0.9rem;
++  border: 1px solid var(--vp-c-divider);
++  border-radius: 10px;
++  background: var(--vp-c-bg-soft);
++  transition: border-color 0.2s;
++}
++
++.mem-card:hover {
++  border-color: var(--vp-c-brand-1);
++}
++
++.mem-avatar {
++  flex: 0 0 3rem;
++  width: 3rem;
++  height: 3rem;
++  border-radius: 50%;
++  overflow: hidden;
++  display: grid;
++  place-items: center;
++  background: var(--vp-c-default-soft);
++  color: var(--vp-c-text-2);
++  font-weight: 600;
++  font-size: 0.95rem;
++  letter-spacing: 0.02em;
++}
++
++.mem-avatar img {
++  width: 100%;
++  height: 100%;
++  object-fit: cover;
++}
++
++.mem-body {
++  min-width: 0;
++}
++
++.mem-name {
++  margin: 0;
++  font-weight: 600;
++  line-height: 1.3;
++}
++
++.mem-name a {
++  color: var(--vp-c-text-1);
++  text-decoration: none;
++}
++
++.mem-name a:hover {
++  color: var(--vp-c-brand-1);
++}
++
++.mem-role {
++  margin: 0.1rem 0 0.35rem;
++  font-size: 0.85rem;
++  color: var(--vp-c-text-3);
++}
++
++.mem-links {
++  margin: 0;
++  display: flex;
++  flex-wrap: wrap;
++  gap: 0.6rem;
++  font-size: 0.8rem;
++}
++
++.mem-alumni {
++  list-style: none;
++  padding: 0;
++  columns: 2;
++  column-gap: 2rem;
++  font-size: 0.95rem;
++}
++
++.mem-alumni li {
++  break-inside: avoid;
++  margin-bottom: 0.3rem;
++}
++
++.mem-now {
++  color: var(--vp-c-text-3);
++}
++
++@media (max-width: 640px) {
++  .mem-alumni {
++    columns: 1;
++  }
++}
++</style>
+diff --git a/package.json b/package.json
+index ce22cdc..e9dfc16 100644
+--- a/package.json
++++ b/package.json
+@@ -8,7 +8,9 @@
+   "scripts": {
+     "dev": "vitepress dev",
+     "build": "vitepress build",
+-    "preview": "vitepress preview"
++    "preview": "vitepress preview",
++    "publications": "node scripts/fetch-publications.mjs",
++    "publications:dry": "node scripts/fetch-publications.mjs --dry"
+   },
+   "type": "module"
+ }
+diff --git a/publications/agdestein2022.md b/publications/agdestein2022.md
+index f55c2fa..169afa7 100644
+--- a/publications/agdestein2022.md
++++ b/publications/agdestein2022.md
+@@ -2,6 +2,7 @@
+ title: "Discretize first, filter next – a new closure model approach"
+ date: "2022-11-24"
+ authors: "Syver Døving Agdestein, Benjamin Sanderse"
++doi: "10.23967/eccomas.2022.094"
+ ---
+ 
+ # Discretize first, filter next – a new closure model approach
+diff --git a/publications/agdesteinDiscretizeFirstFilter2025.md b/publications/agdesteinDiscretizeFirstFilter2025.md
+index 7c9ab2c..aaca234 100644
+--- a/publications/agdesteinDiscretizeFirstFilter2025.md
++++ b/publications/agdesteinDiscretizeFirstFilter2025.md
+@@ -2,6 +2,7 @@
+ title: "Discretize first, filter next: learning divergence-consistent closure models for large-eddy simulation"
+ date: "2025-02-01"
+ authors: "Syver Døving Agdestein, Benjamin Sanderse"
++doi: "10.1016/j.jcp.2024.113577"
+ ---
+ 
+ # Discretize first, filter next: learning divergence-consistent closure models for large-eddy simulation
+diff --git a/publications/agdesteinExactExpressionsUnresolved2026.md b/publications/agdesteinExactExpressionsUnresolved2026.md
+index a4c42c1..5920edf 100644
+--- a/publications/agdesteinExactExpressionsUnresolved2026.md
++++ b/publications/agdesteinExactExpressionsUnresolved2026.md
+@@ -2,6 +2,7 @@
+ title: "Exact expressions for the unresolved stress in a finite-volume based large-eddy simulation"
+ date: "2026-07-01"
+ authors: "Syver Døving Agdestein, Roel Verstappen, Benjamin Sanderse"
++doi: "10.1016/j.jcp.2026.114810"
+ ---
+ 
+ # Exact expressions for the unresolved stress in a finite-volume based large-eddy simulation
+diff --git a/publications/all.md b/publications/all.md
+new file mode 100644
+index 0000000..b3ab3d4
+--- /dev/null
++++ b/publications/all.md
+@@ -0,0 +1,266 @@
++---
++title: All publications
++---
++
++# All publications
++
++<script setup>
++import { computed, onMounted, ref } from 'vue'
++import { data as generated } from '/data/generatedPublications.data'
++import { data as curated } from '/data/publications.data'
++
++// Curated pages (publications/*.md) that carry a `doi:` in their frontmatter are
++// linked from the matching auto-fetched entry, so hand-written abstracts, code and
++// Zenodo links stay reachable.
++const curatedByDoi = computed(() => {
++  const map = {}
++  for (const page of curated) {
++    const doi = page.frontmatter?.doi
++    if (doi) map[String(doi).toLowerCase().replace(/^https?:\/\/(dx\.)?doi\.org\//, '')] = page.url
++  }
++  return map
++})
++
++const query = ref('')
++const member = ref('')
++const showPreprints = ref(true)
++
++const members = computed(() => {
++  const set = new Set()
++  for (const p of generated.publications) for (const m of p.members) set.add(m)
++  return [...set].sort()
++})
++
++// Allow /publications/all?member=Wouter%20Edeling — used by the Members page.
++onMounted(() => {
++  const wanted = new URLSearchParams(window.location.search).get('member')
++  if (wanted && members.value.includes(wanted)) member.value = wanted
++})
++
++const filtered = computed(() => {
++  const q = query.value.trim().toLowerCase()
++  return generated.publications.filter((p) => {
++    if (!showPreprints.value && p.isPreprint) return false
++    if (member.value && !p.members.includes(member.value)) return false
++    if (!q) return true
++    return (
++      p.title.toLowerCase().includes(q) ||
++      (p.venue || '').toLowerCase().includes(q) ||
++      p.authors.some((a) => a.toLowerCase().includes(q))
++    )
++  })
++})
++
++const byYear = computed(() => {
++  const groups = new Map()
++  for (const p of filtered.value) {
++    const y = p.year ?? 'Undated'
++    if (!groups.has(y)) groups.set(y, [])
++    groups.get(y).push(p)
++  }
++  return [...groups.entries()].sort((a, b) => (b[0] === 'Undated' ? -1 : a[0] === 'Undated' ? 1 : b[0] - a[0]))
++})
++
++const isMember = (p, name) => p.members.includes(name)
++</script>
++
++This list is generated automatically from [OpenAlex](https://openalex.org) and refreshed
++weekly. It covers work by current group members carrying a CWI affiliation. A
++hand-picked selection with abstracts and code links lives on the
++[selected publications](/publications/) page, and the institute's own complete record is in
++[CWI's repository](https://ir.cwi.nl/#facet=affiliation_label_partOf:Scientific%20Computing).
++
++<div class="pub-controls">
++  <input v-model="query" type="search" placeholder="Search title, author or journal…" aria-label="Search publications" />
++  <select v-model="member" aria-label="Filter by group member">
++    <option value="">All members</option>
++    <option v-for="m of members" :key="m" :value="m">{{ m }}</option>
++  </select>
++  <label class="pub-toggle">
++    <input type="checkbox" v-model="showPreprints" />
++    Include preprints
++  </label>
++</div>
++
++<p class="pub-count">
++  {{ filtered.length }} {{ filtered.length === 1 ? 'publication' : 'publications' }}<template v-if="generated.generatedAt"> · last updated {{ generated.generatedAt }}</template>
++</p>
++
++<section v-for="[year, items] of byYear" :key="year" class="pub-year">
++  <h2 :id="'y' + year" tabindex="-1">{{ year }} <span class="pub-year-count">{{ items.length }}</span></h2>
++  <ol class="pub-list">
++    <li v-for="p of items" :key="p.id || p.title">
++      <p class="pub-title">
++        <a v-if="p.links.doi || p.links.arxiv" :href="p.links.doi || p.links.arxiv">{{ p.title }}</a>
++        <span v-else>{{ p.title }}</span>
++        <span v-if="p.isPreprint" class="pub-tag">preprint</span>
++      </p>
++      <p class="pub-authors">
++        <template v-for="(a, i) of (p.authors.length > 12 ? p.authors.slice(0, 12) : p.authors)" :key="a + i">
++          <span :class="{ 'pub-us': isMember(p, a) }">{{ a }}</span><span v-if="i < Math.min(p.authors.length, 12) - 1">, </span>
++        </template>
++        <span v-if="p.authors.length > 12"> et al.</span>
++      </p>
++      <p class="pub-meta">
++        <span v-if="p.venue" class="pub-venue">{{ p.venue }}</span>
++        <span v-if="p.volume">{{ p.volume }}<span v-if="p.issue">({{ p.issue }})</span></span>
++        <span v-if="p.pages">{{ p.pages }}</span>
++        <a v-if="curatedByDoi[p.doi]" :href="curatedByDoi[p.doi]" class="pub-link">Details</a>
++        <a v-if="p.links.arxiv && !p.isPreprint" :href="p.links.arxiv" class="pub-link">arXiv</a>
++        <a v-if="p.links.pdf" :href="p.links.pdf" class="pub-link">PDF</a>
++        <span v-if="p.isOpenAccess" class="pub-oa" title="Open access">OA</span>
++      </p>
++    </li>
++  </ol>
++</section>
++
++<p v-if="!filtered.length" class="pub-empty">
++  No publications match that filter.
++</p>
++
++<style scoped>
++.pub-controls {
++  display: flex;
++  flex-wrap: wrap;
++  gap: 0.75rem;
++  align-items: center;
++  margin: 1.5rem 0 0.5rem;
++}
++
++.pub-controls input[type='search'],
++.pub-controls select {
++  border: 1px solid var(--vp-c-divider);
++  background: var(--vp-c-bg-soft);
++  color: var(--vp-c-text-1);
++  border-radius: 8px;
++  padding: 0.45rem 0.7rem;
++  font-size: 0.9rem;
++}
++
++.pub-controls input[type='search'] {
++  flex: 1 1 18rem;
++  min-width: 0;
++}
++
++.pub-toggle {
++  display: inline-flex;
++  align-items: center;
++  gap: 0.4rem;
++  font-size: 0.9rem;
++  color: var(--vp-c-text-2);
++  white-space: nowrap;
++}
++
++.pub-count {
++  color: var(--vp-c-text-3);
++  font-size: 0.85rem;
++  margin: 0.25rem 0 0;
++}
++
++.pub-year h2 {
++  border-top: 1px solid var(--vp-c-divider);
++  margin-top: 2rem;
++  padding-top: 1.25rem;
++  font-size: 1.25rem;
++  letter-spacing: -0.01em;
++}
++
++.pub-year-count {
++  color: var(--vp-c-text-3);
++  font-size: 0.8rem;
++  font-weight: 400;
++  margin-left: 0.4rem;
++}
++
++.pub-list {
++  list-style: none;
++  padding-left: 0;
++  margin: 0;
++}
++
++.pub-list li {
++  padding: 0.85rem 0;
++  border-bottom: 1px solid var(--vp-c-divider);
++}
++
++.pub-list li:last-child {
++  border-bottom: none;
++}
++
++.pub-title {
++  margin: 0 0 0.2rem;
++  font-weight: 600;
++  line-height: 1.45;
++}
++
++.pub-title a {
++  color: var(--vp-c-text-1);
++  text-decoration: none;
++}
++
++.pub-title a:hover {
++  color: var(--vp-c-brand-1);
++  text-decoration: underline;
++}
++
++.pub-authors {
++  margin: 0 0 0.2rem;
++  font-size: 0.9rem;
++  color: var(--vp-c-text-2);
++  line-height: 1.5;
++}
++
++.pub-us {
++  color: var(--vp-c-text-1);
++  font-weight: 600;
++}
++
++.pub-meta {
++  margin: 0;
++  font-size: 0.85rem;
++  color: var(--vp-c-text-3);
++  display: flex;
++  flex-wrap: wrap;
++  gap: 0.6rem;
++  align-items: baseline;
++}
++
++.pub-venue {
++  font-style: italic;
++}
++
++.pub-tag {
++  display: inline-block;
++  margin-left: 0.5rem;
++  padding: 0.05rem 0.4rem;
++  border-radius: 5px;
++  background: var(--vp-c-default-soft);
++  color: var(--vp-c-text-2);
++  font-size: 0.7rem;
++  font-weight: 500;
++  text-transform: uppercase;
++  letter-spacing: 0.04em;
++  vertical-align: middle;
++}
++
++.pub-oa {
++  color: var(--vp-c-success-1, var(--vp-c-green-1));
++  font-weight: 600;
++  font-size: 0.75rem;
++}
++
++.pub-link {
++  font-weight: 500;
++}
++
++.pub-empty {
++  color: var(--vp-c-text-3);
++  padding: 2rem 0;
++}
++
++@media (max-width: 640px) {
++  .pub-controls input[type='search'] {
++    flex-basis: 100%;
++  }
++}
++</style>
+diff --git a/publications/index.md b/publications/index.md
+index 15ecf68..64daf39 100644
+--- a/publications/index.md
++++ b/publications/index.md
+@@ -1,6 +1,8 @@
+-# Publications
++# Selected publications
+ 
+-For all our publications, please visit
++A hand-picked selection, with abstracts, code and data links. The complete,
++automatically updated list is on the [all publications](/publications/all) page;
++CWI's own record is in
+ [CWI's repository](https://ir.cwi.nl/#facet=affiliation_label_partOf:Scientific%20Computing).
+ 
+ <!-- ## Latest publications -->
+diff --git a/publications/ivagnesNewDatadrivenEnergystable2026.md b/publications/ivagnesNewDatadrivenEnergystable2026.md
+index 6d43d9e..d3101ba 100644
+--- a/publications/ivagnesNewDatadrivenEnergystable2026.md
++++ b/publications/ivagnesNewDatadrivenEnergystable2026.md
+@@ -2,6 +2,7 @@
+ title: "A new data-driven energy-stable evolve-filter-relax model for turbulent flow simulation"
+ date: "2026-03-01"
+ authors: "Anna Ivagnes, Toby van Gastelen, Syver Døving Agdestein, Benjamin Sanderse, Giovanni Stabile, Gianluigi Rozza"
++doi: "10.1016/j.cma.2025.118654"
+ ---
+ 
+ # A new data-driven energy-stable evolve-filter-relax model for turbulent flow simulation
+diff --git a/publications/keith2025.md b/publications/keith2025.md
+index 18a6d1e..c829a94 100644
+--- a/publications/keith2025.md
++++ b/publications/keith2025.md
+@@ -2,6 +2,7 @@
+ title: "Scientific Machine Learning: A Symbiosis"
+ date: "2025-03"
+ authors: "Keith, O'Leary-Roseberry, Sanderse, Scheichl, van Bloemen Waanders"
++doi: "10.3934/fods.2024051"
+ ---
+ 
+ # Scientific Machine Learning: A Symbiosis
+diff --git a/publications/rik2025.md b/publications/rik2025.md
+index 0408f2c..945ee1c 100644
+--- a/publications/rik2025.md
++++ b/publications/rik2025.md
+@@ -2,6 +2,7 @@
+ title: "Reduced Data-Driven Turbulence Closure for Capturing Long-Term Statistics"
+ date: "2024-12-15"
+ authors: "Rik Hoekstra, Daan Crommelin, Wouter Edeling"
++doi: "10.1016/j.compfluid.2024.106469"
+ ---
+ 
+ # Reduced Data-Driven Turbulence Closure for Capturing Long-Term Statistics
+diff --git a/publications/rosenberger2025a.md b/publications/rosenberger2025a.md
+index ff6352b..fcbefa5 100644
+--- a/publications/rosenberger2025a.md
++++ b/publications/rosenberger2025a.md
+@@ -2,6 +2,7 @@
+ title: "Exact operator inference with minimal data"
+ date: "2025-06-26"
+ authors: "Henrik Rosenberger, Benjamin Sanderse, Giovanni Stabile"
++doi: "10.1137/25m1772484"
+ ---
+ 
+ # Exact operator inference with minimal data
+diff --git a/publications/sanderse2024.md b/publications/sanderse2024.md
+index 8330577..e37e584 100644
+--- a/publications/sanderse2024.md
++++ b/publications/sanderse2024.md
+@@ -2,6 +2,7 @@
+ title: "Scientific machine learning for closure models in multiscale problems: A review"
+ date: 2025-03
+ authors: "Sanderse, Stinis, Maulik, Ahmed"
++doi: "10.3934/fods.2024043"
+ ---
+ 
+ # Scientific machine learning for closure models in multiscale problems: A review
+diff --git a/publications/vangastelen2024.md b/publications/vangastelen2024.md
+index b97c1a3..cae8091 100644
+--- a/publications/vangastelen2024.md
++++ b/publications/vangastelen2024.md
+@@ -2,6 +2,7 @@
+ title: "Energy-Conserving Neural Network for Turbulence Closure Modeling"
+ date: "2024-07-01"
+ authors: "Toby van Gastelen, Wouter Edeling, Benjamin Sanderse"
++doi: "10.1016/j.jcp.2024.113003"
+ ---
+ 
+ # Energy-Conserving Neural Network for Turbulence Closure Modeling
+diff --git a/publications/vangastelen2024_2.md b/publications/vangastelen2024_2.md
+index 8b2ff2d..a010cae 100644
+--- a/publications/vangastelen2024_2.md
++++ b/publications/vangastelen2024_2.md
+@@ -2,6 +2,7 @@
+ title: "Modeling Advection-Dominated Flows with Space-Local Reduced-Order Models"
+ date: "2024-09-13"
+ authors: "Toby van Gastelen, Wouter Edeling, Benjamin Sanderse"
++doi: "10.1016/j.compfluid.2025.106911"
+ ---
+ 
+ # Modeling Advection-Dominated Flows with Space-Local Reduced-Order Models
+diff --git a/publications/vangastelen2025.md b/publications/vangastelen2025.md
+index 8f9529a..753ab32 100644
+--- a/publications/vangastelen2025.md
++++ b/publications/vangastelen2025.md
+@@ -2,6 +2,7 @@
+ title: "Energy-Conserving Neural Network Closure Model for Long-Time Accurate and Stable LES"
+ date: "2025-04-08"
+ authors: "Toby van Gastelen, Wouter Edeling, Benjamin Sanderse"
++doi: "10.1016/j.compfluid.2026.107028"
+ ---
+ 
+ # Energy-Conserving Neural Network Closure Model for Long-Time Accurate and Stable LES
+diff --git a/scripts/fetch-publications.mjs b/scripts/fetch-publications.mjs
+new file mode 100644
+index 0000000..cfb9cb0
+--- /dev/null
++++ b/scripts/fetch-publications.mjs
+@@ -0,0 +1,265 @@
++#!/usr/bin/env node
++/**
++ * Fetch the group's publications from OpenAlex and write data/publications.generated.json.
++ *
++ *   node scripts/fetch-publications.mjs          # write the file
++ *   node scripts/fetch-publications.mjs --dry    # print a summary, write nothing
++ *
++ * Inputs : data/members.json, data/publications.config.json
++ * Output : data/publications.generated.json
++ *
++ * No dependencies — uses Node 18+ global fetch. OpenAlex needs no API key; passing a
++ * `mailto` puts us in their faster "polite pool".
++ */
++
++import fs from 'node:fs'
++import path from 'node:path'
++import { fileURLToPath } from 'node:url'
++
++const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
++const DATA = path.join(ROOT, 'data')
++const OUT = path.join(DATA, 'publications.generated.json')
++const API = 'https://api.openalex.org'
++const DRY = process.argv.includes('--dry')
++
++const readJson = (p) => JSON.parse(fs.readFileSync(p, 'utf8'))
++const members = readJson(path.join(DATA, 'members.json'))
++const config = readJson(path.join(DATA, 'publications.config.json'))
++
++const CWI = config.institution.openalexId
++const MODE = config.affiliationMode ?? 'balanced'
++const sleep = (ms) => new Promise((r) => setTimeout(r, ms))
++
++/* ------------------------------------------------------------------ helpers */
++
++/** OpenAlex ids come back as full URLs ("https://openalex.org/A123"); compare on the tail. */
++const idIs = (value, id) => typeof value === 'string' && value.split('/').pop() === id
++
++const stripDoi = (doi) =>
++  typeof doi === 'string' ? doi.replace(/^https?:\/\/(dx\.)?doi\.org\//i, '').toLowerCase() : null
++
++/** Normalised title, used to collapse a preprint and its published version into one entry. */
++const titleKey = (t) =>
++  (t || '')
++    .toLowerCase()
++    .replace(/[‐-―]/g, '-')
++    .replace(/[^a-z0-9]+/g, ' ')
++    .trim()
++
++async function api(url, attempt = 0) {
++  const res = await fetch(url, { headers: { 'User-Agent': `scientificcomputingcwi (${config.mailto})` } })
++  if (res.status === 429 || res.status >= 500) {
++    if (attempt >= 5) throw new Error(`OpenAlex ${res.status} after ${attempt} retries: ${url}`)
++    const wait = 2 ** attempt * 1000
++    console.warn(`  ${res.status} from OpenAlex, retrying in ${wait / 1000}s…`)
++    await sleep(wait)
++    return api(url, attempt + 1)
++  }
++  if (!res.ok) throw new Error(`OpenAlex ${res.status}: ${url}`)
++  return res.json()
++}
++
++/** Walk every page of a filtered /works query using cursor paging. */
++async function fetchWorks(filter) {
++  const out = []
++  let cursor = '*'
++  while (cursor) {
++    const url =
++      `${API}/works?filter=${filter}` +
++      `&per-page=200&cursor=${encodeURIComponent(cursor)}` +
++      `&mailto=${encodeURIComponent(config.mailto)}`
++    const page = await api(url)
++    out.push(...(page.results ?? []))
++    cursor = page.meta?.next_cursor ?? null
++    if (!page.results?.length) break
++    await sleep(120)
++  }
++  return out
++}
++
++/* ----------------------------------------------------------- affiliation rule */
++
++/**
++ * Does `work` count as a group publication, given that `member` is an author?
++ * `strict` members are always judged on their own authorship line.
++ */
++function affiliated(work, memberIds, strict) {
++  if (MODE === 'any' && !strict) return true
++
++  const authorships = work.authorships ?? []
++  const ours = authorships.find((a) => memberIds.some((id) => idIs(a.author?.id, id)))
++  const ownHasCwi = (ours?.institutions ?? []).some((i) => idIs(i.id, CWI))
++
++  if (strict || MODE === 'strict') return ownHasCwi
++  if (ownHasCwi) return true
++
++  // balanced: CWI anywhere on the paper…
++  if (authorships.some((a) => (a.institutions ?? []).some((i) => idIs(i.id, CWI)))) return true
++  // …or a record with no institutional metadata at all (how arXiv preprints look).
++  return authorships.length > 0 && authorships.every((a) => (a.institutions ?? []).length === 0)
++}
++
++/* ------------------------------------------------------------- normalisation */
++
++const https = (url) => (typeof url === 'string' ? url.replace(/^http:\/\//i, 'https://') : url)
++
++function bestLinks(work) {
++  const links = {}
++  const doi = stripDoi(work.doi)
++  if (doi) links.doi = `https://doi.org/${doi}`
++
++  const locations = [work.primary_location, work.best_oa_location, ...(work.locations ?? [])].filter(Boolean)
++  for (const loc of locations) {
++    const host = loc.source?.display_name ?? ''
++    const url = loc.landing_page_url || loc.pdf_url
++    if (!url) continue
++    if (/arxiv/i.test(host) || /arxiv\.org/i.test(url)) links.arxiv ??= https(url)
++  }
++  const oa = work.best_oa_location
++  if (oa?.pdf_url) links.pdf ??= https(oa.pdf_url)
++  else if (oa?.landing_page_url) links.openAccess ??= https(oa.landing_page_url)
++  return links
++}
++
++function venueOf(work) {
++  const src = work.primary_location?.source
++  if (!src) return null
++  const name = src.display_name ?? null
++  if (!name) return null
++  // "arXiv (Cornell University)" reads better as just "arXiv"
++  if (/^arxiv/i.test(name)) return 'arXiv'
++  return name
++}
++
++function normalise(work, memberNames) {
++  const bib = work.biblio ?? {}
++  return {
++    id: work.id?.split('/').pop() ?? null,
++    doi: stripDoi(work.doi),
++    title: (work.title ?? work.display_name ?? '').replace(/\s+/g, ' ').trim(),
++    authors: (work.authorships ?? []).map((a) => a.author?.display_name).filter(Boolean),
++    members: [...memberNames].sort(),
++    year: work.publication_year ?? null,
++    date: work.publication_date ?? null,
++    type: work.type ?? null,
++    isPreprint: work.type === 'preprint',
++    venue: venueOf(work),
++    volume: bib.volume ?? null,
++    issue: bib.issue ?? null,
++    pages: bib.first_page && bib.last_page ? `${bib.first_page}–${bib.last_page}` : bib.first_page ?? null,
++    citedBy: work.cited_by_count ?? 0,
++    isOpenAccess: work.open_access?.is_oa ?? false,
++    links: bestLinks(work)
++  }
++}
++
++/* --------------------------------------------------------------------- main */
++
++async function main() {
++  const people = members.current.filter((m) => (m.openalex ?? []).length)
++  console.log(`Fetching publications for ${people.length} members (mode: ${MODE})\n`)
++
++  /** work id -> { work, members:Set<string> } */
++  const collected = new Map()
++  const perMember = {}
++
++  for (const person of people) {
++    const ids = person.openalex
++    const strict = person.strict === true
++    const seen = new Set()
++
++    for (const id of ids) {
++      const filter = [
++        `authorships.author.id:${id}`,
++        `type:${config.types.join('|')}`,
++        config.fromYear ? `from_publication_date:${config.fromYear}-01-01` : null
++      ]
++        .filter(Boolean)
++        .join(',')
++
++      let works
++      try {
++        works = await fetchWorks(filter)
++      } catch (err) {
++        console.error(`  ! ${person.name} (${id}): ${err.message}`)
++        continue
++      }
++
++      for (const work of works) {
++        if (!affiliated(work, ids, strict)) continue
++        if (config.excludeOpenAlexIds.some((x) => idIs(work.id, x))) continue
++        const doi = stripDoi(work.doi)
++        if (doi && config.excludeDois.map(stripDoi).includes(doi)) continue
++        seen.add(work.id)
++        const entry = collected.get(work.id) ?? { work, members: new Set() }
++        entry.members.add(person.name)
++        collected.set(work.id, entry)
++      }
++    }
++
++    perMember[person.name] = seen.size
++    console.log(`  ${person.name.padEnd(26)} ${String(seen.size).padStart(4)}${strict ? '  (strict)' : ''}`)
++  }
++
++  // Collapse the preprint and the published version of the same paper into one entry.
++  // Everything is keyed on the normalised title, because a work and its arXiv preprint
++  // never share a DOI — keying on DOI would leave both in the list. Works with no
++  // usable title fall back to their own id so they are never merged with anything.
++  const groups = new Map()
++  for (const { work, members: who } of collected.values()) {
++    const key = titleKey(work.title) || `id:${work.id}`
++    if (!groups.has(key)) groups.set(key, [])
++    groups.get(key).push({ work, members: who })
++  }
++
++  // Within a group the published version wins over a preprint; citations break ties.
++  const score = (w) => (w.type === 'preprint' ? 0 : 1)
++  const publications = [...groups.values()]
++    .map((group) => {
++      const sorted = [...group].sort(
++        (a, b) => score(b.work) - score(a.work) || (b.work.cited_by_count ?? 0) - (a.work.cited_by_count ?? 0)
++      )
++      const winner = sorted[0]
++      const who = new Set(group.flatMap((g) => [...g.members]))
++      const entry = normalise(winner.work, who)
++      // Carry links from the versions we dropped (the arXiv link usually lives on the preprint).
++      for (const other of sorted.slice(1)) entry.links = { ...bestLinks(other.work), ...entry.links }
++      return entry
++    })
++    .filter((p) => p.title)
++    .sort((a, b) => (b.date ?? '').localeCompare(a.date ?? '') || a.title.localeCompare(b.title))
++
++  for (const manual of config.extra ?? []) publications.push(manual)
++
++  const output = {
++    generatedAt: new Date().toISOString().slice(0, 10),
++    source: 'OpenAlex (https://openalex.org) — CC0',
++    affiliationMode: MODE,
++    fromYear: config.fromYear,
++    count: publications.length,
++    perMember,
++    publications
++  }
++
++  console.log(`\n${publications.length} publications after de-duplication`)
++  const years = publications.reduce((acc, p) => ((acc[p.year] = (acc[p.year] ?? 0) + 1), acc), {})
++  console.log(
++    Object.entries(years)
++      .sort((a, b) => b[0] - a[0])
++      .slice(0, 6)
++      .map(([y, n]) => `  ${y}: ${n}`)
++      .join('\n')
++  )
++
++  if (DRY) {
++    console.log('\n--dry: nothing written')
++    return
++  }
++  fs.writeFileSync(OUT, JSON.stringify(output, null, 2) + '\n')
++  console.log(`\nWrote ${path.relative(ROOT, OUT)}`)
++}
++
++main().catch((err) => {
++  console.error(err)
++  process.exit(1)
++})
+-- 
+2.43.0
+
+
+From 46585a4da6a26f1e1abd2bf6184070cf77346405 Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Tue, 29 Sep 2026 10:15:31 +0200
+Subject: [PATCH 2/2] Show a rolling window of recent publications, link out
+ for the full list
+
+The auto-generated page is now /publications/recent and shows only the current
+year and the two before it (2024-2026 today). The window is computed at build
+time in data/generatedPublications.data.ts, not in the browser, so the
+server-rendered HTML and the client cannot disagree across New Year; the weekly
+publications workflow rebuilds the site, so the window advances on its own.
+Verified by building with a faked clock: 2027 gives 2025-2026-2027.
+
+The data file still holds every fetched publication, so widening the window is a
+one-line change (YEARS_SHOWN) and needs no refetch. 'All publications' now links
+to CWI's institutional repository, from the page header, the page footer, the
+selected-publications page and the homepage.
+
+Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_011yb3XX2yCMnhwLkSTaZ5sd
+---
+ .vitepress/config.ts               |  2 +-
+ README.md                          | 16 +++++++++--
+ data/generatedPublications.data.ts | 31 ++++++++++++++++++--
+ data/publications.data.ts          |  4 +--
+ index.md                           |  7 +++--
+ members.md                         |  2 +-
+ publications/index.md              |  9 +++---
+ publications/{all.md => recent.md} | 45 +++++++++++++++++++++++-------
+ 8 files changed, 89 insertions(+), 27 deletions(-)
+ rename publications/{all.md => recent.md} (80%)
+
+diff --git a/.vitepress/config.ts b/.vitepress/config.ts
+index 54c9f95..9da6b56 100644
+--- a/.vitepress/config.ts
++++ b/.vitepress/config.ts
+@@ -37,7 +37,7 @@ export default defineConfig({
+         text: "Publications",
+         activeMatch: "/publications/.*",
+         items: [
+-          { text: "All publications", link: "/publications/all" },
++          { text: "Recent publications", link: "/publications/recent" },
+           { text: "Selected publications", link: "/publications/" },
+         ],
+       },
+diff --git a/README.md b/README.md
+index bf09ce0..e7fb043 100644
+--- a/README.md
++++ b/README.md
+@@ -26,11 +26,21 @@ order is set by `ROLE_ORDER` in `data/members.data.ts`.
+ 
+ There are two publication pages:
+ 
+-- **`/publications/all`** — generated automatically from [OpenAlex](https://openalex.org),
+-  refreshed weekly. Nobody edits this by hand.
++- **`/publications/recent`** — generated automatically from [OpenAlex](https://openalex.org),
++  refreshed weekly. Nobody edits this by hand. It shows a rolling window of the last few
++  years and links out to CWI's institutional repository for the complete list.
+ - **`/publications/`** — the hand-written selection, one `.md` file per paper, with
+   abstracts, code and data links. Add a `doi: "10.xxxx/yyyy"` line to a page's frontmatter
+-  and the matching entry on the *all publications* page grows a **Details** link to it.
++  and the matching entry on the *recent publications* page grows a **Details** link to it.
++
++### The rolling year window
++
++`YEARS_SHOWN` in `data/generatedPublications.data.ts` sets how far back the page goes.
++It is `2`, meaning the current year and the two before it — 2024–2026 during 2026.
++The window is resolved at build time rather than in the browser, so the server-rendered
++HTML and the client always agree; since the weekly workflow rebuilds the site, the window
++moves forward on its own in January. The data file itself keeps *everything* that was
++fetched, so widening the window is a one-character change and needs no refetch.
+ 
+ ### How the automatic list works
+ 
+diff --git a/data/generatedPublications.data.ts b/data/generatedPublications.data.ts
+index 7b848a3..368b083 100644
+--- a/data/generatedPublications.data.ts
++++ b/data/generatedPublications.data.ts
+@@ -24,10 +24,22 @@ export interface GeneratedPublication {
+ 
+ export interface GeneratedPublicationData {
+   generatedAt: string | null
++  /** Total number of publications fetched, before the recent-years window is applied. */
+   count: number
++  /** Oldest year shown on the site: a rolling window ending at the current year. */
++  minYear: number
++  /** Newest year present in the data (>= current year, since preprints can be dated ahead). */
++  maxYear: number
++  /** Everything fetched, oldest entries included — the page filters down to the window. */
+   publications: GeneratedPublication[]
+ }
+ 
++/**
++ * How many years back the site shows. 2 means "this year and the two before it",
++ * e.g. 2024–2026 during 2026. Change this one number to widen or narrow the window.
++ */
++export const YEARS_SHOWN = 2
++
+ declare const data: GeneratedPublicationData
+ export { data }
+ 
+@@ -37,17 +49,30 @@ const file = path.join(here, 'publications.generated.json')
+ export default defineLoader({
+   watch: ['./publications.generated.json'],
+   async load(): Promise<GeneratedPublicationData> {
++    // The window is resolved here, at build time, rather than in the page. Calling
++    // new Date() inside the component would let the server-rendered HTML and the
++    // browser disagree across a New Year boundary and break hydration. The weekly
++    // publications workflow rebuilds the site, so the window rolls over on its own.
++    const thisYear = new Date().getFullYear()
++    const minYear = thisYear - YEARS_SHOWN
++
+     if (!fs.existsSync(file)) {
+       console.warn(
+         '[publications] data/publications.generated.json not found — run `npm run publications` to create it.'
+       )
+-      return { generatedAt: null, count: 0, publications: [] }
++      return { generatedAt: null, count: 0, minYear, maxYear: thisYear, publications: [] }
+     }
++
+     const parsed = JSON.parse(fs.readFileSync(file, 'utf8'))
++    const publications: GeneratedPublication[] = parsed.publications ?? []
++    const years = publications.map((p) => p.year).filter((y): y is number => typeof y === 'number')
++
+     return {
+       generatedAt: parsed.generatedAt ?? null,
+-      count: parsed.publications?.length ?? 0,
+-      publications: parsed.publications ?? []
++      count: publications.length,
++      minYear,
++      maxYear: Math.max(thisYear, ...years),
++      publications
+     }
+   }
+ })
+diff --git a/data/publications.data.ts b/data/publications.data.ts
+index b870bbc..69bdd2d 100644
+--- a/data/publications.data.ts
++++ b/data/publications.data.ts
+@@ -5,8 +5,8 @@ const NOT_A_PUBLICATION = new Set([
+   '/publications/',
+   '/publications',
+   '/publications/index',
+-  '/publications/all/',
+-  '/publications/all'
++  '/publications/recent/',
++  '/publications/recent'
+ ])
+ 
+ export default createContentLoader('/publications/*.md', {
+diff --git a/index.md b/index.md
+index ecea9c5..4965134 100644
+--- a/index.md
++++ b/index.md
+@@ -15,7 +15,7 @@ hero:
+       link: /news/
+     - theme: alt
+       text: Publications
+-      link: /publications/all
++      link: /publications/recent
+     - theme: alt
+       text: Members
+       link: /members
+@@ -93,9 +93,10 @@ Over the last year, we worked with **Deltares** on predicting failure probabilit
+     </li>
+ </ul>
+ 
+-See [all {{ generated.count }} publications](/publications/all), a
++See [recent publications](/publications/recent), a
+ [selected list with abstracts and code](/publications/), or
+-[CWI's institutional repository](https://ir.cwi.nl/#facet=affiliation_label_partOf:Scientific%20Computing).
++[all publications](https://ir.cwi.nl/#facet=affiliation_label_partOf:Scientific%20Computing)
++in CWI's institutional repository.
+ 
+ <style scoped>
+ ul {
+diff --git a/members.md b/members.md
+index 8db3feb..f37da74 100644
+--- a/members.md
++++ b/members.md
+@@ -61,7 +61,7 @@ generative models and data assimilation.
+           <a v-if="m.email" :href="'mailto:' + m.email">Email</a>
+           <a v-if="m.orcid" :href="'https://orcid.org/' + m.orcid">ORCID</a>
+           <a v-if="m.github" :href="'https://github.com/' + m.github">GitHub</a>
+-          <a :href="'/publications/all?member=' + encodeURIComponent(m.name)">Publications</a>
++          <a :href="'/publications/recent?member=' + encodeURIComponent(m.name)">Publications</a>
+         </p>
+       </div>
+     </li>
+diff --git a/publications/index.md b/publications/index.md
+index 64daf39..975d369 100644
+--- a/publications/index.md
++++ b/publications/index.md
+@@ -1,9 +1,10 @@
+ # Selected publications
+ 
+-A hand-picked selection, with abstracts, code and data links. The complete,
+-automatically updated list is on the [all publications](/publications/all) page;
+-CWI's own record is in
+-[CWI's repository](https://ir.cwi.nl/#facet=affiliation_label_partOf:Scientific%20Computing).
++A hand-picked selection, with abstracts, code and data links. For the automatically
++updated list of the last few years, see [recent publications](/publications/recent);
++for everything, see
++[all publications](https://ir.cwi.nl/#facet=affiliation_label_partOf:Scientific%20Computing)
++in CWI's institutional repository.
+ 
+ <!-- ## Latest publications -->
+ 
+diff --git a/publications/all.md b/publications/recent.md
+similarity index 80%
+rename from publications/all.md
+rename to publications/recent.md
+index b3ab3d4..382b5ee 100644
+--- a/publications/all.md
++++ b/publications/recent.md
+@@ -1,8 +1,8 @@
+ ---
+-title: All publications
++title: Recent publications
+ ---
+ 
+-# All publications
++# Recent publications
+ 
+ <script setup>
+ import { computed, onMounted, ref } from 'vue'
+@@ -25,13 +25,19 @@ const query = ref('')
+ const member = ref('')
+ const showPreprints = ref(true)
+ 
++// The rolling window: everything from generated.minYear onwards. That number is worked
++// out at build time (see data/generatedPublications.data.ts), so it moves forward on its
++// own each year — nothing here needs editing in January.
++const recent = computed(() => generated.publications.filter((p) => (p.year ?? 0) >= generated.minYear))
++const yearRange = computed(() => `${generated.minYear}–${generated.maxYear}`)
++
+ const members = computed(() => {
+   const set = new Set()
+-  for (const p of generated.publications) for (const m of p.members) set.add(m)
++  for (const p of recent.value) for (const m of p.members) set.add(m)
+   return [...set].sort()
+ })
+ 
+-// Allow /publications/all?member=Wouter%20Edeling — used by the Members page.
++// Allow /publications/recent?member=Wouter%20Edeling — used by the Members page.
+ onMounted(() => {
+   const wanted = new URLSearchParams(window.location.search).get('member')
+   if (wanted && members.value.includes(wanted)) member.value = wanted
+@@ -39,7 +45,7 @@ onMounted(() => {
+ 
+ const filtered = computed(() => {
+   const q = query.value.trim().toLowerCase()
+-  return generated.publications.filter((p) => {
++  return recent.value.filter((p) => {
+     if (!showPreprints.value && p.isPreprint) return false
+     if (member.value && !p.members.includes(member.value)) return false
+     if (!q) return true
+@@ -64,11 +70,14 @@ const byYear = computed(() => {
+ const isMember = (p, name) => p.members.includes(name)
+ </script>
+ 
+-This list is generated automatically from [OpenAlex](https://openalex.org) and refreshed
+-weekly. It covers work by current group members carrying a CWI affiliation. A
+-hand-picked selection with abstracts and code links lives on the
+-[selected publications](/publications/) page, and the institute's own complete record is in
+-[CWI's repository](https://ir.cwi.nl/#facet=affiliation_label_partOf:Scientific%20Computing).
++<p>
++  Work by current group members from <strong>{{ yearRange }}</strong>, generated automatically
++  from <a href="https://openalex.org">OpenAlex</a> and refreshed weekly. For everything before
++  that, see
++  <a href="https://ir.cwi.nl/#facet=affiliation_label_partOf:Scientific%20Computing">all publications</a>
++  in CWI's institutional repository. A hand-picked selection with abstracts and code links is
++  on the <a href="/publications/">selected publications</a> page.
++</p>
+ 
+ <div class="pub-controls">
+   <input v-model="query" type="search" placeholder="Search title, author or journal…" aria-label="Search publications" />
+@@ -118,6 +127,14 @@ hand-picked selection with abstracts and code links lives on the
+   No publications match that filter.
+ </p>
+ 
++<p class="pub-footer">
++  This page shows {{ yearRange }} only.
++  <a href="https://ir.cwi.nl/#facet=affiliation_label_partOf:Scientific%20Computing">
++    All publications
++  </a>
++  are listed in CWI's institutional repository.
++</p>
++
+ <style scoped>
+ .pub-controls {
+   display: flex;
+@@ -258,6 +275,14 @@ hand-picked selection with abstracts and code links lives on the
+   padding: 2rem 0;
+ }
+ 
++.pub-footer {
++  margin-top: 2rem;
++  padding-top: 1.25rem;
++  border-top: 1px solid var(--vp-c-divider);
++  font-size: 0.9rem;
++  color: var(--vp-c-text-2);
++}
++
+ @media (max-width: 640px) {
+   .pub-controls input[type='search'] {
+     flex-basis: 100%;
+-- 
+2.43.0
+

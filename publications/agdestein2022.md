@@ -2,6 +2,7 @@
 title: "Discretize first, filter next – a new closure model approach"
 date: "2022-11-24"
 authors: "Syver Døving Agdestein, Benjamin Sanderse"
+doi: "10.23967/eccomas.2022.094"
 ---
 
 # Discretize first, filter next – a new closure model approach

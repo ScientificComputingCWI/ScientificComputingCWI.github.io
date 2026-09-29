@@ -1,0 +1,41 @@
+{
+  "$comment": [
+    "Settings for scripts/fetch-publications.mjs. Edit this file (not the script) to",
+    "change what ends up on the 'All publications' page, then re-run `npm run publications`",
+    "or trigger the 'Update publications' workflow on GitHub.",
+    "",
+    "affiliationMode:",
+    "  'strict'   - only works where the group member's OWN authorship line carries a CWI",
+    "               affiliation. Most precise, but arXiv preprints are dropped because",
+    "               arXiv does not supply affiliation data at all.",
+    "  'balanced' - (default) a work counts when CWI appears anywhere on it, OR when the",
+    "               work carries no institutional metadata whatsoever (which is how",
+    "               arXiv preprints look). Members flagged \"strict\" in members.json are",
+    "               always evaluated strictly, whatever this setting says.",
+    "  'any'      - every work by every listed member, regardless of affiliation.",
+    "",
+    "fromYear: drop anything published before this year. null = no cut-off.",
+    "types:    OpenAlex work types to keep. Note that every archived GitHub release shows",
+    "          up in OpenAlex as a 'software'/'dataset' work, which is why those are",
+    "          excluded by default."
+  ],
+  "institution": {
+    "name": "Centrum Wiskunde & Informatica",
+    "openalexId": "I1341640284",
+    "ror": "https://ror.org/00x7ekv49"
+  },
+  "affiliationMode": "balanced",
+  "fromYear": null,
+  "types": [
+    "article",
+    "preprint",
+    "review",
+    "book",
+    "book-chapter",
+    "dissertation"
+  ],
+  "mailto": "b.sanderse@cwi.nl",
+  "excludeDois": [],
+  "excludeOpenAlexIds": [],
+  "extra": []
+}

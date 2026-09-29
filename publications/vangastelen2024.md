@@ -2,6 +2,7 @@
 title: "Energy-Conserving Neural Network for Turbulence Closure Modeling"
 date: "2024-07-01"
 authors: "Toby van Gastelen, Wouter Edeling, Benjamin Sanderse"
+doi: "10.1016/j.jcp.2024.113003"
 ---
 
 # Energy-Conserving Neural Network for Turbulence Closure Modeling

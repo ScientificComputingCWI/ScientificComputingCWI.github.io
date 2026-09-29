@@ -2,6 +2,7 @@
 title: "Scientific Machine Learning: A Symbiosis"
 date: "2025-03"
 authors: "Keith, O'Leary-Roseberry, Sanderse, Scheichl, van Bloemen Waanders"
+doi: "10.3934/fods.2024051"
 ---
 
 # Scientific Machine Learning: A Symbiosis

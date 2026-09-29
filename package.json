@@ -8,7 +8,9 @@
   "scripts": {
     "dev": "vitepress dev",
     "build": "vitepress build",
-    "preview": "vitepress preview"
+    "preview": "vitepress preview",
+    "publications": "node scripts/fetch-publications.mjs",
+    "publications:dry": "node scripts/fetch-publications.mjs --dry"
   },
   "type": "module"
 }

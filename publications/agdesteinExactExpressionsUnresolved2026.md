@@ -2,6 +2,7 @@
 title: "Exact expressions for the unresolved stress in a finite-volume based large-eddy simulation"
 date: "2026-07-01"
 authors: "Syver Døving Agdestein, Roel Verstappen, Benjamin Sanderse"
+doi: "10.1016/j.jcp.2026.114810"
 ---
 
 # Exact expressions for the unresolved stress in a finite-volume based large-eddy simulation

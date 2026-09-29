@@ -1,0 +1,43 @@
+name: Update publications
+
+on:
+  # Every Monday at 05:17 UTC. OpenAlex updates roughly weekly, so there is no
+  # point running this more often.
+  schedule:
+    - cron: "17 5 * * 1"
+  # Lets you refresh the list on demand from the Actions tab.
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-publications
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Fetch publications from OpenAlex
+        run: npm run publications
+
+      - name: Commit if the list changed
+        run: |
+          if git diff --quiet -- data/publications.generated.json; then
+            echo "No change in the publication list."
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/publications.generated.json
+          git commit -m "Update publications from OpenAlex"
+          git push

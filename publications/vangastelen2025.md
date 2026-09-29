@@ -2,6 +2,7 @@
 title: "Energy-Conserving Neural Network Closure Model for Long-Time Accurate and Stable LES"
 date: "2025-04-08"
 authors: "Toby van Gastelen, Wouter Edeling, Benjamin Sanderse"
+doi: "10.1016/j.compfluid.2026.107028"
 ---
 
 # Energy-Conserving Neural Network Closure Model for Long-Time Accurate and Stable LES

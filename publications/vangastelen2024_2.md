@@ -2,6 +2,7 @@
 title: "Modeling Advection-Dominated Flows with Space-Local Reduced-Order Models"
 date: "2024-09-13"
 authors: "Toby van Gastelen, Wouter Edeling, Benjamin Sanderse"
+doi: "10.1016/j.compfluid.2025.106911"
 ---
 
 # Modeling Advection-Dominated Flows with Space-Local Reduced-Order Models

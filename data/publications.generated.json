@@ -1,0 +1,6242 @@
+{
+  "generatedAt": "2026-09-29",
+  "source": "OpenAlex (https://openalex.org) — CC0",
+  "affiliationMode": "balanced",
+  "fromYear": null,
+  "count": 220,
+  "perMember": {
+    "Benjamin Sanderse": 88,
+    "Wouter Edeling": 42,
+    "Daan Crommelin": 62,
+    "Dimitris Loukrezis": 25,
+    "Syver Døving Agdestein": 10,
+    "Toby van Gastelen": 8,
+    "Rik Hoekstra": 2,
+    "Pardeep Kumar": 2,
+    "Nikolaj Mücke": 18,
+    "Henrik Rosenberger": 9,
+    "Robin Klein": 7,
+    "Barry Koren": 59,
+    "Bernard Geurts": 1
+  },
+  "publications": [
+    {
+      "id": "W7213391166",
+      "doi": "10.48550/arxiv.2609.17492",
+      "title": "On the Existence of Pressure-Equilibrium-Preserving Numerical Fluxes for Supercritical Fluids",
+      "authors": [
+        "Robin Klein"
+      ],
+      "members": [
+        "Robin Klein"
+      ],
+      "year": 2026,
+      "date": "2026-09-15",
+      "type": "preprint",
+      "isPreprint": true,
+      "venue": "arXiv",
+      "volume": null,
+      "issue": null,
+      "pages": null,
+      "citedBy": 0,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.48550/arxiv.2609.17492",
+        "arxiv": "https://arxiv.org/abs/2609.17492",
+        "pdf": "https://arxiv.org/pdf/2609.17492"
+      }
+    },
+    {
+      "id": "W4414895716",
+      "doi": "10.1137/25m1772484",
+      "title": "Exact Operator Inference with Minimal Data",
+      "authors": [
+        "Henrik Rosenberger",
+        "Benjamin Sanderse",
+        "Giovanni Stabile"
+      ],
+      "members": [
+        "Benjamin Sanderse",
+        "Henrik Rosenberger"
+      ],
+      "year": 2026,
+      "date": "2026-09-01",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "SIAM Journal on Scientific Computing",
+      "volume": "48",
+      "issue": "5",
+      "pages": "A2391–A2416",
+      "citedBy": 0,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1137/25m1772484",
+        "arxiv": "https://arxiv.org/abs/2506.01244",
+        "openAccess": "https://doi.org/10.1137/25m1772484"
+      }
+    },
+    {
+      "id": "W4416278311",
+      "doi": "10.1007/s10596-026-10462-1",
+      "title": "Integrating score-based diffusion models with machine learning-enhanced localization for advanced data assimilation in geological carbon storage",
+      "authors": [
+        "Gabriel Serrão Seabra",
+        "Nikolaj Mücke",
+        "Vinicius L. S. Silva",
+        "Alexandre A. Emerick",
+        "Denis Voskov",
+        "Femke C. Vossepoel"
+      ],
+      "members": [
+        "Nikolaj Mücke"
+      ],
+      "year": 2026,
+      "date": "2026-07-10",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Computational Geosciences",
+      "volume": "30",
+      "issue": "4",
+      "pages": null,
+      "citedBy": 0,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1007/s10596-026-10462-1",
+        "openAccess": "https://doi.org/10.1007/s10596-026-10462-1",
+        "arxiv": "https://arxiv.org/abs/2511.05266"
+      }
+    },
+    {
+      "id": "W7166854435",
+      "doi": "10.1016/j.cma.2026.119199",
+      "title": "Exact operator inference decouples parametric problems",
+      "authors": [
+        "Henrik Rosenberger",
+        "Benjamin Sanderse",
+        "Giovanni Stabile"
+      ],
+      "members": [
+        "Benjamin Sanderse",
+        "Henrik Rosenberger"
+      ],
+      "year": 2026,
+      "date": "2026-07-01",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Computer Methods in Applied Mechanics and Engineering",
+      "volume": "461",
+      "issue": null,
+      "pages": "119199–119199",
+      "citedBy": 0,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1016/j.cma.2026.119199",
+        "openAccess": "https://doi.org/10.1016/j.cma.2026.119199"
+      }
+    },
+    {
+      "id": "W7165014595",
+      "doi": "10.48550/arxiv.2606.17759",
+      "title": "Time integration as filtering: a space-time discretization-aware LES formulation",
+      "authors": [
+        "Syver Døving Agdestein"
+      ],
+      "members": [
+        "Syver Døving Agdestein"
+      ],
+      "year": 2026,
+      "date": "2026-06-16",
+      "type": "preprint",
+      "isPreprint": true,
+      "venue": "arXiv",
+      "volume": null,
+      "issue": null,
+      "pages": null,
+      "citedBy": 0,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.48550/arxiv.2606.17759",
+        "arxiv": "https://arxiv.org/abs/2606.17759",
+        "pdf": "https://arxiv.org/pdf/2606.17759"
+      }
+    },
+    {
+      "id": "W7163124393",
+      "doi": "10.1007/s00366-026-02351-z",
+      "title": "Multi-patch neural solver with isogeometric mappings for partial differential equations on computer-aided design domains",
+      "authors": [
+        "Moritz von Tresckow",
+        "Ion Gabriel Ion",
+        "Dimitris Loukrezis"
+      ],
+      "members": [
+        "Dimitris Loukrezis"
+      ],
+      "year": 2026,
+      "date": "2026-06-02",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Engineering With Computers",
+      "volume": "42",
+      "issue": "4",
+      "pages": null,
+      "citedBy": 0,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1007/s00366-026-02351-z",
+        "arxiv": "https://arxiv.org/abs/2509.25450",
+        "pdf": "https://link.springer.com/content/pdf/10.1007/s00366-026-02351-z.pdf"
+      }
+    },
+    {
+      "id": "W4417086813",
+      "doi": "10.1016/j.jcp.2026.115104",
+      "title": "Stable self-adaptive timestepping for reduced order models for incompressible flows",
+      "authors": [
+        "Josep Plana-Riu",
+        "Henrik Rosenberger",
+        "Benjamin Sanderse",
+        "Francesc Xavier Trias"
+      ],
+      "members": [
+        "Benjamin Sanderse",
+        "Henrik Rosenberger"
+      ],
+      "year": 2026,
+      "date": "2026-06-02",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Journal of Computational Physics",
+      "volume": "563",
+      "issue": null,
+      "pages": "115104–115104",
+      "citedBy": 0,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1016/j.jcp.2026.115104",
+        "arxiv": "https://arxiv.org/abs/2512.04592",
+        "openAccess": "https://doi.org/10.1016/j.jcp.2026.115104"
+      }
+    },
+    {
+      "id": "W7162069405",
+      "doi": "10.48550/arxiv.2605.22242",
+      "title": "Decomposing Ensemble Spread in Lorenz '96 With Learned Stochastic Parameterizations",
+      "authors": [
+        "Birgit Kühbacher",
+        "Daan Crommelin",
+        "Niki Kilbertus"
+      ],
+      "members": [
+        "Daan Crommelin"
+      ],
+      "year": 2026,
+      "date": "2026-05-21",
+      "type": "preprint",
+      "isPreprint": true,
+      "venue": "arXiv",
+      "volume": null,
+      "issue": null,
+      "pages": null,
+      "citedBy": 0,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.48550/arxiv.2605.22242",
+        "arxiv": "https://arxiv.org/abs/2605.22242",
+        "pdf": "https://arxiv.org/pdf/2605.22242"
+      }
+    },
+    {
+      "id": "W4416667575",
+      "doi": "10.1109/tec.2026.3687758",
+      "title": "Multivariate Sensitivity Analysis of Electric Machine Efficiency Maps and Profiles Under Design Uncertainty",
+      "authors": [
+        "Aylar Partovizadeh",
+        "Sebastian Schöps",
+        "Dimitris Loukrezis"
+      ],
+      "members": [
+        "Dimitris Loukrezis"
+      ],
+      "year": 2026,
+      "date": "2026-04-27",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "IEEE Transactions on Energy Conversion",
+      "volume": "41",
+      "issue": "3",
+      "pages": "2582–2594",
+      "citedBy": 1,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1109/tec.2026.3687758",
+        "arxiv": "https://arxiv.org/abs/2511.17099",
+        "pdf": "https://arxiv.org/pdf/2511.17099"
+      }
+    },
+    {
+      "id": "W4409989790",
+      "doi": "10.1016/j.compfluid.2026.107098",
+      "title": "Physics-aware generative models for turbulent fluid flows through energy-consistent stochastic interpolants",
+      "authors": [
+        "Nikolaj Mücke",
+        "Benjamin Sanderse"
+      ],
+      "members": [
+        "Benjamin Sanderse",
+        "Nikolaj Mücke"
+      ],
+      "year": 2026,
+      "date": "2026-04-24",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Computers & Fluids",
+      "volume": "314",
+      "issue": null,
+      "pages": "107098–107098",
+      "citedBy": 1,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1016/j.compfluid.2026.107098",
+        "arxiv": "https://arxiv.org/abs/2504.05852",
+        "pdf": "https://arxiv.org/pdf/2504.05852",
+        "openAccess": "https://doi.org/10.1016/j.compfluid.2026.107098"
+      }
+    },
+    {
+      "id": "W7155156167",
+      "doi": "10.1007/s10494-026-00750-2",
+      "title": "LES-ADM Accuracy Assessment via An Error-Landscape Approach",
+      "authors": [
+        "Lena Caban",
+        "Artur Tyliszczak",
+        "Bernard Geurts"
+      ],
+      "members": [
+        "Bernard Geurts"
+      ],
+      "year": 2026,
+      "date": "2026-04-22",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Flow Turbulence and Combustion",
+      "volume": "116",
+      "issue": "4",
+      "pages": null,
+      "citedBy": 0,
+      "isOpenAccess": false,
+      "links": {
+        "doi": "https://doi.org/10.1007/s10494-026-00750-2"
+      }
+    },
+    {
+      "id": "W7155064511",
+      "doi": "10.48550/arxiv.2604.18536",
+      "title": "A differentiable software suite for accelerated simulation of turbulent flows",
+      "authors": [
+        "Syver Døving Agdestein",
+        "Benjamin Sanderse"
+      ],
+      "members": [
+        "Benjamin Sanderse",
+        "Syver Døving Agdestein"
+      ],
+      "year": 2026,
+      "date": "2026-04-20",
+      "type": "preprint",
+      "isPreprint": true,
+      "venue": "arXiv",
+      "volume": null,
+      "issue": null,
+      "pages": null,
+      "citedBy": 0,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.48550/arxiv.2604.18536",
+        "arxiv": "https://arxiv.org/abs/2604.18536",
+        "pdf": "https://arxiv.org/pdf/2604.18536"
+      }
+    },
+    {
+      "id": "W7154985144",
+      "doi": "10.48550/arxiv.2604.15826",
+      "title": "General perturbative framework for kinetics of rare transitions in 1-dimensional active particle systems",
+      "authors": [
+        "Vito Seinen",
+        "Peter G. Bolhuis",
+        "Daan Crommelin",
+        "Sara Jabbari Farouji",
+        "Michel Mandjes"
+      ],
+      "members": [
+        "Daan Crommelin"
+      ],
+      "year": 2026,
+      "date": "2026-04-17",
+      "type": "preprint",
+      "isPreprint": true,
+      "venue": "arXiv",
+      "volume": null,
+      "issue": null,
+      "pages": null,
+      "citedBy": 0,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.48550/arxiv.2604.15826",
+        "arxiv": "https://arxiv.org/abs/2604.15826",
+        "pdf": "https://arxiv.org/pdf/2604.15826"
+      }
+    },
+    {
+      "id": "W7138926669",
+      "doi": "10.48550/arxiv.2603.17516",
+      "title": "Maximum-Projection-Based Bayesian Optimization Utilizing Sensitivity Analysis for High-Efficiency Radial Turbine Design with Scarce Data",
+      "authors": [
+        "Eric Diehl",
+        "Adem Tosun",
+        "Dimitris Loukrezis"
+      ],
+      "members": [
+        "Dimitris Loukrezis"
+      ],
+      "year": 2026,
+      "date": "2026-03-18",
+      "type": "preprint",
+      "isPreprint": true,
+      "venue": "arXiv",
+      "volume": null,
+      "issue": null,
+      "pages": null,
+      "citedBy": 0,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.48550/arxiv.2603.17516",
+        "arxiv": "https://arxiv.org/abs/2603.17516",
+        "pdf": "https://arxiv.org/pdf/2603.17516"
+      }
+    },
+    {
+      "id": "W7138037584",
+      "doi": "10.48550/arxiv.2603.15112",
+      "title": "Generalized Tadmor Conditions and Structure-Preserving Numerical Fluxes for the Compressible Flow of Real Gases",
+      "authors": [
+        "Robin Klein",
+        "Benjamin Sanderse",
+        "Costa, Pedro",
+        "René Pecnik",
+        "R.A.W.M. Henkes"
+      ],
+      "members": [
+        "Benjamin Sanderse",
+        "Robin Klein"
+      ],
+      "year": 2026,
+      "date": "2026-03-16",
+      "type": "preprint",
+      "isPreprint": true,
+      "venue": "arXiv",
+      "volume": null,
+      "issue": null,
+      "pages": null,
+      "citedBy": 0,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.48550/arxiv.2603.15112",
+        "arxiv": "https://arxiv.org/abs/2603.15112",
+        "pdf": "https://arxiv.org/pdf/2603.15112"
+      }
+    },
+    {
+      "id": "W7134048330",
+      "doi": "10.48550/arxiv.2603.05325",
+      "title": "Approaching the optimal closure: equivariance, inductive bias, and Reynolds-number generalization in data-driven LES",
+      "authors": [
+        "Syver Døving Agdestein",
+        "Benjamin Sanderse"
+      ],
+      "members": [
+        "Benjamin Sanderse",
+        "Syver Døving Agdestein"
+      ],
+      "year": 2026,
+      "date": "2026-03-05",
+      "type": "preprint",
+      "isPreprint": true,
+      "venue": "arXiv",
+      "volume": null,
+      "issue": null,
+      "pages": null,
+      "citedBy": 0,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.48550/arxiv.2603.05325",
+        "arxiv": "https://arxiv.org/abs/2603.05325",
+        "pdf": "https://arxiv.org/pdf/2603.05325"
+      }
+    },
+    {
+      "id": "W7133505763",
+      "doi": "10.1016/j.compfluid.2026.107028",
+      "title": "Energy-conserving neural network closure model for long-time accurate and stable 2D LES",
+      "authors": [
+        "Toby van Gastelen",
+        "Wouter Edeling",
+        "Benjamin Sanderse"
+      ],
+      "members": [
+        "Benjamin Sanderse",
+        "Toby van Gastelen",
+        "Wouter Edeling"
+      ],
+      "year": 2026,
+      "date": "2026-03-04",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Computers & Fluids",
+      "volume": "311",
+      "issue": null,
+      "pages": "107028–107028",
+      "citedBy": 0,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1016/j.compfluid.2026.107028",
+        "openAccess": "https://doi.org/10.1016/j.compfluid.2026.107028"
+      }
+    },
+    {
+      "id": "W7118172903",
+      "doi": "10.1038/s41598-025-34363-y",
+      "title": "Generative super-resolution of turbulent flows via stochastic interpolants",
+      "authors": [
+        "Martin Schiødt",
+        "Nikolaj Mücke",
+        "Clara Marika Velte"
+      ],
+      "members": [
+        "Nikolaj Mücke"
+      ],
+      "year": 2026,
+      "date": "2026-01-05",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Scientific Reports",
+      "volume": "16",
+      "issue": "1",
+      "pages": "4229–4229",
+      "citedBy": 0,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1038/s41598-025-34363-y",
+        "pdf": "https://www.nature.com/articles/s41598-025-34363-y_reference.pdf"
+      }
+    },
+    {
+      "id": "W4417442283",
+      "doi": "10.1016/j.cma.2025.118654",
+      "title": "A new data-driven energy-stable evolve-filter-relax model for turbulent flow simulation",
+      "authors": [
+        "Anna Ivagnes",
+        "Toby van Gastelen",
+        "Syver Døving Agdestein",
+        "Benjamin Sanderse",
+        "Giovanni Stabile",
+        "Gianluigi Rozza"
+      ],
+      "members": [
+        "Benjamin Sanderse",
+        "Syver Døving Agdestein",
+        "Toby van Gastelen"
+      ],
+      "year": 2025,
+      "date": "2025-12-17",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Computer Methods in Applied Mechanics and Engineering",
+      "volume": "450",
+      "issue": null,
+      "pages": "118654–118654",
+      "citedBy": 0,
+      "isOpenAccess": false,
+      "links": {
+        "doi": "https://doi.org/10.1016/j.cma.2025.118654",
+        "arxiv": "https://arxiv.org/abs/2507.17423",
+        "pdf": "https://arxiv.org/pdf/2507.17423"
+      }
+    },
+    {
+      "id": "W4417342515",
+      "doi": "10.36227/techrxiv.176583445.54143509/v1",
+      "title": "The Galileo Ferraris Contest: A Benchmark Initiative for Data-Driven Multi-Physics Modeling of Traction Electric Motors",
+      "authors": [
+        "Luigi Solimene",
+        "Simone Ferrari",
+        "Riccardo Torchio",
+        "Costanza Anerdi",
+        "Fabio Freschi",
+        "Luca Giaccone",
+        "Gianmarco Lorenti",
+        "Francesco Lucchini",
+        "S. Mallios",
+        "Patrick Lombard",
+        "Paolo Di Barba",
+        "Arash Ghafoorinejad",
+        "Maria Evelina Mognaschi",
+        "Dimitris Loukrezis",
+        "Eric Diehl",
+        "Eniz Mušeljić",
+        "Aylar Partovizadeh",
+        "Manfred Kaltenbacher",
+        "Sebastian Schöps",
+        "Soo-Hwan Park",
+        "Chanwoo Kim",
+        "Ji-Hyeon Lee",
+        "Younjae Hwang",
+        "Min-Ro Park",
+        "Myung‐Seop Lim",
+        "Sina Toghranegar",
+        "Ruth V. Sabariego",
+        "Geert Deconinck",
+        "Hussain Kazmi",
+        "Zhi Gong",
+        "Zuqi Tang",
+        "Abdelkader Bénabou",
+        "Guillaume Verez",
+        "Tohid Sharifi",
+        "Ali Jamali-Fard",
+        "Deniz Bilgili",
+        "Jasmin Jelovica",
+        "Paolo Manfredi",
+        "Riccardo Trinchero",
+        "Amir Akbari",
+        "Shahin Mahdiyounrad",
+        "David Alister Lowther",
+        "Siyuan Sun",
+        "Toshiaki Koike–Akino",
+        "Ye Wang",
+        "Tatsuya Yamamoto",
+        "Yusuke Sakamoto",
+        "Bingnan Wang",
+        "Ankit Kumar Singh",
+        "Sagnik Dey",
+        "Swayambhu Mohanty",
+        "Aditya Anil Pulikottil",
+        "Asmijit Saha",
+        "Ankit Dalal",
+        "Yuki Sato",
+        "Hidenori Sasaki",
+        "Shingo Hiruma",
+        "Akito Maruo",
+        "Elena Blazhevska Ivanoski",
+        "Eymen Ipek",
+        "Niels Koester",
+        "Shahryar Rahnamayan",
+        "Piergiorgio Alotto",
+        "Gianmario Pellegrino",
+        "Maurizio Repetto"
+      ],
+      "members": [
+        "Dimitris Loukrezis"
+      ],
+      "year": 2025,
+      "date": "2025-12-15",
+      "type": "preprint",
+      "isPreprint": true,
+      "venue": null,
+      "volume": null,
+      "issue": null,
+      "pages": null,
+      "citedBy": 0,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.36227/techrxiv.176583445.54143509/v1",
+        "openAccess": "https://doi.org/10.36227/techrxiv.176583445.54143509/v1"
+      }
+    },
+    {
+      "id": "W4416398934",
+      "doi": "10.1016/j.compfluid.2025.106911",
+      "title": "Modeling advection-dominated flows with space-local reduced-order models",
+      "authors": [
+        "Toby van Gastelen",
+        "Wouter Edeling",
+        "Benjamin Sanderse"
+      ],
+      "members": [
+        "Benjamin Sanderse",
+        "Toby van Gastelen",
+        "Wouter Edeling"
+      ],
+      "year": 2025,
+      "date": "2025-11-20",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Computers & Fluids",
+      "volume": "305",
+      "issue": null,
+      "pages": "106911–106911",
+      "citedBy": 2,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1016/j.compfluid.2025.106911",
+        "arxiv": "https://arxiv.org/abs/2409.08793",
+        "pdf": "https://arxiv.org/pdf/2409.08793",
+        "openAccess": "https://doi.org/10.1016/j.compfluid.2025.106911"
+      }
+    },
+    {
+      "id": "W4415828491",
+      "doi": "10.1016/j.cma.2025.118506",
+      "title": "Reduced subgrid scale terms in three-dimensional turbulence",
+      "authors": [
+        "Rik Hoekstra",
+        "Wouter Edeling"
+      ],
+      "members": [
+        "Rik Hoekstra",
+        "Wouter Edeling"
+      ],
+      "year": 2025,
+      "date": "2025-11-03",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Computer Methods in Applied Mechanics and Engineering",
+      "volume": "449",
+      "issue": null,
+      "pages": "118506–118506",
+      "citedBy": 1,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1016/j.cma.2025.118506",
+        "openAccess": "https://doi.org/10.1016/j.cma.2025.118506"
+      }
+    },
+    {
+      "id": "W4412828150",
+      "doi": "10.1016/j.jocs.2025.102681",
+      "title": "Sensitivity analysis of high-dimensional models with correlated inputs",
+      "authors": [
+        "Juraj Kardoš",
+        "Wouter Edeling",
+        "Diana Suleimenova",
+        "Derek Groen",
+        "Olaf Schenk"
+      ],
+      "members": [
+        "Wouter Edeling"
+      ],
+      "year": 2025,
+      "date": "2025-07-25",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Journal of Computational Science",
+      "volume": "91",
+      "issue": null,
+      "pages": "102681–102681",
+      "citedBy": 1,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1016/j.jocs.2025.102681",
+        "openAccess": "https://doi.org/10.1016/j.jocs.2025.102681",
+        "arxiv": "https://arxiv.org/abs/2306.00555",
+        "pdf": "https://arxiv.org/pdf/2306.00555"
+      }
+    },
+    {
+      "id": "W4414878412",
+      "doi": "10.48550/arxiv.2507.17051",
+      "title": "Exact expressions for the unresolved stress in a finite-volume based large-eddy simulation",
+      "authors": [
+        "Syver Døving Agdestein",
+        "Roel W. C. P. Verstappen",
+        "Benjamin Sanderse"
+      ],
+      "members": [
+        "Benjamin Sanderse",
+        "Syver Døving Agdestein"
+      ],
+      "year": 2025,
+      "date": "2025-07-22",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "University of Groningen research database (University of Groningen / Centre for Information Technology)",
+      "volume": null,
+      "issue": null,
+      "pages": null,
+      "citedBy": 0,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.48550/arxiv.2507.17051",
+        "openAccess": "https://research.rug.nl/en/publications/324d56d9-b9eb-4185-8a43-7b6046b9bba8",
+        "arxiv": "https://arxiv.org/abs/2507.17051"
+      }
+    },
+    {
+      "id": "W4412494797",
+      "doi": "10.1016/j.fluid.2025.114528",
+      "title": "Solving the UVN-flash problem in TVN-space",
+      "authors": [
+        "Pardeep Kumar",
+        "Patricio I. Rosen Esquivel"
+      ],
+      "members": [
+        "Pardeep Kumar"
+      ],
+      "year": 2025,
+      "date": "2025-07-19",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Fluid Phase Equilibria",
+      "volume": "599",
+      "issue": null,
+      "pages": "114528–114528",
+      "citedBy": 1,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1016/j.fluid.2025.114528",
+        "arxiv": "https://arxiv.org/abs/2502.20173",
+        "openAccess": "https://doi.org/10.1016/j.fluid.2025.114528"
+      }
+    },
+    {
+      "id": "W4417013524",
+      "doi": "10.48550/arxiv.2504.05868",
+      "title": "Energy-Conserving Neural Network Closure Model for Long-Time Accurate and Stable LES",
+      "authors": [
+        "Toby van Gastelen",
+        "Wouter Edeling",
+        "Benjamin Sanderse"
+      ],
+      "members": [
+        "Benjamin Sanderse",
+        "Toby van Gastelen",
+        "Wouter Edeling"
+      ],
+      "year": 2025,
+      "date": "2025-04-08",
+      "type": "preprint",
+      "isPreprint": true,
+      "venue": "arXiv",
+      "volume": null,
+      "issue": null,
+      "pages": null,
+      "citedBy": 0,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.48550/arxiv.2504.05868",
+        "arxiv": "https://arxiv.org/abs/2504.05868",
+        "pdf": "https://arxiv.org/pdf/2504.05868"
+      }
+    },
+    {
+      "id": "W4407301364",
+      "doi": "10.1016/j.jcp.2025.113817",
+      "title": "Entropy-stable model reduction of one-dimensional hyperbolic systems using rational quadratic manifolds",
+      "authors": [
+        "Robin Klein",
+        "Benjamin Sanderse",
+        "Pedro Costa",
+        "René Pecnik",
+        "R.A.W.M. Henkes"
+      ],
+      "members": [
+        "Benjamin Sanderse",
+        "Robin Klein"
+      ],
+      "year": 2025,
+      "date": "2025-02-10",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Journal of Computational Physics",
+      "volume": "528",
+      "issue": null,
+      "pages": "113817–113817",
+      "citedBy": 5,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1016/j.jcp.2025.113817",
+        "arxiv": "https://arxiv.org/abs/2407.12627",
+        "pdf": "https://arxiv.org/pdf/2407.12627",
+        "openAccess": "https://doi.org/10.1016/j.jcp.2025.113817"
+      }
+    },
+    {
+      "id": "W4405528683",
+      "doi": "10.1016/j.compfluid.2024.106524",
+      "title": "A new temperature evolution equation that enforces thermodynamic vapour–liquid equilibrium in multiphase flows - application to CO2 modelling",
+      "authors": [
+        "Pardeep Kumar",
+        "Benjamin Sanderse",
+        "Patricio I. Rosen Esquivel",
+        "R.A.W.M. Henkes"
+      ],
+      "members": [
+        "Benjamin Sanderse",
+        "Pardeep Kumar"
+      ],
+      "year": 2024,
+      "date": "2024-12-18",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Computers & Fluids",
+      "volume": "289",
+      "issue": null,
+      "pages": "106524–106524",
+      "citedBy": 2,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1016/j.compfluid.2024.106524",
+        "openAccess": "https://doi.org/10.1016/j.compfluid.2024.106524"
+      }
+    },
+    {
+      "id": "W4404355858",
+      "doi": "10.1016/j.jcp.2024.113577",
+      "title": "Discretize first, filter next: Learning divergence-consistent closure models for large-eddy simulation",
+      "authors": [
+        "Syver Døving Agdestein",
+        "Benjamin Sanderse"
+      ],
+      "members": [
+        "Benjamin Sanderse",
+        "Syver Døving Agdestein"
+      ],
+      "year": 2024,
+      "date": "2024-11-14",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Journal of Computational Physics",
+      "volume": "522",
+      "issue": null,
+      "pages": "113577–113577",
+      "citedBy": 18,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1016/j.jcp.2024.113577",
+        "arxiv": "https://arxiv.org/abs/2403.18088",
+        "pdf": "https://arxiv.org/pdf/2403.18088",
+        "openAccess": "https://doi.org/10.1016/j.jcp.2024.113577"
+      }
+    },
+    {
+      "id": "W4404324100",
+      "doi": "10.1016/j.compfluid.2024.106473",
+      "title": "Energy-consistent discretization of viscous dissipation with application to natural convection flow",
+      "authors": [
+        "Benjamin Sanderse",
+        "Francesc Xavier Trias"
+      ],
+      "members": [
+        "Benjamin Sanderse"
+      ],
+      "year": 2024,
+      "date": "2024-11-13",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Computers & Fluids",
+      "volume": "286",
+      "issue": null,
+      "pages": "106473–106473",
+      "citedBy": 4,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1016/j.compfluid.2024.106473",
+        "arxiv": "https://arxiv.org/abs/2307.10874",
+        "pdf": "https://arxiv.org/pdf/2307.10874",
+        "openAccess": "https://doi.org/10.1016/j.compfluid.2024.106473"
+      }
+    },
+    {
+      "id": "W4403968860",
+      "doi": "10.1016/j.compfluid.2024.106469",
+      "title": "Reduced data-driven turbulence closure for capturing long-term statistics",
+      "authors": [
+        "Rik Hoekstra",
+        "Daan Crommelin",
+        "Wouter Edeling"
+      ],
+      "members": [
+        "Daan Crommelin",
+        "Rik Hoekstra",
+        "Wouter Edeling"
+      ],
+      "year": 2024,
+      "date": "2024-11-01",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Computers & Fluids",
+      "volume": "285",
+      "issue": null,
+      "pages": "106469–106469",
+      "citedBy": 5,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1016/j.compfluid.2024.106469",
+        "arxiv": "https://arxiv.org/abs/2407.14132",
+        "pdf": "https://arxiv.org/pdf/2407.14132",
+        "openAccess": "https://doi.org/10.1016/j.compfluid.2024.106469"
+      }
+    },
+    {
+      "id": "W4403243437",
+      "doi": "10.1016/j.apm.2024.115746",
+      "title": "Multivariate sensitivity-adaptive polynomial chaos expansion for high-dimensional surrogate modeling and uncertainty quantification",
+      "authors": [
+        "Dimitris Loukrezis",
+        "Eric Diehl",
+        "Herbert De Gersem"
+      ],
+      "members": [
+        "Dimitris Loukrezis"
+      ],
+      "year": 2024,
+      "date": "2024-10-09",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Applied Mathematical Modelling",
+      "volume": "137",
+      "issue": null,
+      "pages": "115746–115746",
+      "citedBy": 16,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1016/j.apm.2024.115746",
+        "openAccess": "https://doi.org/10.1016/j.apm.2024.115746"
+      }
+    },
+    {
+      "id": "W4401794208",
+      "doi": "10.1038/s41598-024-69901-7",
+      "title": "The deep latent space particle filter for real-time data assimilation with uncertainty quantification",
+      "authors": [
+        "Nikolaj Mücke",
+        "Sander M. Bohté",
+        "Cornelis W. Oosterlee"
+      ],
+      "members": [
+        "Nikolaj Mücke"
+      ],
+      "year": 2024,
+      "date": "2024-08-21",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Scientific Reports",
+      "volume": "14",
+      "issue": "1",
+      "pages": "19447–19447",
+      "citedBy": 9,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1038/s41598-024-69901-7",
+        "openAccess": "https://doi.org/10.1038/s41598-024-69901-7",
+        "arxiv": "https://arxiv.org/abs/2406.02204",
+        "pdf": "https://arxiv.org/pdf/2406.02204"
+      }
+    },
+    {
+      "id": "W4400405242",
+      "doi": "10.1016/j.ijggc.2024.104190",
+      "title": "AI enhanced data assimilation and uncertainty quantification applied to Geological Carbon Storage",
+      "authors": [
+        "Gabriel Serrão Seabra",
+        "Nikolaj Mücke",
+        "Vinicius L. S. Silva",
+        "Denis Voskov",
+        "Femke C. Vossepoel"
+      ],
+      "members": [
+        "Nikolaj Mücke"
+      ],
+      "year": 2024,
+      "date": "2024-07-01",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "International journal of greenhouse gas control",
+      "volume": "136",
+      "issue": null,
+      "pages": "104190–104190",
+      "citedBy": 34,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1016/j.ijggc.2024.104190",
+        "arxiv": "https://arxiv.org/abs/2402.06110",
+        "pdf": "https://arxiv.org/pdf/2402.06110",
+        "openAccess": "https://doi.org/10.1016/j.ijggc.2024.104190"
+      }
+    },
+    {
+      "id": "W4399555865",
+      "doi": "10.33540/2380",
+      "title": "Deep Learning for Real-Time Inverse Problems and Data Assimilation with Uncertainty Quantification for Digital Twins",
+      "authors": [
+        "Nikolaj Mücke"
+      ],
+      "members": [
+        "Nikolaj Mücke"
+      ],
+      "year": 2024,
+      "date": "2024-06-12",
+      "type": "dissertation",
+      "isPreprint": false,
+      "venue": null,
+      "volume": null,
+      "issue": null,
+      "pages": null,
+      "citedBy": 2,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.33540/2380",
+        "openAccess": "https://dspace.library.uu.nl/handle/1874/452969"
+      }
+    },
+    {
+      "id": "W4396626006",
+      "doi": "10.1038/s41524-024-01272-z",
+      "title": "Global ranking of the sensitivity of interaction potential contributions within classical molecular dynamics force fields",
+      "authors": [
+        "Wouter Edeling",
+        "Maxime Vassaux",
+        "Yiming Yang",
+        "Shunzhou Wan",
+        "Serge Guillas",
+        "Peter V. Coveney"
+      ],
+      "members": [
+        "Wouter Edeling"
+      ],
+      "year": 2024,
+      "date": "2024-05-03",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "npj Computational Materials",
+      "volume": "10",
+      "issue": "1",
+      "pages": null,
+      "citedBy": 13,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1038/s41524-024-01272-z",
+        "pdf": "https://www.nature.com/articles/s41524-024-01272-z.pdf"
+      }
+    },
+    {
+      "id": "W4394693816",
+      "doi": "10.1016/j.jcp.2024.113003",
+      "title": "Energy-conserving neural network for turbulence closure modeling",
+      "authors": [
+        "Toby van Gastelen",
+        "Wouter Edeling",
+        "Benjamin Sanderse"
+      ],
+      "members": [
+        "Benjamin Sanderse",
+        "Toby van Gastelen",
+        "Wouter Edeling"
+      ],
+      "year": 2024,
+      "date": "2024-04-10",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Journal of Computational Physics",
+      "volume": "508",
+      "issue": null,
+      "pages": "113003–113003",
+      "citedBy": 26,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1016/j.jcp.2024.113003",
+        "arxiv": "https://arxiv.org/abs/2301.13770",
+        "pdf": "https://arxiv.org/pdf/2301.13770",
+        "openAccess": "https://doi.org/10.1016/j.jcp.2024.113003"
+      }
+    },
+    {
+      "id": "W4393193597",
+      "doi": "10.5194/wes-9-721-2024",
+      "title": "Dynamic wind farm flow control using free-vortex wake models",
+      "authors": [
+        "Maarten J. van den Broek",
+        "Marcus Becker",
+        "Benjamin Sanderse",
+        "Jan‐Willem van Wingerden"
+      ],
+      "members": [
+        "Benjamin Sanderse"
+      ],
+      "year": 2024,
+      "date": "2024-03-26",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Wind energy science",
+      "volume": "9",
+      "issue": "3",
+      "pages": "721–740",
+      "citedBy": 9,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.5194/wes-9-721-2024",
+        "openAccess": "https://doi.org/10.5194/wes-2023-119",
+        "pdf": "https://wes.copernicus.org/articles/9/721/2024/wes-9-721-2024.pdf"
+      }
+    },
+    {
+      "id": "W4392538481",
+      "doi": "10.48550/arxiv.2403.02913",
+      "title": "Scientific machine learning for closure models in multiscale problems: a review",
+      "authors": [
+        "Benjamin Sanderse",
+        "Panos Stinis",
+        "Romit Maulik",
+        "Shady E. Ahmed"
+      ],
+      "members": [
+        "Benjamin Sanderse"
+      ],
+      "year": 2024,
+      "date": "2024-03-05",
+      "type": "preprint",
+      "isPreprint": true,
+      "venue": "arXiv",
+      "volume": null,
+      "issue": null,
+      "pages": null,
+      "citedBy": 4,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.48550/arxiv.2403.02913",
+        "arxiv": "https://arxiv.org/abs/2403.02913",
+        "pdf": "https://arxiv.org/pdf/2403.02913"
+      }
+    },
+    {
+      "id": "W4391656825",
+      "doi": "10.1016/j.desal.2024.117408",
+      "title": "An analytical flow-by capacitive deionization model",
+      "authors": [
+        "Johannes Wilhelmus Haverkort",
+        "Benjamin Sanderse",
+        "Johan Tiemen Padding",
+        "J.W. Blake"
+      ],
+      "members": [
+        "Benjamin Sanderse"
+      ],
+      "year": 2024,
+      "date": "2024-02-08",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Desalination",
+      "volume": "582",
+      "issue": null,
+      "pages": "117408–117408",
+      "citedBy": 8,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1016/j.desal.2024.117408",
+        "pdf": "https://ars.els-cdn.com/content/image/1-s2.0-S001191642400119X-ga1_lrg.jpg"
+      }
+    },
+    {
+      "id": "W4391616976",
+      "doi": "10.1016/j.ijmultiphaseflow.2024.104756",
+      "title": "Energy-stable discretization of the one-dimensional two-fluid model",
+      "authors": [
+        "J.F.H. Buist",
+        "Benjamin Sanderse",
+        "Svetlana Dubinkina",
+        "Cornelis W. Oosterlee",
+        "R.A.W.M. Henkes"
+      ],
+      "members": [
+        "Benjamin Sanderse"
+      ],
+      "year": 2024,
+      "date": "2024-02-07",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "International Journal of Multiphase Flow",
+      "volume": "174",
+      "issue": null,
+      "pages": "104756–104756",
+      "citedBy": 1,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1016/j.ijmultiphaseflow.2024.104756",
+        "arxiv": "https://arxiv.org/abs/2310.13978",
+        "pdf": "https://ars.els-cdn.com/content/image/1-s2.0-S0301932224000375-ga1_lrg.jpg"
+      }
+    },
+    {
+      "id": "W4392157390",
+      "doi": "10.1063/5.0168857",
+      "title": "A pressure-free long-time stable reduced-order model for two-dimensional Rayleigh–Bénard convection",
+      "authors": [
+        "Krishan Chand",
+        "Henrik Rosenberger",
+        "Benjamin Sanderse"
+      ],
+      "members": [
+        "Benjamin Sanderse",
+        "Henrik Rosenberger"
+      ],
+      "year": 2024,
+      "date": "2024-02-01",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Chaos An Interdisciplinary Journal of Nonlinear Science",
+      "volume": "34",
+      "issue": "2",
+      "pages": null,
+      "citedBy": 3,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1063/5.0168857",
+        "arxiv": "https://arxiv.org/abs/2307.11422",
+        "pdf": "https://pubs.aip.org/aip/cha/article-pdf/doi/10.1063/5.0168857/19694735/023135_1_5.0168857.pdf"
+      }
+    },
+    {
+      "id": "W4391420995",
+      "doi": "10.48550/arxiv.2401.16683",
+      "title": "Polynomial Chaos Expansions on Principal Geodesic Grassmannian Submanifolds for Surrogate Modeling and Uncertainty Quantification",
+      "authors": [
+        "Dimitris G. Giovanis",
+        "Dimitris Loukrezis",
+        "Ioannis G. Kevrekidis",
+        "Michael D. Shields"
+      ],
+      "members": [
+        "Dimitris Loukrezis"
+      ],
+      "year": 2024,
+      "date": "2024-01-30",
+      "type": "preprint",
+      "isPreprint": true,
+      "venue": "arXiv",
+      "volume": null,
+      "issue": null,
+      "pages": null,
+      "citedBy": 0,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.48550/arxiv.2401.16683",
+        "arxiv": "https://arxiv.org/abs/2401.16683",
+        "pdf": "https://arxiv.org/pdf/2401.16683"
+      }
+    },
+    {
+      "id": "W4390726271",
+      "doi": "10.1063/5.0177553",
+      "title": "Data-driven dynamical coarse-graining for condensed matter systems",
+      "authors": [
+        "Mauricio J. del Razo",
+        "Daan Crommelin",
+        "Peter G. Bolhuis"
+      ],
+      "members": [
+        "Daan Crommelin"
+      ],
+      "year": 2024,
+      "date": "2024-01-09",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "The Journal of Chemical Physics",
+      "volume": "160",
+      "issue": "2",
+      "pages": null,
+      "citedBy": 7,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1063/5.0177553",
+        "arxiv": "https://arxiv.org/abs/2306.17672",
+        "pdf": "https://pubs.aip.org/aip/jcp/article-pdf/doi/10.1063/5.0177553/18291569/024108_1_5.0177553.pdf"
+      }
+    },
+    {
+      "id": "W4402681235",
+      "doi": "10.2139/ssrn.4962617",
+      "title": "A New Temperature Evolution Equation that Enforces Thermodynamic Vapour-Liquid Equilibrium in Multiphase Flows - Application to Co2 Modeling",
+      "authors": [
+        "Pardeep Kumar",
+        "Benjamin Sanderse",
+        "Patricio I. Rosen Esquivel",
+        "R.A.W.M. Henkes"
+      ],
+      "members": [
+        "Benjamin Sanderse"
+      ],
+      "year": 2024,
+      "date": "2024-01-01",
+      "type": "preprint",
+      "isPreprint": true,
+      "venue": "SSRN Electronic Journal",
+      "volume": null,
+      "issue": null,
+      "pages": null,
+      "citedBy": 0,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.2139/ssrn.4962617",
+        "arxiv": "https://arxiv.org/abs/2408.09164",
+        "pdf": "https://arxiv.org/pdf/2408.09164",
+        "openAccess": "https://doi.org/10.2139/ssrn.4962617"
+      }
+    },
+    {
+      "id": "W4390003613",
+      "doi": "10.5194/wes-8-1909-2023",
+      "title": "Free-vortex models for wind turbine wakes under yaw misalignment – a validation study on far-wake effects",
+      "authors": [
+        "Maarten J. van den Broek",
+        "Delphine De Tavernier",
+        "Paul Hulsman",
+        "Daan van der Hoek",
+        "Benjamin Sanderse",
+        "Jan‐Willem van Wingerden"
+      ],
+      "members": [
+        "Benjamin Sanderse"
+      ],
+      "year": 2023,
+      "date": "2023-12-20",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Wind energy science",
+      "volume": "8",
+      "issue": "12",
+      "pages": "1909–1925",
+      "citedBy": 20,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.5194/wes-8-1909-2023",
+        "pdf": "https://wes.copernicus.org/articles/8/1909/2023/wes-8-1909-2023.pdf"
+      }
+    },
+    {
+      "id": "W4389453886",
+      "doi": "10.1016/j.jcp.2023.112697",
+      "title": "Energy-conserving hyper-reduction and temporal localization for reduced order models of the incompressible Navier-Stokes equations",
+      "authors": [
+        "Robin Klein",
+        "Benjamin Sanderse"
+      ],
+      "members": [
+        "Benjamin Sanderse",
+        "Robin Klein"
+      ],
+      "year": 2023,
+      "date": "2023-12-07",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Journal of Computational Physics",
+      "volume": "499",
+      "issue": null,
+      "pages": "112697–112697",
+      "citedBy": 13,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1016/j.jcp.2023.112697",
+        "openAccess": "https://doi.org/10.1016/j.jcp.2023.112697"
+      }
+    },
+    {
+      "id": "W4388574596",
+      "doi": "10.1016/j.compfluid.2023.106108",
+      "title": "Quantifying uncertainties in direct numerical simulations of a turbulent channel flow",
+      "authors": [
+        "Joseph O’Connor",
+        "Sylvain Laizet",
+        "Andrew Wynn",
+        "Wouter Edeling",
+        "Peter V. Coveney"
+      ],
+      "members": [
+        "Wouter Edeling"
+      ],
+      "year": 2023,
+      "date": "2023-11-10",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Computers & Fluids",
+      "volume": "268",
+      "issue": null,
+      "pages": "106108–106108",
+      "citedBy": 14,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1016/j.compfluid.2023.106108",
+        "openAccess": "https://doi.org/10.1016/j.compfluid.2023.106108"
+      }
+    },
+    {
+      "id": "W4386136888",
+      "doi": "10.1365/s13291-023-00270-2",
+      "title": "G. Rozza, G. Stabile, F. Ballarin: “Advanced Reduced Order Methods and Applications in Computational Fluid Dynamics”",
+      "authors": [
+        "Benjamin Sanderse"
+      ],
+      "members": [
+        "Benjamin Sanderse"
+      ],
+      "year": 2023,
+      "date": "2023-08-24",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Jahresbericht der Deutschen Mathematiker-Vereinigung",
+      "volume": "125",
+      "issue": "3",
+      "pages": "191–194",
+      "citedBy": 1,
+      "isOpenAccess": false,
+      "links": {
+        "doi": "https://doi.org/10.1365/s13291-023-00270-2"
+      }
+    },
+    {
+      "id": "W4385860834",
+      "doi": "10.1016/j.camwa.2023.07.028",
+      "title": "Markov chain generative adversarial neural networks for solving Bayesian inverse problems in physics applications",
+      "authors": [
+        "Nikolaj Mücke",
+        "Benjamin Sanderse",
+        "Sander M. Bohté",
+        "Cornelis W. Oosterlee"
+      ],
+      "members": [
+        "Benjamin Sanderse",
+        "Nikolaj Mücke"
+      ],
+      "year": 2023,
+      "date": "2023-08-16",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Computers & Mathematics with Applications",
+      "volume": "147",
+      "issue": null,
+      "pages": "278–299",
+      "citedBy": 14,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1016/j.camwa.2023.07.028",
+        "arxiv": "https://arxiv.org/abs/2111.12408",
+        "pdf": "https://arxiv.org/pdf/2111.12408",
+        "openAccess": "https://doi.org/10.1016/j.camwa.2023.07.028"
+      }
+    },
+    {
+      "id": "W4385568975",
+      "doi": "10.1016/j.jcp.2023.112405",
+      "title": "No pressure? Energy-consistent ROMs for the incompressible Navier-Stokes equations with time-dependent boundary conditions",
+      "authors": [
+        "Henrik Rosenberger",
+        "Benjamin Sanderse"
+      ],
+      "members": [
+        "Benjamin Sanderse",
+        "Henrik Rosenberger"
+      ],
+      "year": 2023,
+      "date": "2023-08-05",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Journal of Computational Physics",
+      "volume": "491",
+      "issue": null,
+      "pages": "112405–112405",
+      "citedBy": 3,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1016/j.jcp.2023.112405",
+        "arxiv": "https://arxiv.org/abs/2212.12036",
+        "pdf": "https://arxiv.org/pdf/2212.12036",
+        "openAccess": "https://doi.org/10.1016/j.jcp.2023.112405"
+      }
+    },
+    {
+      "id": "W4383376837",
+      "doi": "10.3390/s23136179",
+      "title": "A Probabilistic Digital Twin for Leak Localization in Water Distribution Networks Using Generative Deep Learning",
+      "authors": [
+        "Nikolaj Mücke",
+        "Prerna Pandey",
+        "Shashi Jain",
+        "Sander M. Bohté",
+        "Cornelis W. Oosterlee"
+      ],
+      "members": [
+        "Nikolaj Mücke"
+      ],
+      "year": 2023,
+      "date": "2023-07-05",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Sensors",
+      "volume": "23",
+      "issue": "13",
+      "pages": "6179–6179",
+      "citedBy": 28,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.3390/s23136179",
+        "pdf": "https://www.mdpi.com/1424-8220/23/13/6179/pdf?version=1688634640"
+      }
+    },
+    {
+      "id": "W4383604263",
+      "doi": "10.48550/arxiv.2307.02349",
+      "title": "Error Approximation and Bias Correction in Dynamic Problems using a Recurrent Neural Network/Finite Element Hybrid Model",
+      "authors": [
+        "Moritz von Tresckow",
+        "Herbert De Gersem",
+        "Dimitris Loukrezis"
+      ],
+      "members": [
+        "Dimitris Loukrezis"
+      ],
+      "year": 2023,
+      "date": "2023-07-05",
+      "type": "preprint",
+      "isPreprint": true,
+      "venue": "arXiv",
+      "volume": null,
+      "issue": null,
+      "pages": null,
+      "citedBy": 0,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.48550/arxiv.2307.02349",
+        "arxiv": "https://arxiv.org/abs/2307.02349",
+        "pdf": "https://arxiv.org/pdf/2307.02349"
+      }
+    },
+    {
+      "id": "W4376958741",
+      "doi": "10.1016/j.camwa.2023.04.030",
+      "title": "Comparison of neural closure models for discretised PDEs",
+      "authors": [
+        "Hugo Melchers",
+        "Daan Crommelin",
+        "Barry Koren",
+        "Vlado Menkovski",
+        "Benjamin Sanderse"
+      ],
+      "members": [
+        "Benjamin Sanderse",
+        "Daan Crommelin"
+      ],
+      "year": 2023,
+      "date": "2023-05-17",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Computers & Mathematics with Applications",
+      "volume": "143",
+      "issue": null,
+      "pages": "94–107",
+      "citedBy": 20,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1016/j.camwa.2023.04.030",
+        "arxiv": "https://arxiv.org/abs/2210.14675",
+        "pdf": "https://arxiv.org/pdf/2210.14675",
+        "openAccess": "https://doi.org/10.1016/j.camwa.2023.04.030"
+      }
+    },
+    {
+      "id": "W4377009951",
+      "doi": "10.48550/arxiv.2305.09572",
+      "title": "UQpy v4.1: Uncertainty Quantification with Python",
+      "authors": [
+        "Dimitrios Tsapetis",
+        "Michael D. Shields",
+        "Dimitris G. Giovanis",
+        "Audrey Olivier",
+        "Lukáš Novák",
+        "Promit Chakroborty",
+        "Himanshu Sharma",
+        "Mohit Chauhan",
+        "Katiana Kontolati",
+        "Lohit Vandanapu",
+        "Dimitris Loukrezis",
+        "Michael Gardner"
+      ],
+      "members": [
+        "Dimitris Loukrezis"
+      ],
+      "year": 2023,
+      "date": "2023-05-16",
+      "type": "preprint",
+      "isPreprint": true,
+      "venue": "arXiv",
+      "volume": null,
+      "issue": null,
+      "pages": null,
+      "citedBy": 0,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.48550/arxiv.2305.09572",
+        "arxiv": "https://arxiv.org/abs/2305.09572",
+        "pdf": "https://arxiv.org/pdf/2305.09572"
+      }
+    },
+    {
+      "id": "W4323650346",
+      "doi": "10.48550/arxiv.2303.03401",
+      "title": "Data-driven Modified Nodal Analysis Circuit Solver",
+      "authors": [
+        "Armin Galetzka",
+        "Dimitris Loukrezis",
+        "Herbert De Gersem"
+      ],
+      "members": [
+        "Dimitris Loukrezis"
+      ],
+      "year": 2023,
+      "date": "2023-03-06",
+      "type": "preprint",
+      "isPreprint": true,
+      "venue": "arXiv",
+      "volume": null,
+      "issue": null,
+      "pages": null,
+      "citedBy": 1,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.48550/arxiv.2303.03401",
+        "arxiv": "https://arxiv.org/abs/2303.03401",
+        "pdf": "https://arxiv.org/pdf/2303.03401"
+      }
+    },
+    {
+      "id": "W4319311854",
+      "doi": "10.1137/21m1463240",
+      "title": "On the Deep Active-Subspace Method",
+      "authors": [
+        "Wouter Edeling"
+      ],
+      "members": [
+        "Wouter Edeling"
+      ],
+      "year": 2023,
+      "date": "2023-02-06",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "SIAM/ASA Journal on Uncertainty Quantification",
+      "volume": "11",
+      "issue": "1",
+      "pages": "62–90",
+      "citedBy": 12,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1137/21m1463240",
+        "pdf": "https://ir.cwi.nl/pub/32887/32887.pdf"
+      }
+    },
+    {
+      "id": "W4388904196",
+      "doi": "10.1016/j.ifacol.2023.10.1165",
+      "title": "Optimal Control for Wind Turbine Wake Mixing on Floating Platforms",
+      "authors": [
+        "Maarten J. van den Broek",
+        "Daniël van den Berg",
+        "Benjamin Sanderse",
+        "Jan‐Willem van Wingerden"
+      ],
+      "members": [
+        "Benjamin Sanderse"
+      ],
+      "year": 2023,
+      "date": "2023-01-01",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "IFAC-PapersOnLine",
+      "volume": "56",
+      "issue": "2",
+      "pages": "7656–7661",
+      "citedBy": 10,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1016/j.ifacol.2023.10.1165",
+        "arxiv": "https://arxiv.org/abs/2210.17347",
+        "pdf": "https://arxiv.org/pdf/2210.17347",
+        "openAccess": "https://doi.org/10.1016/j.ifacol.2023.10.1165"
+      }
+    },
+    {
+      "id": "W4319968918",
+      "doi": "10.2139/ssrn.4353532",
+      "title": "Structure-Preserving Hyper-Reduction and Temporal Localization for Reduced Order Models of Incompressible Flows",
+      "authors": [
+        "Robin Klein",
+        "Benjamin Sanderse"
+      ],
+      "members": [
+        "Benjamin Sanderse",
+        "Robin Klein"
+      ],
+      "year": 2023,
+      "date": "2023-01-01",
+      "type": "preprint",
+      "isPreprint": true,
+      "venue": "SSRN Electronic Journal",
+      "volume": null,
+      "issue": null,
+      "pages": null,
+      "citedBy": 4,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.2139/ssrn.4353532",
+        "arxiv": "https://arxiv.org/abs/2304.09229",
+        "pdf": "https://arxiv.org/pdf/2304.09229",
+        "openAccess": "https://doi.org/10.2139/ssrn.4353532"
+      }
+    },
+    {
+      "id": "W4313403604",
+      "doi": "10.1002/fld.5168",
+      "title": "Energy‐consistent formulation of the pressure‐free two‐fluid model",
+      "authors": [
+        "J.F.H. Buist",
+        "Benjamin Sanderse",
+        "Svetlana Dubinkina",
+        "Cornelis W. Oosterlee",
+        "R.A.W.M. Henkes"
+      ],
+      "members": [
+        "Benjamin Sanderse"
+      ],
+      "year": 2022,
+      "date": "2022-12-19",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "International Journal for Numerical Methods in Fluids",
+      "volume": "95",
+      "issue": "5",
+      "pages": "869–898",
+      "citedBy": 2,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1002/fld.5168",
+        "pdf": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/fld.5168"
+      }
+    },
+    {
+      "id": "W4309633096",
+      "doi": "10.1016/j.cpc.2022.108596",
+      "title": "FabSim3: An automation toolkit for verified simulations using high performance computing",
+      "authors": [
+        "Derek Groen",
+        "Hamid Arabnejad",
+        "Diana Suleimenova",
+        "Wouter Edeling",
+        "Erwan Raffin",
+        "Yani Xue",
+        "Kevin Bronik",
+        "Nicolas Monnier",
+        "Peter V. Coveney"
+      ],
+      "members": [
+        "Wouter Edeling"
+      ],
+      "year": 2022,
+      "date": "2022-11-17",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Computer Physics Communications",
+      "volume": "283",
+      "issue": null,
+      "pages": "108596–108596",
+      "citedBy": 17,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1016/j.cpc.2022.108596",
+        "pdf": "https://www.sciencedirect.com/science/article/pii/S0010465522003150/pdf"
+      }
+    },
+    {
+      "id": "W4309396320",
+      "doi": "10.48550/arxiv.2211.09580",
+      "title": "Quadrupole Magnet Design based on Genetic Multi-Objective Optimization",
+      "authors": [
+        "Eric Diehl",
+        "Moritz von Tresckow",
+        "Lou Scholtissek",
+        "Dimitris Loukrezis",
+        "Nicolas Marsic",
+        "W. Müller",
+        "Herbert De Gersem"
+      ],
+      "members": [
+        "Dimitris Loukrezis"
+      ],
+      "year": 2022,
+      "date": "2022-11-17",
+      "type": "preprint",
+      "isPreprint": true,
+      "venue": "arXiv",
+      "volume": null,
+      "issue": null,
+      "pages": null,
+      "citedBy": 0,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.48550/arxiv.2211.09580",
+        "arxiv": "https://arxiv.org/abs/2211.09580",
+        "pdf": "https://arxiv.org/pdf/2211.09580"
+      }
+    },
+    {
+      "id": "W4308204135",
+      "doi": "10.1016/j.renene.2022.10.120",
+      "title": "Adjoint optimisation for wind farm flow control with a free-vortex wake model",
+      "authors": [
+        "Maarten J. van den Broek",
+        "Delphine De Tavernier",
+        "Benjamin Sanderse",
+        "Jan‐Willem van Wingerden"
+      ],
+      "members": [
+        "Benjamin Sanderse"
+      ],
+      "year": 2022,
+      "date": "2022-11-04",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Renewable Energy",
+      "volume": "201",
+      "issue": null,
+      "pages": "752–765",
+      "citedBy": 32,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1016/j.renene.2022.10.120",
+        "arxiv": "https://arxiv.org/abs/2208.11516",
+        "pdf": "https://ars.els-cdn.com/content/image/1-s2.0-S0960148122016226-ga1_lrg.jpg"
+      }
+    },
+    {
+      "id": "W4306155710",
+      "doi": "10.31234/osf.io/3jz8e",
+      "title": "A Multidisciplinary Perspective on COVID-19 Exit Strategies",
+      "authors": [
+        "Fabian Dablander",
+        "Tessa F. Blanken",
+        "Charlotte Coosje Tanis",
+        "Rosa Breed",
+        "Luc Edgar Coffeng",
+        "Daan Crommelin",
+        "Wouter Edeling",
+        "Pieter A. Gautier",
+        "Beatrice de Graaf",
+        "Federica Gugole",
+        "Frenk van Harreveld",
+        "Dewi Jager",
+        "Lotte Bjerregaard Jensen",
+        "Rina Knoeff",
+        "Melle van der Linde",
+        "Benjamin Sanderse",
+        "Anniek DE RUIJTER",
+        "Sake J. de Vlas",
+        "Catharina Santing",
+        "Bert Zwart",
+        "Hans Heesterbeek",
+        "Denny Borsboom"
+      ],
+      "members": [
+        "Benjamin Sanderse",
+        "Daan Crommelin",
+        "Wouter Edeling"
+      ],
+      "year": 2022,
+      "date": "2022-10-12",
+      "type": "preprint",
+      "isPreprint": true,
+      "venue": null,
+      "volume": null,
+      "issue": null,
+      "pages": null,
+      "citedBy": 0,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.31234/osf.io/3jz8e",
+        "arxiv": "https://doi.org/10.31234/OSF.IO/3JZ8E",
+        "pdf": "https://psyarxiv.com/3jz8e/download"
+      }
+    },
+    {
+      "id": "W4292755633",
+      "doi": "10.48550/arxiv.2208.09363",
+      "title": "Learning filtered discretization operators: non-intrusive versus intrusive approaches",
+      "authors": [
+        "Syver Døving Agdestein",
+        "Benjamin Sanderse"
+      ],
+      "members": [
+        "Benjamin Sanderse",
+        "Syver Døving Agdestein"
+      ],
+      "year": 2022,
+      "date": "2022-08-19",
+      "type": "preprint",
+      "isPreprint": true,
+      "venue": "arXiv",
+      "volume": null,
+      "issue": null,
+      "pages": null,
+      "citedBy": 0,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.48550/arxiv.2208.09363",
+        "arxiv": "https://arxiv.org/abs/2208.09363",
+        "pdf": "https://arxiv.org/pdf/2208.09363"
+      }
+    },
+    {
+      "id": "W4292756335",
+      "doi": "10.48550/arxiv.2208.09360",
+      "title": "Momentum-conserving ROMs for the incompressible Navier-Stokes equations",
+      "authors": [
+        "Henrik Rosenberger",
+        "Benjamin Sanderse"
+      ],
+      "members": [
+        "Benjamin Sanderse",
+        "Henrik Rosenberger"
+      ],
+      "year": 2022,
+      "date": "2022-08-19",
+      "type": "preprint",
+      "isPreprint": true,
+      "venue": "arXiv",
+      "volume": null,
+      "issue": null,
+      "pages": null,
+      "citedBy": 0,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.48550/arxiv.2208.09360",
+        "arxiv": "https://arxiv.org/abs/2208.09360",
+        "pdf": "https://arxiv.org/pdf/2208.09360"
+      }
+    },
+    {
+      "id": "W4285490820",
+      "doi": "10.1029/2021ms002892",
+      "title": "Representing Cloud Mesoscale Variability in Superparameterized Climate Models",
+      "authors": [
+        "Fredrik Jansson",
+        "Gijs van den Oord",
+        "Inti Pelupessy",
+        "Maria V. Chertova",
+        "Johanna Grönqvist",
+        "A. Pier Siebesma",
+        "Daan Crommelin"
+      ],
+      "members": [
+        "Daan Crommelin"
+      ],
+      "year": 2022,
+      "date": "2022-07-15",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Journal of Advances in Modeling Earth Systems",
+      "volume": "14",
+      "issue": "8",
+      "pages": null,
+      "citedBy": 9,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1029/2021ms002892",
+        "pdf": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1029/2021MS002892"
+      }
+    },
+    {
+      "id": "W4283756745",
+      "doi": "10.48550/arxiv.2206.14435",
+      "title": "An $hp$-adaptive multi-element stochastic collocation method for surrogate modeling with information re-use",
+      "authors": [
+        "Armin Galetzka",
+        "Dimitris Loukrezis",
+        "Niklas Georg",
+        "Herbert De Gersem",
+        "Ulrich Römer"
+      ],
+      "members": [
+        "Dimitris Loukrezis"
+      ],
+      "year": 2022,
+      "date": "2022-06-29",
+      "type": "preprint",
+      "isPreprint": true,
+      "venue": "arXiv",
+      "volume": null,
+      "issue": null,
+      "pages": null,
+      "citedBy": 2,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.48550/arxiv.2206.14435",
+        "arxiv": "https://arxiv.org/abs/2206.14435",
+        "pdf": "https://arxiv.org/pdf/2206.14435"
+      }
+    },
+    {
+      "id": "W4283168087",
+      "doi": "10.1002/essoar.10508697.2",
+      "title": "Representing Mesoscale Cloud Variability in Superparameterized Climate models",
+      "authors": [
+        "Fredrik Jansson",
+        "Gijs van den Oord",
+        "Inti Pelupessy",
+        "Maria V. Chertova",
+        "Johanna Grönqvist",
+        "A. Pier Siebesma",
+        "Daan Crommelin"
+      ],
+      "members": [
+        "Daan Crommelin"
+      ],
+      "year": 2022,
+      "date": "2022-06-20",
+      "type": "preprint",
+      "isPreprint": true,
+      "venue": null,
+      "volume": null,
+      "issue": null,
+      "pages": null,
+      "citedBy": 0,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1002/essoar.10508697.2",
+        "openAccess": "https://doi.org/10.1002/essoar.10508697.2"
+      }
+    },
+    {
+      "id": "W3157005827",
+      "doi": "10.1016/j.compfluid.2022.105533",
+      "title": "Energy-conserving formulation of the two-fluid model for incompressible two-phase flow in channels and pipes",
+      "authors": [
+        "J.F.H. Buist",
+        "Benjamin Sanderse",
+        "Svetlana Dubinkina",
+        "R.A.W.M. Henkes",
+        "Cornelis W. Oosterlee"
+      ],
+      "members": [
+        "Benjamin Sanderse"
+      ],
+      "year": 2022,
+      "date": "2022-06-14",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Computers & Fluids",
+      "volume": "244",
+      "issue": null,
+      "pages": "105533–105533",
+      "citedBy": 6,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1016/j.compfluid.2022.105533",
+        "arxiv": "https://arxiv.org/abs/2104.07728",
+        "openAccess": "https://doi.org/10.48550/arxiv.2104.07728",
+        "pdf": "https://www.sciencedirect.com/science/article/pii/S0045793022001657/pdf"
+      }
+    },
+    {
+      "id": "W4294958420",
+      "doi": "10.48550/arxiv.2205.08746",
+      "title": "Power Module Heat Sink Design Optimization with Ensembles of Data-Driven Polynomial Chaos Surrogate Models",
+      "authors": [
+        "Dimitris Loukrezis",
+        "Herbert De Gersem"
+      ],
+      "members": [
+        "Dimitris Loukrezis"
+      ],
+      "year": 2022,
+      "date": "2022-05-18",
+      "type": "preprint",
+      "isPreprint": true,
+      "venue": "arXiv",
+      "volume": null,
+      "issue": null,
+      "pages": null,
+      "citedBy": 0,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.48550/arxiv.2205.08746",
+        "arxiv": "https://arxiv.org/abs/2205.08746",
+        "pdf": "https://arxiv.org/pdf/2205.08746"
+      }
+    },
+    {
+      "id": "W4226060472",
+      "doi": "10.48550/arxiv.2204.02843",
+      "title": "Tensor train based isogeometric analysis for PDE approximation on parameter dependent geometries",
+      "authors": [
+        "Ion Gabriel Ion",
+        "Dimitris Loukrezis",
+        "Herbert De Gersem"
+      ],
+      "members": [
+        "Dimitris Loukrezis"
+      ],
+      "year": 2022,
+      "date": "2022-04-06",
+      "type": "preprint",
+      "isPreprint": true,
+      "venue": "arXiv",
+      "volume": null,
+      "issue": null,
+      "pages": null,
+      "citedBy": 1,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.48550/arxiv.2204.02843",
+        "arxiv": "https://arxiv.org/abs/2204.02843",
+        "pdf": "https://arxiv.org/pdf/2204.02843"
+      }
+    },
+    {
+      "id": "W4225985940",
+      "doi": "10.5194/wes-7-759-2022",
+      "title": "Efficient Bayesian calibration of aerodynamic wind turbine models using surrogate modeling",
+      "authors": [
+        "Benjamin Sanderse",
+        "Vinit V. Dighe",
+        "Koen Boorsma",
+        "Gerard Schepers"
+      ],
+      "members": [
+        "Benjamin Sanderse"
+      ],
+      "year": 2022,
+      "date": "2022-03-31",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Wind energy science",
+      "volume": "7",
+      "issue": "2",
+      "pages": "759–781",
+      "citedBy": 13,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.5194/wes-7-759-2022",
+        "pdf": "https://wes.copernicus.org/preprints/wes-2021-58/wes-2021-58.pdf",
+        "openAccess": "https://doi.org/10.5194/wes-7-759-2022"
+      }
+    },
+    {
+      "id": "W4200599323",
+      "doi": "10.1002/essoar.10508697.1",
+      "title": "Representing Mesoscale Variability in Superparameterized Climate models",
+      "authors": [
+        "Fredrik Jansson",
+        "Gijs van den Oord",
+        "Inti Pelupessy",
+        "Maria V. Chertova",
+        "Johanna Grönqvist",
+        "A. Pier Siebesma",
+        "Daan Crommelin"
+      ],
+      "members": [
+        "Daan Crommelin"
+      ],
+      "year": 2021,
+      "date": "2021-11-11",
+      "type": "preprint",
+      "isPreprint": true,
+      "venue": null,
+      "volume": null,
+      "issue": null,
+      "pages": null,
+      "citedBy": 0,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1002/essoar.10508697.1",
+        "openAccess": "https://doi.org/10.1002/essoar.10508697.1"
+      }
+    },
+    {
+      "id": "W3199055017",
+      "doi": "10.1371/journal.pcbi.1009355",
+      "title": "Uncertainty quantification and sensitivity analysis of COVID-19 exit strategies in an individual-based transmission model",
+      "authors": [
+        "Federica Gugole",
+        "Luc Edgar Coffeng",
+        "Wouter Edeling",
+        "Benjamin Sanderse",
+        "Sake J. de Vlas",
+        "Daan Crommelin"
+      ],
+      "members": [
+        "Benjamin Sanderse",
+        "Daan Crommelin",
+        "Wouter Edeling"
+      ],
+      "year": 2021,
+      "date": "2021-09-17",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "PLoS Computational Biology",
+      "volume": "17",
+      "issue": "9",
+      "pages": "e1009355–e1009355",
+      "citedBy": 21,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1371/journal.pcbi.1009355",
+        "pdf": "https://www.medrxiv.org/content/medrxiv/early/2021/03/26/2021.03.24.21254218.full.pdf",
+        "openAccess": "https://doi.org/10.1371/journal.pcbi.1009355"
+      }
+    },
+    {
+      "id": "W3191248236",
+      "doi": null,
+      "title": "Three-Dimensional Data-Driven Electromagnetic Field Simulation using Real World Measurement Data.",
+      "authors": [
+        "Armin Galetzka",
+        "Dimitris Loukrezis",
+        "Herbert De Gersem"
+      ],
+      "members": [
+        "Dimitris Loukrezis"
+      ],
+      "year": 2021,
+      "date": "2021-07-30",
+      "type": "preprint",
+      "isPreprint": true,
+      "venue": "arXiv",
+      "volume": null,
+      "issue": null,
+      "pages": null,
+      "citedBy": 0,
+      "isOpenAccess": true,
+      "links": {
+        "arxiv": "https://export.arxiv.org/pdf/2107.14604",
+        "openAccess": "https://export.arxiv.org/pdf/2107.14604"
+      }
+    },
+    {
+      "id": "W3215699093",
+      "doi": "10.48550/arxiv.2107.14604",
+      "title": "Three-Dimensional Data-Driven Magnetostatic Field Computation using Real-World Measurement Data",
+      "authors": [
+        "Armin Galetzka",
+        "Dimitris Loukrezis",
+        "Herbert De Gersem"
+      ],
+      "members": [
+        "Dimitris Loukrezis"
+      ],
+      "year": 2021,
+      "date": "2021-07-30",
+      "type": "preprint",
+      "isPreprint": true,
+      "venue": "arXiv",
+      "volume": null,
+      "issue": null,
+      "pages": null,
+      "citedBy": 0,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.48550/arxiv.2107.14604",
+        "arxiv": "https://arxiv.org/pdf/2107.14604.pdf",
+        "openAccess": "https://arxiv.org/pdf/2107.14604.pdf"
+      }
+    },
+    {
+      "id": "W3183869552",
+      "doi": "10.1021/acs.jctc.1c00526",
+      "title": "Ensembles Are Required to Handle Aleatoric and Parametric Uncertainty in Molecular Dynamics Simulation",
+      "authors": [
+        "Maxime Vassaux",
+        "Shunzhou Wan",
+        "Wouter Edeling",
+        "Peter V. Coveney"
+      ],
+      "members": [
+        "Wouter Edeling"
+      ],
+      "year": 2021,
+      "date": "2021-07-19",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Journal of Chemical Theory and Computation",
+      "volume": "17",
+      "issue": "8",
+      "pages": "5187–5197",
+      "citedBy": 61,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1021/acs.jctc.1c00526",
+        "openAccess": "https://doi.org/10.1021/acs.jctc.1c00526"
+      }
+    },
+    {
+      "id": "W3108091126",
+      "doi": "10.1016/j.jocs.2021.101408",
+      "title": "Reduced order modeling for parameterized time-dependent PDEs using spatially and memory aware deep learning",
+      "authors": [
+        "Nikolaj Mücke",
+        "Sander M. Bohté",
+        "Cornelis W. Oosterlee"
+      ],
+      "members": [
+        "Nikolaj Mücke"
+      ],
+      "year": 2021,
+      "date": "2021-06-21",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Journal of Computational Science",
+      "volume": "53",
+      "issue": null,
+      "pages": "101408–101408",
+      "citedBy": 57,
+      "isOpenAccess": true,
+      "links": {
+        "arxiv": "https://arxiv.org/pdf/2011.11327.pdf",
+        "pdf": "https://www.sciencedirect.com/science/article/pii/S1877750321000934/pdf",
+        "doi": "https://doi.org/10.1016/j.jocs.2021.101408"
+      }
+    },
+    {
+      "id": "W3172762254",
+      "doi": "10.48550/arxiv.2106.03491",
+      "title": "Intrusive deconvolutional neural networks for enhancing PIC/FLIP solutions",
+      "authors": [
+        "Yous van Halder",
+        "Benjamin Sanderse",
+        "Barry Koren"
+      ],
+      "members": [
+        "Benjamin Sanderse"
+      ],
+      "year": 2021,
+      "date": "2021-06-07",
+      "type": "preprint",
+      "isPreprint": true,
+      "venue": "arXiv",
+      "volume": null,
+      "issue": null,
+      "pages": null,
+      "citedBy": 0,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.48550/arxiv.2106.03491",
+        "arxiv": "https://arxiv.org/abs/2106.03491",
+        "pdf": "https://arxiv.org/pdf/2106.03491"
+      }
+    },
+    {
+      "id": "W3167733026",
+      "doi": "10.1016/j.jocs.2021.101402",
+      "title": "Tutorial applications for Verification, Validation and Uncertainty Quantification using VECMA toolkit",
+      "authors": [
+        "Diana Suleimenova",
+        "Hamid Arabnejad",
+        "Wouter Edeling",
+        "D. Coster",
+        "Onnie O. Luk",
+        "Jalal Lakhlili",
+        "Vytautas Jancauskas",
+        "Michał Kulczewski",
+        "Lourens E. Veen",
+        "Dongwei Ye",
+        "Pavel Zun",
+        "Valeria V. Krzhizhanovskaya",
+        "Alfons G. Hoekstra",
+        "Daan Crommelin",
+        "Peter V. Coveney",
+        "Derek Groen"
+      ],
+      "members": [
+        "Daan Crommelin",
+        "Wouter Edeling"
+      ],
+      "year": 2021,
+      "date": "2021-06-07",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Journal of Computational Science",
+      "volume": "53",
+      "issue": null,
+      "pages": "101402–101402",
+      "citedBy": 28,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1016/j.jocs.2021.101402",
+        "pdf": "https://www.sciencedirect.com/science/article/pii/S1877750321000892/pdf"
+      }
+    },
+    {
+      "id": "W3093417354",
+      "doi": "10.1002/fld.4994",
+      "title": "Reduced order models for the incompressible Navier‐Stokes equations on collocated grids using a ‘discretize‐then‐project’ approach",
+      "authors": [
+        "Sabrina Kelbij Star",
+        "Benjamin Sanderse",
+        "Giovanni Stabile",
+        "Gianluigi Rozza",
+        "Joris Degroote"
+      ],
+      "members": [
+        "Benjamin Sanderse"
+      ],
+      "year": 2021,
+      "date": "2021-04-28",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "International Journal for Numerical Methods in Fluids",
+      "volume": "93",
+      "issue": "8",
+      "pages": "2694–2722",
+      "citedBy": 1,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1002/fld.4994",
+        "arxiv": "https://arxiv.org/abs/2010.06964",
+        "pdf": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/fld.4994"
+      }
+    },
+    {
+      "id": "W3152377779",
+      "doi": "10.1098/rsta.2020.0073",
+      "title": "Assessing uncertainties from physical parameters and modelling choices in an atmospheric large eddy simulation model",
+      "authors": [
+        "Fredrik Jansson",
+        "Wouter Edeling",
+        "Jisk Jakob Attema",
+        "Daan Crommelin"
+      ],
+      "members": [
+        "Daan Crommelin",
+        "Wouter Edeling"
+      ],
+      "year": 2021,
+      "date": "2021-03-29",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Philosophical Transactions of the Royal Society A Mathematical Physical and Engineering Sciences",
+      "volume": "379",
+      "issue": "2197",
+      "pages": "20200073–20200073",
+      "citedBy": 9,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1098/rsta.2020.0073",
+        "openAccess": "https://doi.org/10.1098/rsta.2020.0073"
+      }
+    },
+    {
+      "id": "W3145274123",
+      "doi": "10.1098/rsta.2020.0077",
+      "title": "Sensitivity-driven simulation development: a case study in forced migration",
+      "authors": [
+        "Diana Suleimenova",
+        "Hamid Arabnejad",
+        "Wouter Edeling",
+        "Derek Groen"
+      ],
+      "members": [
+        "Wouter Edeling"
+      ],
+      "year": 2021,
+      "date": "2021-03-29",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Philosophical Transactions of the Royal Society A Mathematical Physical and Engineering Sciences",
+      "volume": "379",
+      "issue": "2197",
+      "pages": "20200077–20200077",
+      "citedBy": 15,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1098/rsta.2020.0077",
+        "openAccess": "https://doi.org/10.1098/rsta.2020.0077"
+      }
+    },
+    {
+      "id": "W3139566472",
+      "doi": "10.1098/rsta.2020.0072",
+      "title": "Uncertainty quantification patterns for multiscale models",
+      "authors": [
+        "Dongwei Ye",
+        "Lourens E. Veen",
+        "Anna Nikishova",
+        "Jalal Lakhlili",
+        "Wouter Edeling",
+        "Onnie O. Luk",
+        "Valeria V. Krzhizhanovskaya",
+        "Alfons G. Hoekstra"
+      ],
+      "members": [
+        "Wouter Edeling"
+      ],
+      "year": 2021,
+      "date": "2021-03-29",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Philosophical Transactions of the Royal Society A Mathematical Physical and Engineering Sciences",
+      "volume": "379",
+      "issue": "2197",
+      "pages": "20200072–20200072",
+      "citedBy": 19,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1098/rsta.2020.0072",
+        "openAccess": "https://doi.org/10.1098/rsta.2020.0072"
+      }
+    },
+    {
+      "id": "W3092584845",
+      "doi": "10.1098/rsta.2020.0221",
+      "title": "VECMAtk: a scalable verification, validation and uncertainty quantification toolkit for scientific simulations",
+      "authors": [
+        "D. Groen",
+        "H. Arabnejad",
+        "V. Jancauskas",
+        "W. N. Edeling",
+        "Fredrik Jansson",
+        "R. A. Richardson",
+        "J. Lakhlili",
+        "L. Veen",
+        "Bartosz Bosak",
+        "P. Kopta",
+        "D. W. Wright",
+        "N. Monnier",
+        "P. Karlshoefer",
+        "D. Suleimenova",
+        "R. Sinclair",
+        "Maxime Vassaux",
+        "A. Nikishova",
+        "M. Bieniek",
+        "Onnie O. Luk",
+        "M. Kulczewski",
+        "E. Raffin",
+        "Daan Crommelin",
+        "O. Hoenen",
+        "D. P. Coster",
+        "T. Piontek",
+        "P. V. Coveney"
+      ],
+      "members": [
+        "Daan Crommelin"
+      ],
+      "year": 2021,
+      "date": "2021-03-29",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Philosophical Transactions of the Royal Society A Mathematical Physical and Engineering Sciences",
+      "volume": "379",
+      "issue": "2197",
+      "pages": "20200221–20200221",
+      "citedBy": 29,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1098/rsta.2020.0221",
+        "arxiv": "https://arxiv.org/abs/2010.03923",
+        "openAccess": "https://doi.org/10.1098/rsta.2020.0221"
+      }
+    },
+    {
+      "id": "W3015022738",
+      "doi": "10.1016/j.physd.2021.132894",
+      "title": "Resampling with neural networks for stochastic parameterization in multiscale systems",
+      "authors": [
+        "Daan Crommelin",
+        "Wouter Edeling"
+      ],
+      "members": [
+        "Daan Crommelin",
+        "Wouter Edeling"
+      ],
+      "year": 2021,
+      "date": "2021-03-23",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Physica D Nonlinear Phenomena",
+      "volume": "422",
+      "issue": null,
+      "pages": "132894–132894",
+      "citedBy": 16,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1016/j.physd.2021.132894",
+        "arxiv": "https://arxiv.org/abs/2004.01457",
+        "pdf": "https://www.sciencedirect.com/science/article/pii/S016727892100052X/pdf"
+      }
+    },
+    {
+      "id": "W3131899928",
+      "doi": "10.1038/s43588-021-00028-9",
+      "title": "The impact of uncertainty on predictions of the CovidSim epidemiological code",
+      "authors": [
+        "Wouter Edeling",
+        "Hamid Arabnejad",
+        "Robbie Sinclair",
+        "Diana Suleimenova",
+        "Krishnakumar Gopalakrishnan",
+        "Bartosz Bosak",
+        "Derek Groen",
+        "Imran Mahmood",
+        "Daan Crommelin",
+        "Peter V. Coveney"
+      ],
+      "members": [
+        "Daan Crommelin",
+        "Wouter Edeling"
+      ],
+      "year": 2021,
+      "date": "2021-02-22",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Nature Computational Science",
+      "volume": "1",
+      "issue": "2",
+      "pages": "128–135",
+      "citedBy": 85,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1038/s43588-021-00028-9",
+        "pdf": "https://www.nature.com/articles/s43588-021-00028-9.pdf"
+      }
+    },
+    {
+      "id": "W2917839990",
+      "doi": "10.1016/j.cam.2021.113430",
+      "title": "A geometrical interpretation of the addition of nodes to an interpolatory quadrature rule while preserving positive weights",
+      "authors": [
+        "L.M.M. van den Bos",
+        "Benjamin Sanderse"
+      ],
+      "members": [
+        "Benjamin Sanderse"
+      ],
+      "year": 2021,
+      "date": "2021-01-27",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Journal of Computational and Applied Mathematics",
+      "volume": "391",
+      "issue": null,
+      "pages": "113430–113430",
+      "citedBy": 2,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1016/j.cam.2021.113430",
+        "arxiv": "https://arxiv.org/abs/1902.07477",
+        "openAccess": "https://doi.org/10.1016/j.cam.2021.113430"
+      }
+    },
+    {
+      "id": "W3091812911",
+      "doi": "10.2140/camcos.2021.16.33",
+      "title": "Stochastic parametrization with VARX processes",
+      "authors": [
+        "Nick Verheul",
+        "Daan Crommelin"
+      ],
+      "members": [
+        "Daan Crommelin"
+      ],
+      "year": 2021,
+      "date": "2021-01-19",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Communications in Applied Mathematics and Computational Science",
+      "volume": "16",
+      "issue": "1",
+      "pages": "33–57",
+      "citedBy": 0,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.2140/camcos.2021.16.33",
+        "arxiv": "https://arxiv.org/abs/2010.03293",
+        "pdf": "https://arxiv.org/pdf/2010.03293"
+      }
+    },
+    {
+      "id": "W3008849231",
+      "doi": "10.26083/tuprints-00019220",
+      "title": "Approximation and Uncertainty Quantification of Systems with Arbitrary Parameter Distributions Using Weighted Leja Interpolation",
+      "authors": [
+        "Dimitris Loukrezis",
+        "Herbert De Gersem"
+      ],
+      "members": [
+        "Dimitris Loukrezis"
+      ],
+      "year": 2021,
+      "date": "2021-01-01",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Technischen Universität Darmstadt",
+      "volume": "13",
+      "issue": "3",
+      "pages": "51",
+      "citedBy": 0,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.26083/tuprints-00019220",
+        "pdf": "https://tuprints.ulb.tu-darmstadt.de/19220/1/algorithms-13-00051-v2.pdf"
+      }
+    },
+    {
+      "id": "W2962056370",
+      "doi": "10.1615/int.j.uncertaintyquantification.2021034265",
+      "title": "PDE/PDF-informed adaptive sampling for efficient non-intrusive surrogate modelling",
+      "authors": [
+        "Yous van Halder",
+        "Benjamin Sanderse",
+        "Barry Koren"
+      ],
+      "members": [
+        "Benjamin Sanderse"
+      ],
+      "year": 2021,
+      "date": "2021-01-01",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "International Journal for Uncertainty Quantification",
+      "volume": null,
+      "issue": null,
+      "pages": null,
+      "citedBy": 0,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1615/int.j.uncertaintyquantification.2021034265",
+        "pdf": "https://arxiv.org/pdf/1907.04022",
+        "arxiv": "https://arxiv.org/abs/1907.04022"
+      }
+    },
+    {
+      "id": "W4241448057",
+      "doi": "10.21203/rs.3.rs-82122/v3",
+      "title": "Model uncertainty and decision making: Predicting the Impact of COVID-19 Using the CovidSim Epidemiological Code",
+      "authors": [
+        "Wouter Edeling",
+        "Hamid Arabnejad",
+        "Robert C. Sinclair",
+        "Diana Suleimenova",
+        "Krishnakumar Gopalakrishnan",
+        "Bartosz Bosak",
+        "Derek Groen",
+        "Imran Mahmood",
+        "Daan Crommelin",
+        "Peter V. Coveney"
+      ],
+      "members": [
+        "Daan Crommelin",
+        "Wouter Edeling"
+      ],
+      "year": 2020,
+      "date": "2020-11-06",
+      "type": "preprint",
+      "isPreprint": true,
+      "venue": "Research Square",
+      "volume": null,
+      "issue": null,
+      "pages": null,
+      "citedBy": 7,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.21203/rs.3.rs-82122/v3",
+        "pdf": "https://www.researchsquare.com/article/rs-82122/latest.pdf",
+        "openAccess": "https://doi.org/10.21203/rs.3.rs-82122/v3"
+      }
+    },
+    {
+      "id": "W3017252191",
+      "doi": "10.1016/j.jcp.2020.109919",
+      "title": "A novel pressure-free two-fluid model for one-dimensional incompressible multiphase flow",
+      "authors": [
+        "Benjamin Sanderse",
+        "J.F.H. Buist",
+        "R.A.W.M. Henkes"
+      ],
+      "members": [
+        "Benjamin Sanderse"
+      ],
+      "year": 2020,
+      "date": "2020-10-22",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Journal of Computational Physics",
+      "volume": "426",
+      "issue": null,
+      "pages": "109919–109919",
+      "citedBy": 8,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1016/j.jcp.2020.109919",
+        "arxiv": "https://arxiv.org/abs/2004.06987",
+        "pdf": "https://www.sciencedirect.com/science/article/pii/S0021999120306938/pdf"
+      }
+    },
+    {
+      "id": "W2976100866",
+      "doi": "10.1016/j.jcp.2020.109736",
+      "title": "Non-linearly stable reduced-order models for incompressible flow with energy-conserving finite volume methods",
+      "authors": [
+        "Benjamin Sanderse"
+      ],
+      "members": [
+        "Benjamin Sanderse"
+      ],
+      "year": 2020,
+      "date": "2020-07-27",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Journal of Computational Physics",
+      "volume": "421",
+      "issue": null,
+      "pages": "109736–109736",
+      "citedBy": 33,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1016/j.jcp.2020.109736",
+        "arxiv": "https://arxiv.org/abs/1909.11462",
+        "pdf": "https://arxiv.org/pdf/1909.11462"
+      }
+    },
+    {
+      "id": "W3036079255",
+      "doi": "10.1002/adts.201900246",
+      "title": "Building Confidence in Simulation: Applications of EasyVVUQ",
+      "authors": [
+        "David W. Wright",
+        "Robin A. Richardson",
+        "Wouter Edeling",
+        "Jalal Lakhlili",
+        "Robert C. Sinclair",
+        "Vytautas Jancauskas",
+        "Diana Suleimenova",
+        "Bartosz Bosak",
+        "Michał Kulczewski",
+        "Tomasz Piontek",
+        "Piotr Kopta",
+        "Irina Chircă",
+        "Hamid Arabnejad",
+        "Onnie O. Luk",
+        "O. Hoenen",
+        "Jan Węglarz",
+        "Daan Crommelin",
+        "Derek Groen",
+        "Peter V. Coveney"
+      ],
+      "members": [
+        "Daan Crommelin",
+        "Wouter Edeling"
+      ],
+      "year": 2020,
+      "date": "2020-06-15",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Advanced Theory and Simulations",
+      "volume": "3",
+      "issue": "8",
+      "pages": null,
+      "citedBy": 42,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1002/adts.201900246",
+        "pdf": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/adts.201900246"
+      }
+    },
+    {
+      "id": "W3025665987",
+      "doi": "10.1016/j.jcp.2020.109537",
+      "title": "Adaptive sampling-based quadrature rules for efficient Bayesian prediction",
+      "authors": [
+        "L.M.M. van den Bos",
+        "Benjamin Sanderse",
+        "Wim Bierbooms"
+      ],
+      "members": [
+        "Benjamin Sanderse"
+      ],
+      "year": 2020,
+      "date": "2020-05-12",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Journal of Computational Physics",
+      "volume": "417",
+      "issue": null,
+      "pages": "109537–109537",
+      "citedBy": 12,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1016/j.jcp.2020.109537",
+        "arxiv": "https://arxiv.org/abs/1907.08418",
+        "pdf": "https://arxiv.org/pdf/1907.08418"
+      }
+    },
+    {
+      "id": "W3023047266",
+      "doi": "10.5334/jors.303",
+      "title": "EasyVVUQ: A Library for Verification, Validation and Uncertainty Quantification in High Performance Computing",
+      "authors": [
+        "Robin A. Richardson",
+        "David W. Wright",
+        "Wouter Edeling",
+        "Vytautas Jancauskas",
+        "Jalal Lakhlili",
+        "Peter V. Coveney"
+      ],
+      "members": [
+        "Wouter Edeling"
+      ],
+      "year": 2020,
+      "date": "2020-04-29",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Journal of Open Research Software",
+      "volume": "8",
+      "issue": "1",
+      "pages": "11–11",
+      "citedBy": 62,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.5334/jors.303",
+        "pdf": "https://openresearchsoftware.metajnl.com/articles/10.5334/jors.303/galley/425/download/"
+      }
+    },
+    {
+      "id": "W3021507084",
+      "doi": "10.48550/arxiv.2004.13128",
+      "title": "Multi-level neural networks for PDEs with uncertain parameters",
+      "authors": [
+        "Yous van Halder",
+        "Benjamin Sanderse",
+        "Barry Koren"
+      ],
+      "members": [
+        "Benjamin Sanderse"
+      ],
+      "year": 2020,
+      "date": "2020-04-27",
+      "type": "preprint",
+      "isPreprint": true,
+      "venue": "arXiv",
+      "volume": null,
+      "issue": null,
+      "pages": null,
+      "citedBy": 1,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.48550/arxiv.2004.13128",
+        "arxiv": "https://arxiv.org/abs/2004.13128",
+        "pdf": "https://arxiv.org/pdf/2004.13128"
+      }
+    },
+    {
+      "id": "W3021363314",
+      "doi": null,
+      "title": "Tackling the Multiscale Challenge of Climate Modelling",
+      "authors": [
+        "Daan Crommelin",
+        "Wouter Edeling",
+        "Fredrik Jansson"
+      ],
+      "members": [
+        "Daan Crommelin",
+        "Wouter Edeling"
+      ],
+      "year": 2020,
+      "date": "2020-04-01",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "UvA-DARE (University of Amsterdam)",
+      "volume": "2020",
+      "issue": null,
+      "pages": "15–17",
+      "citedBy": 0,
+      "isOpenAccess": true,
+      "links": {
+        "pdf": "https://pure.uva.nl/ws/files/54952979/Tackling_the_Multiscale_Challenge_of_Climate_Modelling.pdf"
+      }
+    },
+    {
+      "id": "W3014782007",
+      "doi": "10.48550/arxiv.2003.14300",
+      "title": "Computing first passage times for Markov-modulated fluid models using numerical PDE problem solvers",
+      "authors": [
+        "Debarati Bhaumik",
+        "Marko Boon",
+        "Daan Crommelin",
+        "Barry Koren",
+        "Bert Zwart"
+      ],
+      "members": [
+        "Daan Crommelin"
+      ],
+      "year": 2020,
+      "date": "2020-03-30",
+      "type": "preprint",
+      "isPreprint": true,
+      "venue": "arXiv",
+      "volume": null,
+      "issue": null,
+      "pages": null,
+      "citedBy": 0,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.48550/arxiv.2003.14300",
+        "arxiv": "https://arxiv.org/abs/2003.14300",
+        "pdf": "https://arxiv.org/pdf/2003.14300"
+      }
+    },
+    {
+      "id": "W4287822831",
+      "doi": "10.48550/arxiv.2003.14300",
+      "title": "Computing first passage times for Markov-modulated fluid models using\\n numerical PDE problem solvers",
+      "authors": [
+        "Debarati Bhaumik",
+        "Marko Boon",
+        "Daan Crommelin",
+        "Barry Koren",
+        "Bert Zwart"
+      ],
+      "members": [
+        "Daan Crommelin"
+      ],
+      "year": 2020,
+      "date": "2020-03-30",
+      "type": "preprint",
+      "isPreprint": true,
+      "venue": "arXiv",
+      "volume": null,
+      "issue": null,
+      "pages": null,
+      "citedBy": 0,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.48550/arxiv.2003.14300",
+        "arxiv": "https://arxiv.org/abs/2003.14300",
+        "pdf": "https://arxiv.org/pdf/2003.14300"
+      }
+    },
+    {
+      "id": "W3005348600",
+      "doi": "10.1016/j.compfluid.2020.104470",
+      "title": "Reducing data-driven dynamical subgrid scale models by physical constraints",
+      "authors": [
+        "Wouter Edeling",
+        "Daan Crommelin"
+      ],
+      "members": [
+        "Daan Crommelin",
+        "Wouter Edeling"
+      ],
+      "year": 2020,
+      "date": "2020-02-07",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Computers & Fluids",
+      "volume": "201",
+      "issue": null,
+      "pages": "104470–104470",
+      "citedBy": 12,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1016/j.compfluid.2020.104470",
+        "pdf": "https://www.sciencedirect.com/science/article/pii/S0045793020300438"
+      }
+    },
+    {
+      "id": "W3046365378",
+      "doi": null,
+      "title": "Faster Flow Predictions with Intrusive Neural Networks.",
+      "authors": [
+        "Yous van Halder",
+        "Benjamin Sanderse"
+      ],
+      "members": [
+        "Benjamin Sanderse"
+      ],
+      "year": 2020,
+      "date": "2020-01-01",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "ERCIM news/ERCIM news online edition",
+      "volume": "2020",
+      "issue": null,
+      "pages": null,
+      "citedBy": 0,
+      "isOpenAccess": false,
+      "links": {}
+    },
+    {
+      "id": "W2996160517",
+      "doi": "10.1002/nme.6300",
+      "title": "Efficient estimation of extreme quantiles using adaptive kriging and importance sampling",
+      "authors": [
+        "Nassim Razaaly",
+        "Daan Crommelin",
+        "Pietro Marco Congedo"
+      ],
+      "members": [
+        "Daan Crommelin"
+      ],
+      "year": 2019,
+      "date": "2019-12-19",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "International Journal for Numerical Methods in Engineering",
+      "volume": "121",
+      "issue": "9",
+      "pages": "2086–2105",
+      "citedBy": 8,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1002/nme.6300",
+        "pdf": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/nme.6300"
+      }
+    },
+    {
+      "id": "W2957589565",
+      "doi": "10.1029/2018ms001600",
+      "title": "Regional Superparameterization in a Global Circulation Model Using Large Eddy Simulations",
+      "authors": [
+        "Fredrik Jansson",
+        "Gijs van den Oord",
+        "Inti Pelupessy",
+        "Johanna Grönqvist",
+        "A. Pier Siebesma",
+        "Daan Crommelin"
+      ],
+      "members": [
+        "Daan Crommelin"
+      ],
+      "year": 2019,
+      "date": "2019-07-12",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Journal of Advances in Modeling Earth Systems",
+      "volume": "11",
+      "issue": "9",
+      "pages": "2958–2979",
+      "citedBy": 32,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1029/2018ms001600",
+        "pdf": "https://agupubs.onlinelibrary.wiley.com/doi/pdfdirect/10.1029/2018MS001600"
+      }
+    },
+    {
+      "id": "W4288284577",
+      "doi": "10.48550/arxiv.1907.04022",
+      "title": "PDE/PDF-informed adaptive sampling for efficient non-intrusive surrogate\\n modelling",
+      "authors": [
+        "Yous van Halder",
+        "Benjamin Sanderse",
+        "Barry Koren"
+      ],
+      "members": [
+        "Benjamin Sanderse"
+      ],
+      "year": 2019,
+      "date": "2019-07-09",
+      "type": "preprint",
+      "isPreprint": true,
+      "venue": "arXiv",
+      "volume": null,
+      "issue": null,
+      "pages": null,
+      "citedBy": 0,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.48550/arxiv.1907.04022",
+        "arxiv": "https://arxiv.org/abs/1907.04022",
+        "pdf": "https://arxiv.org/pdf/1907.04022"
+      }
+    },
+    {
+      "id": "W2931943753",
+      "doi": "10.48550/arxiv.1904.03859",
+      "title": "Efficient estimation of divergence-based sensitivity indices with Gaussian process surrogates",
+      "authors": [
+        "Anne Eggels",
+        "Daan Crommelin"
+      ],
+      "members": [
+        "Daan Crommelin"
+      ],
+      "year": 2019,
+      "date": "2019-04-08",
+      "type": "preprint",
+      "isPreprint": true,
+      "venue": "arXiv",
+      "volume": null,
+      "issue": null,
+      "pages": null,
+      "citedBy": 0,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.48550/arxiv.1904.03859",
+        "arxiv": "https://arxiv.org/abs/1904.03859",
+        "pdf": "https://arxiv.org/pdf/1904.03859"
+      }
+    },
+    {
+      "id": "W4291226696",
+      "doi": "10.48550/arxiv.1904.01456",
+      "title": "Influence of spatial dispersion on surface plasmons, nanoparticles and grating couplers",
+      "authors": [
+        "Armel Pitelet",
+        "Centeno, Emmanuel",
+        "Antoine Moreau",
+        "Nikolai Schmitt",
+        "Claire Scheid",
+        "Dimitris Loukrezis",
+        "Herbert De Gersem",
+        "Cristian Ciracì"
+      ],
+      "members": [
+        "Dimitris Loukrezis"
+      ],
+      "year": 2019,
+      "date": "2019-04-02",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "HAL (Le Centre pour la Communication Scientifique Directe)",
+      "volume": null,
+      "issue": null,
+      "pages": null,
+      "citedBy": 0,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.48550/arxiv.1904.01456",
+        "arxiv": "https://doi.org/10.48550/arxiv.1904.01456",
+        "openAccess": "https://figshare.com/articles/preprint/Influence_of_spatial_dispersion_on_surface_plasmons_nanoparticles_and_grating_couplers/24687252"
+      }
+    },
+    {
+      "id": "W2934162524",
+      "doi": "10.1063/1.5080296",
+      "title": "Rare event simulation for steady-state probabilities via recurrency cycles",
+      "authors": [
+        "Krzysztof Bisewski",
+        "Daan Crommelin",
+        "Michel Mandjes"
+      ],
+      "members": [
+        "Daan Crommelin"
+      ],
+      "year": 2019,
+      "date": "2019-03-01",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Chaos An Interdisciplinary Journal of Nonlinear Science",
+      "volume": "29",
+      "issue": "3",
+      "pages": "033131–033131",
+      "citedBy": 2,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1063/1.5080296",
+        "arxiv": "https://arxiv.org/abs/1904.02966",
+        "pdf": "https://arxiv.org/pdf/1904.02966"
+      }
+    },
+    {
+      "id": "W2890114885",
+      "doi": "10.1016/j.jcp.2019.02.001",
+      "title": "Constraint-consistent Runge–Kutta methods for one-dimensional incompressible multiphase flow",
+      "authors": [
+        "Benjamin Sanderse",
+        "Arthur E. P. Veldman"
+      ],
+      "members": [
+        "Benjamin Sanderse"
+      ],
+      "year": 2019,
+      "date": "2019-02-11",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Journal of Computational Physics",
+      "volume": "384",
+      "issue": null,
+      "pages": "170–199",
+      "citedBy": 15,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1016/j.jcp.2019.02.001",
+        "arxiv": "https://arxiv.org/abs/1809.06114",
+        "pdf": "https://ars.els-cdn.com/content/image/1-s2.0-S0021999119300683-gr001_lrg.jpg"
+      }
+    },
+    {
+      "id": "W2996986396",
+      "doi": "10.3390/e21020100",
+      "title": "Quantifying Data Dependencies with Rényi Mutual Information and Minimum Spanning Trees",
+      "authors": [
+        "Anne Eggels",
+        "Daan Crommelin"
+      ],
+      "members": [
+        "Daan Crommelin"
+      ],
+      "year": 2019,
+      "date": "2019-01-22",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Entropy",
+      "volume": "21",
+      "issue": "2",
+      "pages": "100–100",
+      "citedBy": 5,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.3390/e21020100",
+        "arxiv": "https://arxiv.org/abs/1802.01841",
+        "pdf": "https://www.mdpi.com/1099-4300/21/2/100/pdf?version=1548847750"
+      }
+    },
+    {
+      "id": "W2919364773",
+      "doi": "10.26083/tuprints-00008485",
+      "title": "Adaptive approximations for high-dimensional uncertainty quantification in stochastic parametric electromagnetic field simulations",
+      "authors": [
+        "Dimitris Loukrezis"
+      ],
+      "members": [
+        "Dimitris Loukrezis"
+      ],
+      "year": 2019,
+      "date": "2019-01-01",
+      "type": "dissertation",
+      "isPreprint": false,
+      "venue": "TUbilio (Technical University of Darmstadt)",
+      "volume": null,
+      "issue": null,
+      "pages": null,
+      "citedBy": 6,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.26083/tuprints-00008485",
+        "pdf": "https://tuprints.ulb.tu-darmstadt.de/8485"
+      }
+    },
+    {
+      "id": "W2986460339",
+      "doi": "10.1137/18m1219643",
+      "title": "An Adaptive Minimum Spanning Tree Multielement Method for Uncertainty Quantification of Smooth and Discontinuous Responses",
+      "authors": [
+        "Yous van Halder",
+        "Benjamin Sanderse",
+        "Barry Koren"
+      ],
+      "members": [
+        "Benjamin Sanderse"
+      ],
+      "year": 2019,
+      "date": "2019-01-01",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "SIAM Journal on Scientific Computing",
+      "volume": "41",
+      "issue": "6",
+      "pages": "A3624–A3648",
+      "citedBy": 8,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1137/18m1219643",
+        "openAccess": "https://research.tue.nl/en/publications/fe722356-fd74-4d77-a7de-126694eaf1d3"
+      }
+    },
+    {
+      "id": "W3000508479",
+      "doi": null,
+      "title": "Overstromingen en Monte Carlo",
+      "authors": [
+        "Daan Crommelin"
+      ],
+      "members": [
+        "Daan Crommelin"
+      ],
+      "year": 2019,
+      "date": "2019-01-01",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Data Archiving and Networked Services (DANS)",
+      "volume": "2019",
+      "issue": null,
+      "pages": "20–23",
+      "citedBy": 0,
+      "isOpenAccess": true,
+      "links": {
+        "pdf": "https://ir.cwi.nl/pub/29252"
+      }
+    },
+    {
+      "id": "W2921616367",
+      "doi": null,
+      "title": "Bayesian Inference for Turbulence Model Uncertainty Quantification",
+      "authors": [
+        "Wouter Edeling",
+        "Aashwin Mishra",
+        "Gianluca Iaccarino"
+      ],
+      "members": [
+        "Wouter Edeling"
+      ],
+      "year": 2018,
+      "date": "2018-11-20",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Bulletin of the American Physical Society",
+      "volume": null,
+      "issue": null,
+      "pages": null,
+      "citedBy": 0,
+      "isOpenAccess": false,
+      "links": {}
+    },
+    {
+      "id": "W2900988838",
+      "doi": "10.1175/jpo-d-18-0117.1",
+      "title": "Toward a Turbulence Closure Based on Energy Modes",
+      "authors": [
+        "Jan Viebahn",
+        "Daan Crommelin",
+        "Henk A. Dijkstra"
+      ],
+      "members": [
+        "Daan Crommelin"
+      ],
+      "year": 2018,
+      "date": "2018-11-16",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Journal of Physical Oceanography",
+      "volume": "49",
+      "issue": "4",
+      "pages": "1075–1097",
+      "citedBy": 7,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1175/jpo-d-18-0117.1",
+        "pdf": "https://journals.ametsoc.org/jpo/article-pdf/49/4/1075/4851687/jpo-d-18-0117_1.pdf"
+      }
+    },
+    {
+      "id": "W2891529427",
+      "doi": null,
+      "title": "Uncertainty Quantification for an Optical Grating Coupler with Adjoint-based Adaptive Collocation",
+      "authors": [
+        "Niklas Georg",
+        "Dimitris Loukrezis",
+        "Ulrich Römer",
+        "Sebastian Schöps"
+      ],
+      "members": [
+        "Dimitris Loukrezis"
+      ],
+      "year": 2018,
+      "date": "2018-08-01",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "TUbilio (Technical University of Darmstadt)",
+      "volume": null,
+      "issue": null,
+      "pages": null,
+      "citedBy": 0,
+      "isOpenAccess": false,
+      "links": {}
+    },
+    {
+      "id": "W2906520991",
+      "doi": null,
+      "title": "Using Affine Decompositions and Design Elements for Geometric Parametrization",
+      "authors": [
+        "Zeger Bontinck",
+        "Ion Gabriel Ion",
+        "Dimitris Loukrezis",
+        "Ulrich J. Römer",
+        "Sebastian Schöps",
+        "Herbert De Gersem"
+      ],
+      "members": [
+        "Dimitris Loukrezis"
+      ],
+      "year": 2018,
+      "date": "2018-08-01",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "TUbilio (Technical University of Darmstadt)",
+      "volume": null,
+      "issue": null,
+      "pages": null,
+      "citedBy": 0,
+      "isOpenAccess": false,
+      "links": {}
+    },
+    {
+      "id": "W2887235653",
+      "doi": null,
+      "title": "Uncertainty quantification for an optical grating coupler with an adjoint-based Leja adaptive collocation method.",
+      "authors": [
+        "Niklas Georg",
+        "Dimitris Loukrezis",
+        "Ulrich Römer",
+        "Sebastian Schöps"
+      ],
+      "members": [
+        "Dimitris Loukrezis"
+      ],
+      "year": 2018,
+      "date": "2018-07-19",
+      "type": "preprint",
+      "isPreprint": true,
+      "venue": "arXiv",
+      "volume": null,
+      "issue": null,
+      "pages": null,
+      "citedBy": 4,
+      "isOpenAccess": true,
+      "links": {
+        "arxiv": "https://arxiv.org/pdf/1807.07485",
+        "openAccess": "https://arxiv.org/pdf/1807.07485"
+      }
+    },
+    {
+      "id": "W2949853609",
+      "doi": null,
+      "title": "Uncertainty quantification for nanoplasmonics with adjoint-based Leja adaptive collocation and conformal maps",
+      "authors": [
+        "Niklas Georg",
+        "Dimitris Loukrezis",
+        "Ulrich Römer",
+        "Sebastian Schöps"
+      ],
+      "members": [
+        "Dimitris Loukrezis"
+      ],
+      "year": 2018,
+      "date": "2018-07-19",
+      "type": "preprint",
+      "isPreprint": true,
+      "venue": "arXiv",
+      "volume": null,
+      "issue": null,
+      "pages": null,
+      "citedBy": 3,
+      "isOpenAccess": true,
+      "links": {
+        "arxiv": "https://arxiv.org/abs/1807.07485",
+        "openAccess": "https://arxiv.org/abs/1807.07485"
+      }
+    },
+    {
+      "id": "W2616336847",
+      "doi": "10.1145/3177775",
+      "title": "Controlling the Time Discretization Bias for the Supremum of Brownian Motion",
+      "authors": [
+        "Krzysztof Bisewski",
+        "Daan Crommelin",
+        "Michel Mandjes"
+      ],
+      "members": [
+        "Daan Crommelin"
+      ],
+      "year": 2018,
+      "date": "2018-07-13",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "ACM Transactions on Modeling and Computer Simulation",
+      "volume": "28",
+      "issue": "3",
+      "pages": "1–25",
+      "citedBy": 4,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1145/3177775",
+        "arxiv": "https://arxiv.org/abs/1705.06567",
+        "pdf": "https://arxiv.org/pdf/1705.06567"
+      }
+    },
+    {
+      "id": "W2801518294",
+      "doi": "10.1109/tste.2018.2834475",
+      "title": "Hidden Markov Models for Wind Farm Power Output",
+      "authors": [
+        "Debarati Bhaumik",
+        "Daan Crommelin",
+        "Stella Kapodistria",
+        "Bert Zwart"
+      ],
+      "members": [
+        "Daan Crommelin"
+      ],
+      "year": 2018,
+      "date": "2018-05-08",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "IEEE Transactions on Sustainable Energy",
+      "volume": "10",
+      "issue": "2",
+      "pages": "533–539",
+      "citedBy": 29,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1109/tste.2018.2834475",
+        "pdf": "https://ir.cwi.nl/pub/27720/BhauCroKapZwa_IEEESustEnerg_2018.pdf"
+      }
+    },
+    {
+      "id": "W2811045889",
+      "doi": null,
+      "title": "Shape Optimization of Electric Devices Combining a Deterministic Optimization Method With Design Elements",
+      "authors": [
+        "Ion Gabriel Ion",
+        "Dimitris Loukrezis",
+        "Ulrich J. Römer",
+        "Zeger Bontinck",
+        "Sebastian Schöps",
+        "Oliver Lass",
+        "Stefan Ulbrich",
+        "Herbert De Gersem"
+      ],
+      "members": [
+        "Dimitris Loukrezis"
+      ],
+      "year": 2018,
+      "date": "2018-04-01",
+      "type": "article",
+      "isPreprint": false,
+      "venue": null,
+      "volume": null,
+      "issue": null,
+      "pages": null,
+      "citedBy": 0,
+      "isOpenAccess": false,
+      "links": {}
+    },
+    {
+      "id": "W2790231963",
+      "doi": "10.48550/arxiv.1803.06833",
+      "title": "An adaptive minimum spanning tree multi-element method for uncertainty quantification of smooth and discontinuous responses",
+      "authors": [
+        "Yous van Halder",
+        "Benjamin Sanderse",
+        "Barry Koren"
+      ],
+      "members": [
+        "Benjamin Sanderse"
+      ],
+      "year": 2018,
+      "date": "2018-03-19",
+      "type": "preprint",
+      "isPreprint": true,
+      "venue": "arXiv",
+      "volume": null,
+      "issue": null,
+      "pages": null,
+      "citedBy": 3,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.48550/arxiv.1803.06833",
+        "arxiv": "https://arxiv.org/abs/1803.06833",
+        "pdf": "https://arxiv.org/pdf/1803.06833"
+      }
+    },
+    {
+      "id": "W4298771571",
+      "doi": "10.48550/arxiv.1803.06833",
+      "title": "An adaptive minimum spanning tree multi-element method for uncertainty\\n quantification of smooth and discontinuous responses",
+      "authors": [
+        "Yous van Halder",
+        "Benjamin Sanderse",
+        "Barry Koren"
+      ],
+      "members": [
+        "Benjamin Sanderse"
+      ],
+      "year": 2018,
+      "date": "2018-03-19",
+      "type": "preprint",
+      "isPreprint": true,
+      "venue": "arXiv",
+      "volume": null,
+      "issue": null,
+      "pages": null,
+      "citedBy": 0,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.48550/arxiv.1803.06833",
+        "arxiv": "https://arxiv.org/abs/1803.06833",
+        "pdf": "https://arxiv.org/pdf/1803.06833"
+      }
+    },
+    {
+      "id": "W2788603536",
+      "doi": "10.1016/j.est.2017.12.012",
+      "title": "Mitigation of large power spills by an energy storage device in a stand alone energy system",
+      "authors": [
+        "Debarati Bhaumik",
+        "Daan Crommelin",
+        "Bert Zwart"
+      ],
+      "members": [
+        "Daan Crommelin"
+      ],
+      "year": 2018,
+      "date": "2018-02-03",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Journal of Energy Storage",
+      "volume": "16",
+      "issue": null,
+      "pages": "76–83",
+      "citedBy": 5,
+      "isOpenAccess": false,
+      "links": {
+        "doi": "https://doi.org/10.1016/j.est.2017.12.012"
+      }
+    },
+    {
+      "id": "W2788243603",
+      "doi": "10.1007/978-3-319-65558-1_20",
+      "title": "Cellular Automata for Clouds and Convection",
+      "authors": [
+        "Daan Crommelin"
+      ],
+      "members": [
+        "Daan Crommelin"
+      ],
+      "year": 2018,
+      "date": "2018-01-01",
+      "type": "book-chapter",
+      "isPreprint": false,
+      "venue": "Emergence, complexity and computation",
+      "volume": null,
+      "issue": null,
+      "pages": "327–339",
+      "citedBy": 2,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1007/978-3-319-65558-1_20",
+        "pdf": "https://ir.cwi.nl/pub/28358/28358.pdf"
+      }
+    },
+    {
+      "id": "W2581691809",
+      "doi": "10.1615/int.j.uncertaintyquantification.2018020215",
+      "title": "CLUSTERING-BASED COLLOCATION FOR UNCERTAINTY PROPAGATION WITH MULTIVARIATE DEPENDENT INPUTS",
+      "authors": [
+        "Anne W. Eggels",
+        "Daan Crommelin",
+        "J. A. S. Witteveen"
+      ],
+      "members": [
+        "Daan Crommelin"
+      ],
+      "year": 2018,
+      "date": "2018-01-01",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "International Journal for Uncertainty Quantification",
+      "volume": "8",
+      "issue": "1",
+      "pages": "43–59",
+      "citedBy": 3,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1615/int.j.uncertaintyquantification.2018020215",
+        "arxiv": "https://arxiv.org/abs/1703.06112",
+        "pdf": "https://www.dl.begellhouse.com/download/article/791d665a4cdf9232/IJUQ0801(3)-20215.pdf"
+      }
+    },
+    {
+      "id": "W2902192325",
+      "doi": null,
+      "title": "Digital Twins - Introduction to the Special Theme.",
+      "authors": [
+        "Edgar R. Weippl",
+        "Benjamin Sanderse"
+      ],
+      "members": [
+        "Benjamin Sanderse"
+      ],
+      "year": 2018,
+      "date": "2018-01-01",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "ERCIM news/ERCIM news online edition",
+      "volume": "2018",
+      "issue": null,
+      "pages": null,
+      "citedBy": 6,
+      "isOpenAccess": false,
+      "links": {}
+    },
+    {
+      "id": "W2776177683",
+      "doi": null,
+      "title": "Numerical Comparison of Leja and Clenshaw-Curtis Dimension-Adaptive Collocation for Stochastic Parametric Electromagnetic Field Problems",
+      "authors": [
+        "Dimitris Loukrezis",
+        "Ulrich Römer",
+        "Herbert De Gersem"
+      ],
+      "members": [
+        "Dimitris Loukrezis"
+      ],
+      "year": 2017,
+      "date": "2017-12-19",
+      "type": "article",
+      "isPreprint": false,
+      "venue": null,
+      "volume": null,
+      "issue": null,
+      "pages": null,
+      "citedBy": 0,
+      "isOpenAccess": false,
+      "links": {}
+    },
+    {
+      "id": "W2773122046",
+      "doi": "10.1515/mcwf-2017-0005",
+      "title": "Covariate-based stochastic parameterization of baroclinic ocean eddies",
+      "authors": [
+        "Nick Verheul",
+        "Jan Viebahn",
+        "Daan Crommelin"
+      ],
+      "members": [
+        "Daan Crommelin"
+      ],
+      "year": 2017,
+      "date": "2017-12-08",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Mathematics of Climate and Weather Forecasting",
+      "volume": "3",
+      "issue": "1",
+      "pages": null,
+      "citedBy": 9,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1515/mcwf-2017-0005",
+        "pdf": "https://www.degruyter.com/downloadpdf/j/mcwf.2017.3.issue-1/mcwf-2017-0005/mcwf-2017-0005.xml"
+      }
+    },
+    {
+      "id": "W3030011357",
+      "doi": null,
+      "title": "Towards a stochastic Gent-McWilliams parameterization",
+      "authors": [
+        "Jan Viebahn",
+        "Daan Crommelin",
+        "Henk A. Dijkstra"
+      ],
+      "members": [
+        "Daan Crommelin"
+      ],
+      "year": 2017,
+      "date": "2017-12-01",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "AGUFM",
+      "volume": "2017",
+      "issue": null,
+      "pages": null,
+      "citedBy": 0,
+      "isOpenAccess": false,
+      "links": {}
+    },
+    {
+      "id": "W2767760561",
+      "doi": "10.1007/s10494-017-9870-6",
+      "title": "Data-Free and Data-Driven RANS Predictions with Quantified Uncertainty",
+      "authors": [
+        "Wouter Edeling",
+        "Gianluca Iaccarino",
+        "Paola Cinnella"
+      ],
+      "members": [
+        "Wouter Edeling"
+      ],
+      "year": 2017,
+      "date": "2017-11-09",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Flow Turbulence and Combustion",
+      "volume": "100",
+      "issue": "3",
+      "pages": "593–616",
+      "citedBy": 39,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1007/s10494-017-9870-6",
+        "pdf": "https://link.springer.com/content/pdf/10.1007/s10494-017-9870-6.pdf"
+      }
+    },
+    {
+      "id": "W3025039442",
+      "doi": null,
+      "title": "Data-free and data-driven spectral perturbations for RANS UQ",
+      "authors": [
+        "Wouter Edeling",
+        "Aashwin Mishra",
+        "Gianluca Iaccarino"
+      ],
+      "members": [
+        "Wouter Edeling"
+      ],
+      "year": 2017,
+      "date": "2017-11-01",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "APS",
+      "volume": null,
+      "issue": null,
+      "pages": null,
+      "citedBy": 0,
+      "isOpenAccess": false,
+      "links": {}
+    },
+    {
+      "id": "W2762834242",
+      "doi": null,
+      "title": "Uncertainty quantification for wind energy applications",
+      "authors": [
+        "L.M.M. van deBos",
+        "Benjamin Sanderse"
+      ],
+      "members": [
+        "Benjamin Sanderse"
+      ],
+      "year": 2017,
+      "date": "2017-08-22",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Scientific Computing & Instrumentation",
+      "volume": null,
+      "issue": null,
+      "pages": null,
+      "citedBy": 1,
+      "isOpenAccess": false,
+      "links": {}
+    },
+    {
+      "id": "W2624776622",
+      "doi": "10.1016/j.compfluid.2017.06.010",
+      "title": "Efficient simulation of one-dimensional two-phase flow with a high-order h-adaptive space-time Discontinuous Galerkin method",
+      "authors": [
+        "J.S.B. Van Zwieten",
+        "Benjamin Sanderse",
+        "Maurice H. W. Hendrix",
+        "C. Vuik",
+        "R.A.W.M. Henkes"
+      ],
+      "members": [
+        "Benjamin Sanderse"
+      ],
+      "year": 2017,
+      "date": "2017-06-16",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Computers & Fluids",
+      "volume": "156",
+      "issue": null,
+      "pages": "34–47",
+      "citedBy": 3,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1016/j.compfluid.2017.06.010",
+        "pdf": "https://www.sciencedirect.com/science/article/pii/S0045793017302207"
+      }
+    },
+    {
+      "id": "W2617965377",
+      "doi": "10.1016/j.ijmultiphaseflow.2017.05.002",
+      "title": "Analysis of time integration methods for the compressible two-fluid model for pipe flow simulations",
+      "authors": [
+        "Benjamin Sanderse",
+        "Ivar Eskerud Smith",
+        "Maurice H. W. Hendrix"
+      ],
+      "members": [
+        "Benjamin Sanderse"
+      ],
+      "year": 2017,
+      "date": "2017-05-25",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "International Journal of Multiphase Flow",
+      "volume": "95",
+      "issue": null,
+      "pages": "155–174",
+      "citedBy": 11,
+      "isOpenAccess": false,
+      "links": {
+        "doi": "https://doi.org/10.1016/j.ijmultiphaseflow.2017.05.002"
+      }
+    },
+    {
+      "id": "W2614192949",
+      "doi": "10.48550/arxiv.1705.05354",
+      "title": "A return to eddy viscosity model for epistemic UQ in RANS closures",
+      "authors": [
+        "Wouter Edeling",
+        "Gianluca Iaccarino",
+        "Paola Cinnella"
+      ],
+      "members": [
+        "Wouter Edeling"
+      ],
+      "year": 2017,
+      "date": "2017-05-15",
+      "type": "preprint",
+      "isPreprint": true,
+      "venue": "arXiv",
+      "volume": null,
+      "issue": null,
+      "pages": null,
+      "citedBy": 4,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.48550/arxiv.1705.05354",
+        "arxiv": "https://arxiv.org/abs/1705.05354",
+        "pdf": "https://arxiv.org/pdf/1705.05354"
+      }
+    },
+    {
+      "id": "W2904717729",
+      "doi": null,
+      "title": "Leja-Based Adaptive Sparse Grids for Uncertainty Quantification in High-Frequency Electromagnetics",
+      "authors": [
+        "Dimitris Loukrezis",
+        "Ulrich Römer",
+        "Herbert De Gersem"
+      ],
+      "members": [
+        "Dimitris Loukrezis"
+      ],
+      "year": 2017,
+      "date": "2017-01-01",
+      "type": "article",
+      "isPreprint": false,
+      "venue": null,
+      "volume": null,
+      "issue": null,
+      "pages": null,
+      "citedBy": 0,
+      "isOpenAccess": false,
+      "links": {}
+    },
+    {
+      "id": "W2952647959",
+      "doi": "10.48550/arxiv.1612.07474",
+      "title": "Stochastic Climate Theory",
+      "authors": [
+        "Georg A. Gottwald",
+        "Daan Crommelin",
+        "Christian L. E. Franzke"
+      ],
+      "members": [
+        "Daan Crommelin"
+      ],
+      "year": 2016,
+      "date": "2016-12-22",
+      "type": "preprint",
+      "isPreprint": true,
+      "venue": "arXiv",
+      "volume": null,
+      "issue": null,
+      "pages": null,
+      "citedBy": 7,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.48550/arxiv.1612.07474",
+        "arxiv": "https://arxiv.org/abs/1612.07474",
+        "pdf": "https://arxiv.org/pdf/1612.07474"
+      }
+    },
+    {
+      "id": "W2563681334",
+      "doi": "10.1016/j.jcp.2016.12.011",
+      "title": "Non-intrusive uncertainty quantification using reduced cubature rules",
+      "authors": [
+        "L.M.M. van den Bos",
+        "Barry Koren",
+        "Richard P. Dwight"
+      ],
+      "members": [
+        "Barry Koren"
+      ],
+      "year": 2016,
+      "date": "2016-12-14",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Journal of Computational Physics",
+      "volume": "332",
+      "issue": null,
+      "pages": "418–445",
+      "citedBy": 13,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1016/j.jcp.2016.12.011",
+        "arxiv": "https://arxiv.org/abs/1905.06177",
+        "openAccess": "https://research.tue.nl/en/publications/cda1a3c2-995e-43ef-97de-3e76825734c4"
+      }
+    },
+    {
+      "id": "W2585909960",
+      "doi": null,
+      "title": "Structural Uncertainties in RANS Models: Reynolds Stress Transport contra Eddy Viscosity Frameworks",
+      "authors": [
+        "Aashwin Mishra",
+        "Wouter Edeling",
+        "Gianluca Iaccarino"
+      ],
+      "members": [
+        "Wouter Edeling"
+      ],
+      "year": 2016,
+      "date": "2016-11-22",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Bulletin of the American Physical Society",
+      "volume": null,
+      "issue": null,
+      "pages": null,
+      "citedBy": 0,
+      "isOpenAccess": false,
+      "links": {}
+    },
+    {
+      "id": "W2596350017",
+      "doi": null,
+      "title": "Statistical Inference of a RANS closure for a Jet-in-Crossflow simulation",
+      "authors": [
+        "Jan Heyse",
+        "Wouter Edeling",
+        "Gianluca Iaccarino"
+      ],
+      "members": [
+        "Wouter Edeling"
+      ],
+      "year": 2016,
+      "date": "2016-11-21",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Bulletin of the American Physical Society",
+      "volume": null,
+      "issue": null,
+      "pages": null,
+      "citedBy": 0,
+      "isOpenAccess": false,
+      "links": {}
+    },
+    {
+      "id": "W2593215461",
+      "doi": null,
+      "title": "The Use of the Reynolds Stress Transport Equation to Constrain Eigenvectors Perturbations on Model Form UQ of RANS Simulations",
+      "authors": [
+        "Luiz Eduardo Bittencourt Sampaio",
+        "Roney  Leon Thompson",
+        "Wouter Edeling",
+        "Aashwin Mishra",
+        "Gianluca Iaccarino"
+      ],
+      "members": [
+        "Wouter Edeling"
+      ],
+      "year": 2016,
+      "date": "2016-11-21",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Bulletin of the American Physical Society",
+      "volume": null,
+      "issue": null,
+      "pages": null,
+      "citedBy": 0,
+      "isOpenAccess": false,
+      "links": {}
+    },
+    {
+      "id": "W2588090935",
+      "doi": null,
+      "title": "Towards a transport model for epistemic UQ in RANS closures",
+      "authors": [
+        "Wouter Edeling",
+        "Gianluca Iaccarino"
+      ],
+      "members": [
+        "Wouter Edeling"
+      ],
+      "year": 2016,
+      "date": "2016-11-21",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Bulletin of the American Physical Society",
+      "volume": null,
+      "issue": null,
+      "pages": null,
+      "citedBy": 0,
+      "isOpenAccess": false,
+      "links": {}
+    },
+    {
+      "id": "W2237826530",
+      "doi": "10.1175/bams-d-15-00268.1",
+      "title": "Stochastic Parameterization: Toward a New View of Weather and Climate Models",
+      "authors": [
+        "Judith Berner",
+        "Ulrich Achatz",
+        "Lauriane Batté",
+        "Lisa Bengtsson",
+        "Álvaro de la Cámara",
+        "Hannah M. Christensen",
+        "Matteo Colangeli",
+        "Danielle R. B. Coleman",
+        "Daan Crommelin",
+        "Stamen Dolaptchiev",
+        "Christian L. E. Franzke",
+        "Petra Friederichs",
+        "Peter Imkeller",
+        "Heikki J. Järvinen",
+        "Stephan Juricke",
+        "Vassili Kitsios",
+        "François Lott",
+        "Valerio Lucarini",
+        "Salil Mahajan",
+        "T. N. Palmer",
+        "Cécile Penland",
+        "Mirjana Sakradžija",
+        "Jin‐Song von Storch",
+        "Antje Weisheimer",
+        "Michael Weniger",
+        "Paul D. Williams",
+        "Jun‐Ichi Yano"
+      ],
+      "members": [
+        "Daan Crommelin"
+      ],
+      "year": 2016,
+      "date": "2016-07-19",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Bulletin of the American Meteorological Society",
+      "volume": "98",
+      "issue": "3",
+      "pages": "565–588",
+      "citedBy": 433,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1175/bams-d-15-00268.1",
+        "arxiv": "https://arxiv.org/abs/1510.08682",
+        "pdf": "https://arxiv.org/pdf/1510.08682"
+      }
+    },
+    {
+      "id": "W2254952565",
+      "doi": "10.1145/2875342",
+      "title": "A Large-Deviation-Based Splitting Estimation of Power Flow Reliability",
+      "authors": [
+        "Wander Wadman",
+        "Daan Crommelin",
+        "Bert Zwart"
+      ],
+      "members": [
+        "Daan Crommelin"
+      ],
+      "year": 2016,
+      "date": "2016-02-09",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "ACM Transactions on Modeling and Computer Simulation",
+      "volume": "26",
+      "issue": "4",
+      "pages": "1–26",
+      "citedBy": 14,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1145/2875342",
+        "pdf": "https://ir.cwi.nl/pub/23499/23499B.pdf"
+      }
+    },
+    {
+      "id": "W2228657800",
+      "doi": "10.1175/jas-d-15-0244.1",
+      "title": "Stochastic Convection Parameterization with Markov Chains in an Intermediate-Complexity GCM",
+      "authors": [
+        "Jesse Dorrestijn",
+        "Daan Crommelin",
+        "A. Pier Siebesma",
+        "Harmen J. J. Jonker",
+        "Frank Selten"
+      ],
+      "members": [
+        "Daan Crommelin"
+      ],
+      "year": 2016,
+      "date": "2016-01-06",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Journal of the Atmospheric Sciences",
+      "volume": "73",
+      "issue": "3",
+      "pages": "1367–1382",
+      "citedBy": 47,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1175/jas-d-15-0244.1",
+        "pdf": "https://journals.ametsoc.org/downloadpdf/journals/atsc/73/3/jas-d-15-0244.1.pdf"
+      }
+    },
+    {
+      "id": "W2402342422",
+      "doi": "10.4310/cms.2016.v14.n5.a2",
+      "title": "Data-driven stochastic representations of unresolved features in multiscale models",
+      "authors": [
+        "Nick Verheul",
+        "Daan Crommelin"
+      ],
+      "members": [
+        "Daan Crommelin"
+      ],
+      "year": 2016,
+      "date": "2016-01-01",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Communications in Mathematical Sciences",
+      "volume": "14",
+      "issue": "5",
+      "pages": "1213–1236",
+      "citedBy": 8,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.4310/cms.2016.v14.n5.a2",
+        "pdf": "https://www.intlpress.com/site/pub/files/_fulltext/journals/cms/2016/0014/0005/CMS-2016-0014-0005-a002.pdf"
+      }
+    },
+    {
+      "id": "W2562314303",
+      "doi": null,
+      "title": "Rare Event Simulation for Climate Extremes",
+      "authors": [
+        "Michel Mandjes",
+        "J. H. van Zanten",
+        "Daan Crommelin"
+      ],
+      "members": [
+        "Daan Crommelin"
+      ],
+      "year": 2015,
+      "date": "2015-08-01",
+      "type": "article",
+      "isPreprint": false,
+      "venue": null,
+      "volume": null,
+      "issue": null,
+      "pages": null,
+      "citedBy": 0,
+      "isOpenAccess": false,
+      "links": {}
+    },
+    {
+      "id": "W1964418759",
+      "doi": "10.1175/jas-d-14-0110.1",
+      "title": "Stochastic Parameterization of Convective Area Fractions with a Multicloud Model Inferred from Observational Data",
+      "authors": [
+        "Jesse Dorrestijn",
+        "Daan Crommelin",
+        "A. Pier Siebesma",
+        "Harmen J. J. Jonker",
+        "Christian Jakob"
+      ],
+      "members": [
+        "Daan Crommelin"
+      ],
+      "year": 2014,
+      "date": "2014-11-10",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Journal of the Atmospheric Sciences",
+      "volume": "72",
+      "issue": "2",
+      "pages": "854–869",
+      "citedBy": 37,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1175/jas-d-14-0110.1",
+        "pdf": "https://journals.ametsoc.org/downloadpdf/journals/atsc/72/2/jas-d-14-0110.1.pdf"
+      }
+    },
+    {
+      "id": "W2153780603",
+      "doi": "10.1175/jas-d-13-0260.1",
+      "title": "Parametric Estimation of the Stochastic Dynamics of Sea Surface Winds",
+      "authors": [
+        "William F. Thompson",
+        "Adam H. Monahan",
+        "Daan Crommelin"
+      ],
+      "members": [
+        "Daan Crommelin"
+      ],
+      "year": 2014,
+      "date": "2014-05-14",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Journal of the Atmospheric Sciences",
+      "volume": "71",
+      "issue": "9",
+      "pages": "3465–3483",
+      "citedBy": 3,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1175/jas-d-13-0260.1",
+        "pdf": "https://journals.ametsoc.org/downloadpdf/journals/atsc/71/9/jas-d-13-0260.1.pdf"
+      }
+    },
+    {
+      "id": "W2143146578",
+      "doi": "10.1016/j.jcp.2013.10.002",
+      "title": "Boundary treatment for fourth-order staggered mesh discretizations of the incompressible Navier–Stokes equations",
+      "authors": [
+        "Benjamin Sanderse",
+        "Roel W. C. P. Verstappen",
+        "Barry Koren"
+      ],
+      "members": [
+        "Barry Koren",
+        "Benjamin Sanderse"
+      ],
+      "year": 2013,
+      "date": "2013-10-10",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Journal of Computational Physics",
+      "volume": "257",
+      "issue": null,
+      "pages": "1472–1505",
+      "citedBy": 10,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1016/j.jcp.2013.10.002",
+        "openAccess": "https://research.rug.nl/en/publications/abf208f2-2df1-401e-9168-afc14502313b"
+      }
+    },
+    {
+      "id": "W2069425686",
+      "doi": "10.1098/rsta.2012.0374",
+      "title": "A data-driven multi-cloud model for stochastic parametrization of deep convection",
+      "authors": [
+        "Jesse Dorrestijn",
+        "Daan Crommelin",
+        "Joseph A. Biello",
+        "Steven Böing"
+      ],
+      "members": [
+        "Daan Crommelin"
+      ],
+      "year": 2013,
+      "date": "2013-04-15",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Philosophical Transactions of the Royal Society A Mathematical Physical and Engineering Sciences",
+      "volume": "371",
+      "issue": "1991",
+      "pages": "20120374–20120374",
+      "citedBy": 44,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1098/rsta.2012.0374",
+        "pdf": "https://ir.cwi.nl/pub/22120/22120B.pdf"
+      }
+    },
+    {
+      "id": "W2588822504",
+      "doi": null,
+      "title": "Energy-conserving discretization methods for the incompressible Navier-Stokes equations",
+      "authors": [
+        "Benjamin Sanderse"
+      ],
+      "members": [
+        "Benjamin Sanderse"
+      ],
+      "year": 2013,
+      "date": "2013-03-19",
+      "type": "dissertation",
+      "isPreprint": false,
+      "venue": "Data Archiving and Networked Services (DANS)",
+      "volume": null,
+      "issue": null,
+      "pages": null,
+      "citedBy": 4,
+      "isOpenAccess": true,
+      "links": {
+        "openAccess": "https://ir.cwi.nl/pub/21308"
+      }
+    },
+    {
+      "id": "W2581048317",
+      "doi": "10.6100/ir750543",
+      "title": "Energy-conserving discretization methods for the incompressible Navier-Stokes equations:application to the simulation of wind-turbine wakes",
+      "authors": [
+        "Benjamin Sanderse"
+      ],
+      "members": [
+        "Benjamin Sanderse"
+      ],
+      "year": 2013,
+      "date": "2013-01-01",
+      "type": "dissertation",
+      "isPreprint": false,
+      "venue": "Centrum Wiskunde & Informatica (CWI), the national research institute for mathematics and computer science in the Netherlands",
+      "volume": null,
+      "issue": null,
+      "pages": null,
+      "citedBy": 9,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.6100/ir750543",
+        "pdf": "https://ir.cwi.nl/pub/21308"
+      }
+    },
+    {
+      "id": "W2189294494",
+      "doi": null,
+      "title": "Stochastic parameterization through statistical inference",
+      "authors": [
+        "Daan Crommelin"
+      ],
+      "members": [
+        "Daan Crommelin"
+      ],
+      "year": 2013,
+      "date": "2013-01-01",
+      "type": "article",
+      "isPreprint": false,
+      "venue": null,
+      "volume": null,
+      "issue": null,
+      "pages": null,
+      "citedBy": 0,
+      "isOpenAccess": false,
+      "links": {}
+    },
+    {
+      "id": "W3017870301",
+      "doi": null,
+      "title": "Stochastic parameterization of moist convection estimated from LES data",
+      "authors": [
+        "Jesse Dorrestijn",
+        "Daan Crommelin",
+        "Joseph A. Biello",
+        "Steven Böing",
+        "A. Pier Siebesma",
+        "Harm J. J. Jonker"
+      ],
+      "members": [
+        "Daan Crommelin"
+      ],
+      "year": 2012,
+      "date": "2012-12-01",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "AGUFM",
+      "volume": "2012",
+      "issue": null,
+      "pages": null,
+      "citedBy": 0,
+      "isOpenAccess": false,
+      "links": {}
+    },
+    {
+      "id": "W1963741653",
+      "doi": "10.1007/s10955-012-0597-4",
+      "title": "Estimation of Space-Dependent Diffusions and Potential Landscapes from Non-equilibrium Data",
+      "authors": [
+        "Daan Crommelin"
+      ],
+      "members": [
+        "Daan Crommelin"
+      ],
+      "year": 2012,
+      "date": "2012-09-20",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Journal of Statistical Physics",
+      "volume": "149",
+      "issue": "2",
+      "pages": "220–233",
+      "citedBy": 12,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1007/s10955-012-0597-4",
+        "pdf": "https://ir.cwi.nl/pub/21056/21056B.pdf"
+      }
+    },
+    {
+      "id": "W2153566480",
+      "doi": "10.1007/s00162-012-0281-y",
+      "title": "Stochastic parameterization of shallow cumulus convection estimated from high-resolution model data",
+      "authors": [
+        "Jesse Dorrestijn",
+        "Daan Crommelin",
+        "A. Pier Siebesma",
+        "Harm J. J. Jonker"
+      ],
+      "members": [
+        "Daan Crommelin"
+      ],
+      "year": 2012,
+      "date": "2012-09-10",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Theoretical and Computational Fluid Dynamics",
+      "volume": "27",
+      "issue": "1-2",
+      "pages": "133–148",
+      "citedBy": 79,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1007/s00162-012-0281-y",
+        "pdf": "https://link.springer.com/content/pdf/10.1007/s00162-012-0281-y.pdf"
+      }
+    },
+    {
+      "id": "W2073685945",
+      "doi": "10.1016/j.jcp.2012.07.039",
+      "title": "Energy-conserving Runge–Kutta methods for the incompressible Navier–Stokes equations",
+      "authors": [
+        "Benjamin Sanderse"
+      ],
+      "members": [
+        "Benjamin Sanderse"
+      ],
+      "year": 2012,
+      "date": "2012-08-17",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Journal of Computational Physics",
+      "volume": "233",
+      "issue": null,
+      "pages": "100–131",
+      "citedBy": 92,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1016/j.jcp.2012.07.039",
+        "pdf": "https://publications.tno.nl/publication/34633587/9cr4V7/w12046.pdf"
+      }
+    },
+    {
+      "id": "W2034232886",
+      "doi": "10.1016/j.amc.2012.04.032",
+      "title": "A numerical layer resolving method for the flow over a curved surface",
+      "authors": [
+        "Ali Raza Ansari",
+        "B. Hossain",
+        "Barry Koren",
+        "Gregorii I. Shishkin"
+      ],
+      "members": [
+        "Barry Koren"
+      ],
+      "year": 2012,
+      "date": "2012-05-23",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Applied Mathematics and Computation",
+      "volume": "218",
+      "issue": "21",
+      "pages": "10656–10668",
+      "citedBy": 0,
+      "isOpenAccess": false,
+      "links": {
+        "doi": "https://doi.org/10.1016/j.amc.2012.04.032"
+      }
+    },
+    {
+      "id": "W2006364723",
+      "doi": "10.1016/j.jcp.2011.11.028",
+      "title": "Accuracy analysis of explicit Runge–Kutta methods applied to the incompressible Navier–Stokes equations",
+      "authors": [
+        "Benjamin Sanderse",
+        "Barry Koren"
+      ],
+      "members": [
+        "Barry Koren",
+        "Benjamin Sanderse"
+      ],
+      "year": 2011,
+      "date": "2011-12-08",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Journal of Computational Physics",
+      "volume": "231",
+      "issue": "8",
+      "pages": "3041–3063",
+      "citedBy": 105,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1016/j.jcp.2011.11.028",
+        "pdf": "https://ir.cwi.nl/pub/19520/19520D.pdf"
+      }
+    },
+    {
+      "id": "W3016288940",
+      "doi": null,
+      "title": "Stochastic parameterization with data-inferred conditional Markov chains",
+      "authors": [
+        "Daan Crommelin"
+      ],
+      "members": [
+        "Daan Crommelin"
+      ],
+      "year": 2011,
+      "date": "2011-12-01",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "AGUFM",
+      "volume": "2011",
+      "issue": null,
+      "pages": null,
+      "citedBy": 0,
+      "isOpenAccess": false,
+      "links": {}
+    },
+    {
+      "id": "W2107056658",
+      "doi": "10.1137/100795917",
+      "title": "Diffusion Estimation from Multiscale Data by Operator Eigenpairs",
+      "authors": [
+        "Daan Crommelin",
+        "Eric Vanden‐Eijnden"
+      ],
+      "members": [
+        "Daan Crommelin"
+      ],
+      "year": 2011,
+      "date": "2011-10-01",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Multiscale Modeling and Simulation",
+      "volume": "9",
+      "issue": "4",
+      "pages": "1588–1623",
+      "citedBy": 45,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1137/100795917",
+        "pdf": "https://ir.cwi.nl/pub/18934/18934B.pdf"
+      }
+    },
+    {
+      "id": "W2106352744",
+      "doi": "10.1016/j.jcp.2011.03.016",
+      "title": "The Brunt–Väisälä frequency of rotating tokamak plasmas",
+      "authors": [
+        "Johannes Wilhelmus Haverkort",
+        "H.J. de Blank",
+        "Barry Koren"
+      ],
+      "members": [
+        "Barry Koren"
+      ],
+      "year": 2011,
+      "date": "2011-03-13",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Journal of Computational Physics",
+      "volume": "231",
+      "issue": "3",
+      "pages": "981–1001",
+      "citedBy": 17,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1016/j.jcp.2011.03.016",
+        "pdf": "https://ir.cwi.nl/pub/18602/18602D.pdf"
+      }
+    },
+    {
+      "id": "W2117401079",
+      "doi": "10.1088/0741-3335/53/4/045004",
+      "title": "Low-frequency Alfvén gap modes in rotating tokamak plasmas",
+      "authors": [
+        "Johannes Wilhelmus Haverkort",
+        "H. J. de Blank",
+        "Barry Koren"
+      ],
+      "members": [
+        "Barry Koren"
+      ],
+      "year": 2011,
+      "date": "2011-02-24",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Plasma Physics and Controlled Fusion",
+      "volume": "53",
+      "issue": "4",
+      "pages": "045004–045004",
+      "citedBy": 3,
+      "isOpenAccess": false,
+      "links": {
+        "doi": "https://doi.org/10.1088/0741-3335/53/4/045004"
+      }
+    },
+    {
+      "id": "W2161953237",
+      "doi": "10.1007/s11831-011-9059-4",
+      "title": "Free-Surface Viscous Flow Solution Methods for Ship Hydrodynamics",
+      "authors": [
+        "Jeroen Wackers",
+        "Barry Koren",
+        "Hoyte C. Raven",
+        "Atze van der Ploeg",
+        "A. R. Starke",
+        "G.B. Deng",
+        "P. Queutey",
+        "Michel Visonneau",
+        "Takanori Hino",
+        "Kunihide Ohashi"
+      ],
+      "members": [
+        "Barry Koren"
+      ],
+      "year": 2011,
+      "date": "2011-02-11",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Archives of Computational Methods in Engineering",
+      "volume": "18",
+      "issue": "1",
+      "pages": "1–41",
+      "citedBy": 91,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1007/s11831-011-9059-4",
+        "pdf": "https://ir.cwi.nl/pub/18846/18846D.pdf"
+      }
+    },
+    {
+      "id": "W2123434606",
+      "doi": "10.1002/we.458",
+      "title": "Review of computational fluid dynamics for wind turbine wake aerodynamics",
+      "authors": [
+        "Benjamin Sanderse",
+        "S.P. van der Pijl",
+        "Barry Koren"
+      ],
+      "members": [
+        "Barry Koren",
+        "Benjamin Sanderse"
+      ],
+      "year": 2011,
+      "date": "2011-02-04",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Wind Energy",
+      "volume": "14",
+      "issue": "7",
+      "pages": "799–819",
+      "citedBy": 600,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1002/we.458",
+        "pdf": "https://ir.cwi.nl/pub/18843/18843D.pdf"
+      }
+    },
+    {
+      "id": "W2147187431",
+      "doi": "10.1007/978-3-642-17884-9_78",
+      "title": "A Two-Dimensional Embedded-Boundary Method for Convection Problems with Moving Boundaries",
+      "authors": [
+        "Yunus Hassen",
+        "Barry Koren"
+      ],
+      "members": [
+        "Barry Koren"
+      ],
+      "year": 2011,
+      "date": "2011-01-01",
+      "type": "book-chapter",
+      "isPreprint": false,
+      "venue": null,
+      "volume": null,
+      "issue": null,
+      "pages": "613–619",
+      "citedBy": 0,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1007/978-3-642-17884-9_78",
+        "pdf": "https://ir.cwi.nl/pub/16558/16558D.pdf"
+      }
+    },
+    {
+      "id": "W2104712122",
+      "doi": "10.1016/j.jcp.2010.04.025",
+      "title": "A new formulation of Kapila’s five-equation model for compressible two-fluid flow, and its numerical treatment",
+      "authors": [
+        "Jasper J. Kreeft",
+        "Barry Koren"
+      ],
+      "members": [
+        "Barry Koren"
+      ],
+      "year": 2010,
+      "date": "2010-04-26",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Journal of Computational Physics",
+      "volume": "229",
+      "issue": "18",
+      "pages": "6220–6242",
+      "citedBy": 98,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1016/j.jcp.2010.04.025",
+        "pdf": "https://ir.cwi.nl/pub/17386/17386D.pdf"
+      }
+    },
+    {
+      "id": "W1569013439",
+      "doi": null,
+      "title": "Stochastics and computation for turbulent systems",
+      "authors": [
+        "Daan Crommelin",
+        "Jason E. Frank"
+      ],
+      "members": [
+        "Daan Crommelin"
+      ],
+      "year": 2010,
+      "date": "2010-04-01",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Data Archiving and Networked Services (DANS)",
+      "volume": "2010",
+      "issue": null,
+      "pages": "28–29",
+      "citedBy": 1,
+      "isOpenAccess": false,
+      "links": {}
+    },
+    {
+      "id": "W1589669324",
+      "doi": "10.1007/978-3-642-03344-5",
+      "title": "Advanced Computational Methods in Science and Engineering",
+      "authors": [
+        "Barry Koren",
+        "Vuik, Kees"
+      ],
+      "members": [
+        "Barry Koren"
+      ],
+      "year": 2009,
+      "date": "2009-09-25",
+      "type": "book",
+      "isPreprint": false,
+      "venue": "Lecture notes in computational science and engineering",
+      "volume": null,
+      "issue": null,
+      "pages": null,
+      "citedBy": 37,
+      "isOpenAccess": false,
+      "links": {
+        "doi": "https://doi.org/10.1007/978-3-642-03344-5"
+      }
+    },
+    {
+      "id": "W2111288282",
+      "doi": "10.1073/pnas.0900173106",
+      "title": "Normal forms for reduced stochastic climate models",
+      "authors": [
+        "Andrew J. Majda",
+        "Christian L. E. Franzke",
+        "Daan Crommelin"
+      ],
+      "members": [
+        "Daan Crommelin"
+      ],
+      "year": 2009,
+      "date": "2009-02-19",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Proceedings of the National Academy of Sciences",
+      "volume": "106",
+      "issue": "10",
+      "pages": "3649–3653",
+      "citedBy": 139,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1073/pnas.0900173106",
+        "openAccess": "https://www.ncbi.nlm.nih.gov/pmc/articles/2645348"
+      }
+    },
+    {
+      "id": "W2113978525",
+      "doi": "10.1007/978-3-642-01273-0_65",
+      "title": "A Finite-Volume Method for Convection Problems with Embedded Moving-Boundaries",
+      "authors": [
+        "Yunus Hassen",
+        "Barry Koren"
+      ],
+      "members": [
+        "Barry Koren"
+      ],
+      "year": 2009,
+      "date": "2009-01-01",
+      "type": "book-chapter",
+      "isPreprint": false,
+      "venue": null,
+      "volume": null,
+      "issue": null,
+      "pages": "499–505",
+      "citedBy": 1,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1007/978-3-642-01273-0_65",
+        "pdf": "https://ir.cwi.nl/pub/13679/13679D.pdf"
+      }
+    },
+    {
+      "id": "W1964765041",
+      "doi": "10.1137/080735977",
+      "title": "Data-Based Inference of Generators for Markov Jump Processes Using Convex Optimization",
+      "authors": [
+        "Daan Crommelin",
+        "Eric Vanden‐Eijnden"
+      ],
+      "members": [
+        "Daan Crommelin"
+      ],
+      "year": 2009,
+      "date": "2009-01-01",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Multiscale Modeling and Simulation",
+      "volume": "7",
+      "issue": "4",
+      "pages": "1751–1778",
+      "citedBy": 22,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1137/080735977",
+        "pdf": "https://ir.cwi.nl/pub/14723/14723B.pdf"
+      }
+    },
+    {
+      "id": "W2159666468",
+      "doi": "10.1007/978-3-642-03344-5_8",
+      "title": "Finite-Volume Discretizations and Immersed Boundaries",
+      "authors": [
+        "Yunus Hassen",
+        "Barry Koren"
+      ],
+      "members": [
+        "Barry Koren"
+      ],
+      "year": 2009,
+      "date": "2009-01-01",
+      "type": "book-chapter",
+      "isPreprint": false,
+      "venue": "Lecture notes in computational science and engineering",
+      "volume": null,
+      "issue": null,
+      "pages": "229–268",
+      "citedBy": 2,
+      "isOpenAccess": false,
+      "links": {
+        "doi": "https://doi.org/10.1007/978-3-642-03344-5_8"
+      }
+    },
+    {
+      "id": "W1532186304",
+      "doi": "10.1007/3-540-51048-6_52",
+      "title": "Upwind schemes, multigrid and defect correction for the steady Navier-Stokes equations",
+      "authors": [
+        "Barry Koren"
+      ],
+      "members": [
+        "Barry Koren"
+      ],
+      "year": 2008,
+      "date": "2008-04-06",
+      "type": "book-chapter",
+      "isPreprint": false,
+      "venue": "Lecture notes in physics",
+      "volume": null,
+      "issue": null,
+      "pages": "344–348",
+      "citedBy": 42,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1007/3-540-51048-6_52",
+        "pdf": "https://ir.cwi.nl/pub/9942/9942D.pdf"
+      }
+    },
+    {
+      "id": "W2097216280",
+      "doi": "10.1002/fld.1756",
+      "title": "Least‐squares spectral element method applied to the Euler equations",
+      "authors": [
+        "Marc I. Gerritsma",
+        "Rokus van der Bas",
+        "B. De Maerschalck",
+        "Barry Koren",
+        "H. Deconinck"
+      ],
+      "members": [
+        "Barry Koren"
+      ],
+      "year": 2008,
+      "date": "2008-03-27",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "International Journal for Numerical Methods in Fluids",
+      "volume": "57",
+      "issue": "9",
+      "pages": "1371–1395",
+      "citedBy": 15,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1002/fld.1756",
+        "pdf": "https://ir.cwi.nl/pub/13271/13271D.pdf"
+      }
+    },
+    {
+      "id": "W2103757834",
+      "doi": "10.1175/2008jas2566.1",
+      "title": "Subgrid-Scale Parameterization with Conditional Markov Chains",
+      "authors": [
+        "Daan Crommelin",
+        "Eric Vanden‐Eijnden"
+      ],
+      "members": [
+        "Daan Crommelin"
+      ],
+      "year": 2008,
+      "date": "2008-01-30",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Journal of the Atmospheric Sciences",
+      "volume": "65",
+      "issue": "8",
+      "pages": "2661–2675",
+      "citedBy": 125,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1175/2008jas2566.1",
+        "pdf": "https://journals.ametsoc.org/downloadpdf/journals/atsc/65/8/2008jas2566.1.pdf"
+      }
+    },
+    {
+      "id": "W2118199675",
+      "doi": "10.1002/fld.1596",
+      "title": "Efficient computation of steady water flow with waves",
+      "authors": [
+        "Jeroen Wackers",
+        "Barry Koren"
+      ],
+      "members": [
+        "Barry Koren"
+      ],
+      "year": 2007,
+      "date": "2007-09-11",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "International Journal for Numerical Methods in Fluids",
+      "volume": "56",
+      "issue": "8",
+      "pages": "1567–1574",
+      "citedBy": 1,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1002/fld.1596",
+        "pdf": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/fld.1596"
+      }
+    },
+    {
+      "id": "W2085919818",
+      "doi": "10.1016/j.jcp.2007.06.007",
+      "title": "Multigrid solution method for the steady RANS equations",
+      "authors": [
+        "Jeroen Wackers",
+        "Barry Koren"
+      ],
+      "members": [
+        "Barry Koren"
+      ],
+      "year": 2007,
+      "date": "2007-06-16",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Journal of Computational Physics",
+      "volume": "226",
+      "issue": "2",
+      "pages": "1784–1807",
+      "citedBy": 15,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1016/j.jcp.2007.06.007",
+        "pdf": "https://ir.cwi.nl/pub/13985/13985D.pdf"
+      }
+    },
+    {
+      "id": "W2111225148",
+      "doi": "10.1016/j.jcp.2007.02.011",
+      "title": "Adjoint-based aerodynamic shape optimization on unstructured meshes",
+      "authors": [
+        "G. Carpentieri",
+        "Barry Koren",
+        "Michel J.L. van Tooren"
+      ],
+      "members": [
+        "Barry Koren"
+      ],
+      "year": 2007,
+      "date": "2007-02-26",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Journal of Computational Physics",
+      "volume": "224",
+      "issue": "1",
+      "pages": "267–287",
+      "citedBy": 56,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1016/j.jcp.2007.02.011",
+        "pdf": "https://ir.cwi.nl/pub/12119/12119D.pdf"
+      }
+    },
+    {
+      "id": "W2131941841",
+      "doi": "10.1016/j.cam.2006.03.056",
+      "title": "A surface capturing method for the efficient computation of steady water waves",
+      "authors": [
+        "Jeroen Wackers",
+        "Barry Koren"
+      ],
+      "members": [
+        "Barry Koren"
+      ],
+      "year": 2006,
+      "date": "2006-12-20",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Journal of Computational and Applied Mathematics",
+      "volume": "215",
+      "issue": "2",
+      "pages": "618–625",
+      "citedBy": 7,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1016/j.cam.2006.03.056",
+        "pdf": "https://www.sciencedirect.com/science/article/pii/S0377042706007746/pdf"
+      }
+    },
+    {
+      "id": "W2141749605",
+      "doi": "10.1007/bf02986996",
+      "title": "Computational fluid dynamics: Science and tool",
+      "authors": [
+        "Barry Koren"
+      ],
+      "members": [
+        "Barry Koren"
+      ],
+      "year": 2006,
+      "date": "2006-12-01",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "The Mathematical Intelligencer",
+      "volume": "28",
+      "issue": "1",
+      "pages": "5–16",
+      "citedBy": 0,
+      "isOpenAccess": false,
+      "links": {
+        "doi": "https://doi.org/10.1007/bf02986996"
+      }
+    },
+    {
+      "id": "W1542928652",
+      "doi": "10.1007/3-540-31801-1_90",
+      "title": "A Novel Physical Model and Computational Method for Non-Isentropic, Compressible Two-Fluid Flow",
+      "authors": [
+        "Jeroen Wackers",
+        "Barry Koren"
+      ],
+      "members": [
+        "Barry Koren"
+      ],
+      "year": 2006,
+      "date": "2006-09-26",
+      "type": "book-chapter",
+      "isPreprint": false,
+      "venue": null,
+      "volume": null,
+      "issue": null,
+      "pages": "625–630",
+      "citedBy": 0,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1007/3-540-31801-1_90",
+        "pdf": "https://ir.cwi.nl/pub/12170/12170B.pdf"
+      }
+    },
+    {
+      "id": "W2133721347",
+      "doi": "10.1007/3-540-31801-1_31",
+      "title": "An Efficient Numerical Method for 3D Viscous Ship Hydrodynamics with Free-Surface Gravity Waves",
+      "authors": [
+        "M.R. Lewis",
+        "Barry Koren"
+      ],
+      "members": [
+        "Barry Koren"
+      ],
+      "year": 2006,
+      "date": "2006-09-26",
+      "type": "book-chapter",
+      "isPreprint": false,
+      "venue": null,
+      "volume": null,
+      "issue": null,
+      "pages": "239–244",
+      "citedBy": 0,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1007/3-540-31801-1_31",
+        "openAccess": "https://ir.cwi.nl/pub/12173"
+      }
+    },
+    {
+      "id": "W2156816986",
+      "doi": "10.1002/fld.911",
+      "title": "A fully conservative model for compressible two‐fluid flow",
+      "authors": [
+        "Jeroen Wackers",
+        "Barry Koren"
+      ],
+      "members": [
+        "Barry Koren"
+      ],
+      "year": 2005,
+      "date": "2005-01-18",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "International Journal for Numerical Methods in Fluids",
+      "volume": "47",
+      "issue": "10-11",
+      "pages": "1337–1343",
+      "citedBy": 30,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1002/fld.911",
+        "pdf": "https://ir.cwi.nl/pub/10852/10852D.pdf"
+      }
+    },
+    {
+      "id": "W2136389669",
+      "doi": "10.1016/j.cam.2003.09.026",
+      "title": "Grid approximation of a singularly perturbed boundary value problem modelling heat transfer in the case of flow over a flat plate with suction of the boundary layer",
+      "authors": [
+        "John J. H. Miller",
+        "Gregorii I. Shishkin",
+        "Barry Koren",
+        "Л. П. Шишкина"
+      ],
+      "members": [
+        "Barry Koren"
+      ],
+      "year": 2003,
+      "date": "2003-12-11",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Journal of Computational and Applied Mathematics",
+      "volume": "166",
+      "issue": "1",
+      "pages": "221–232",
+      "citedBy": 6,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1016/j.cam.2003.09.026",
+        "pdf": "https://www.sciencedirect.com/science/article/pii/S0377042703008598/pdf"
+      }
+    },
+    {
+      "id": "W2134123533",
+      "doi": "10.1016/s0021-9991(02)00058-x",
+      "title": "A pressure-invariant conservative Godunov-type method for barotropic two-fluid flows",
+      "authors": [
+        "E. H. van Brummelen",
+        "Barry Koren"
+      ],
+      "members": [
+        "Barry Koren"
+      ],
+      "year": 2003,
+      "date": "2003-02-01",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Journal of Computational Physics",
+      "volume": "185",
+      "issue": "1",
+      "pages": "289–308",
+      "citedBy": 49,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1016/s0021-9991(02)00058-x",
+        "pdf": "https://ir.cwi.nl/pub/4220/04220D.pdf"
+      }
+    },
+    {
+      "id": "W2129866226",
+      "doi": "10.1007/978-3-642-59334-5_11",
+      "title": "Computation of 3D Steady Navier-Stokes Flow with Free-Surface Gravity Waves",
+      "authors": [
+        "M.R. Lewis",
+        "Barry Koren",
+        "Hoyte C. Raven"
+      ],
+      "members": [
+        "Barry Koren"
+      ],
+      "year": 2003,
+      "date": "2003-01-01",
+      "type": "book-chapter",
+      "isPreprint": false,
+      "venue": null,
+      "volume": null,
+      "issue": null,
+      "pages": "100–105",
+      "citedBy": 1,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1007/978-3-642-59334-5_11",
+        "pdf": "https://ir.cwi.nl/pub/4053/04053D.pdf"
+      }
+    },
+    {
+      "id": "W2927421102",
+      "doi": "10.1016/s0997-7546(03)00004-9",
+      "title": "Computational Aerodynamics and Fluid Dynamics: An Introduction",
+      "authors": [
+        "Barry Koren"
+      ],
+      "members": [
+        "Barry Koren"
+      ],
+      "year": 2003,
+      "date": "2003-01-01",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "European Journal of Mechanics - B/Fluids",
+      "volume": "22",
+      "issue": "1",
+      "pages": "99–100",
+      "citedBy": 2,
+      "isOpenAccess": false,
+      "links": {
+        "doi": "https://doi.org/10.1016/s0997-7546(03)00004-9"
+      }
+    },
+    {
+      "id": "W2097320625",
+      "doi": "10.1007/978-3-642-59334-5_78",
+      "title": "Fix for Solution Errors near Interfaces in Two-Fluid Flow Computations",
+      "authors": [
+        "Barry Koren",
+        "E. H. van Brummelen",
+        "Piet Hemker",
+        "Bram van Leer",
+        "M.R. Lewis"
+      ],
+      "members": [
+        "Barry Koren"
+      ],
+      "year": 2003,
+      "date": "2003-01-01",
+      "type": "book-chapter",
+      "isPreprint": false,
+      "venue": null,
+      "volume": null,
+      "issue": null,
+      "pages": "523–528",
+      "citedBy": 0,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1007/978-3-642-59334-5_78",
+        "pdf": "https://ir.cwi.nl/pub/4052/04052D.pdf"
+      }
+    },
+    {
+      "id": "W2572245915",
+      "doi": null,
+      "title": "Nonlinear dynamics of atmospheric regime transitions",
+      "authors": [
+        "Daan Crommelin"
+      ],
+      "members": [
+        "Daan Crommelin"
+      ],
+      "year": 2003,
+      "date": "2003-01-01",
+      "type": "dissertation",
+      "isPreprint": false,
+      "venue": "Centrum Wiskunde & Informatica (CWI), the national research institute for mathematics and computer science in the Netherlands",
+      "volume": null,
+      "issue": null,
+      "pages": null,
+      "citedBy": 4,
+      "isOpenAccess": true,
+      "links": {
+        "pdf": "https://ir.cwi.nl/pub/21465/21465D.pdf"
+      }
+    },
+    {
+      "id": "W2132973115",
+      "doi": "10.1006/jcph.2002.7150",
+      "title": "Riemann-Problem and Level-Set Approaches for Homentropic Two-Fluid Flow Computations",
+      "authors": [
+        "Barry Koren",
+        "M.R. Lewis",
+        "E. H. van Brummelen",
+        "Bram van Leer"
+      ],
+      "members": [
+        "Barry Koren"
+      ],
+      "year": 2002,
+      "date": "2002-09-01",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Journal of Computational Physics",
+      "volume": "181",
+      "issue": "2",
+      "pages": "654–674",
+      "citedBy": 38,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1006/jcph.2002.7150",
+        "pdf": "https://ir.cwi.nl/pub/9859/9859D.pdf"
+      }
+    },
+    {
+      "id": "W2101649496",
+      "doi": "10.1016/s0168-9274(01)00030-7",
+      "title": "The sparse-grid combination technique applied to time-dependent advection problems",
+      "authors": [
+        "Boris Lastdrager",
+        "Barry Koren",
+        "Jan G. Verwer"
+      ],
+      "members": [
+        "Barry Koren"
+      ],
+      "year": 2001,
+      "date": "2001-09-01",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Applied Numerical Mathematics",
+      "volume": "38",
+      "issue": "4",
+      "pages": "377–401",
+      "citedBy": 18,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1016/s0168-9274(01)00030-7",
+        "pdf": "https://ir.cwi.nl/pub/1898/1898D.pdf"
+      }
+    },
+    {
+      "id": "W2462560122",
+      "doi": "10.1007/978-1-4615-0663-8_89",
+      "title": "A Godunov-Type Method for Capturing Water Waves",
+      "authors": [
+        "E. H. van Brummelen",
+        "Barry Koren"
+      ],
+      "members": [
+        "Barry Koren"
+      ],
+      "year": 2001,
+      "date": "2001-01-01",
+      "type": "book-chapter",
+      "isPreprint": false,
+      "venue": null,
+      "volume": null,
+      "issue": null,
+      "pages": "949–968",
+      "citedBy": 0,
+      "isOpenAccess": false,
+      "links": {
+        "doi": "https://doi.org/10.1007/978-1-4615-0663-8_89"
+      }
+    },
+    {
+      "id": "W2144813076",
+      "doi": "10.1007/978-3-642-56535-9_44",
+      "title": "Numerical Solution of Steady Free-Surface Navier-Stokes Flow",
+      "authors": [
+        "E. H. van Brummelen",
+        "Hoyte C. Raven",
+        "Barry Koren"
+      ],
+      "members": [
+        "Barry Koren"
+      ],
+      "year": 2001,
+      "date": "2001-01-01",
+      "type": "book-chapter",
+      "isPreprint": false,
+      "venue": null,
+      "volume": null,
+      "issue": null,
+      "pages": "305–310",
+      "citedBy": 2,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1007/978-3-642-56535-9_44",
+        "openAccess": "https://ir.cwi.nl/pub/4434"
+      }
+    },
+    {
+      "id": "W2140903890",
+      "doi": "10.2478/cmam-2001-0006",
+      "title": "Solution of Time-dependent Advection-Diffusion Problems with the Sparse-grid Combination Technique and a Rosenbrock Solver",
+      "authors": [
+        "Boris Lastdrager",
+        "Barry Koren",
+        "Jan G. Verwer"
+      ],
+      "members": [
+        "Barry Koren"
+      ],
+      "year": 2001,
+      "date": "2001-01-01",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Computational Methods in Applied Mathematics",
+      "volume": "1",
+      "issue": "1",
+      "pages": "86–98",
+      "citedBy": 15,
+      "isOpenAccess": true,
+      "links": {
+        "pdf": "https://www.degruyter.com/document/doi/10.2478/cmam-2001-0006/pdf",
+        "doi": "https://doi.org/10.2478/cmam-2001-0006"
+      }
+    },
+    {
+      "id": "W2171758037",
+      "doi": "10.1002/(sici)1096-9128(200002/03)12:2/3<157::aid-cpe467>3.0.co;2-e",
+      "title": "Dynamic process composition and communication patterns in irregularly structured applications",
+      "authors": [
+        "C.T.H. Everaars",
+        "Farhad Arbab",
+        "Barry Koren"
+      ],
+      "members": [
+        "Barry Koren"
+      ],
+      "year": 2000,
+      "date": "2000-01-01",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Concurrency Practice and Experience",
+      "volume": "12",
+      "issue": "2-3",
+      "pages": "157–174",
+      "citedBy": 7,
+      "isOpenAccess": false,
+      "links": {
+        "doi": "https://doi.org/10.1002/(sici)1096-9128(200002/03)12:2/3<157::aid-cpe467>3.0.co;2-e"
+      }
+    },
+    {
+      "id": "W2100831559",
+      "doi": "10.1016/s0377-0427(98)00203-9",
+      "title": "A fed back level-set method for moving material-void interfaces",
+      "authors": [
+        "Barry Koren",
+        "A.C.J. Venis"
+      ],
+      "members": [
+        "Barry Koren"
+      ],
+      "year": 1999,
+      "date": "1999-01-01",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Journal of Computational and Applied Mathematics",
+      "volume": "101",
+      "issue": "1-2",
+      "pages": "131–152",
+      "citedBy": 5,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1016/s0377-0427(98)00203-9",
+        "pdf": "https://www.sciencedirect.com/science/article/pii/S0377042798002039/pdf"
+      }
+    },
+    {
+      "id": "W2165177716",
+      "doi": "10.1016/s0167-8191(98)00043-x",
+      "title": "Using coordination to parallelize sparse-grid methods for 3-D CFD problems",
+      "authors": [
+        "Kees Everaars",
+        "Barry Koren"
+      ],
+      "members": [
+        "Barry Koren"
+      ],
+      "year": 1998,
+      "date": "1998-07-01",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Parallel Computing",
+      "volume": "24",
+      "issue": "7",
+      "pages": "1081–1106",
+      "citedBy": 21,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1016/s0167-8191(98)00043-x",
+        "openAccess": "https://ir.cwi.nl/pub/4759"
+      }
+    },
+    {
+      "id": "W2106800474",
+      "doi": "10.1007/978-3-642-58734-4_6",
+      "title": "3D Multigrid on Partially Ordered Sets of Grids",
+      "authors": [
+        "Piet Hemker",
+        "Barry Koren",
+        "J. Noordmans"
+      ],
+      "members": [
+        "Barry Koren"
+      ],
+      "year": 1998,
+      "date": "1998-01-01",
+      "type": "book-chapter",
+      "isPreprint": false,
+      "venue": "Lecture notes in computational science and engineering",
+      "volume": null,
+      "issue": null,
+      "pages": "105–124",
+      "citedBy": 3,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1007/978-3-642-58734-4_6",
+        "pdf": "https://ir.cwi.nl/pub/11482/11482D.pdf"
+      }
+    },
+    {
+      "id": "W2143936091",
+      "doi": "10.1080/10618569608940774",
+      "title": "Improving Euler Computations at Low Mach Numbers",
+      "authors": [
+        "Barry Koren"
+      ],
+      "members": [
+        "Barry Koren"
+      ],
+      "year": 1996,
+      "date": "1996-03-01",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "International journal of computational fluid dynamics",
+      "volume": "6",
+      "issue": "1",
+      "pages": "51–70",
+      "citedBy": 8,
+      "isOpenAccess": false,
+      "links": {
+        "doi": "https://doi.org/10.1080/10618569608940774"
+      }
+    },
+    {
+      "id": "W2140291031",
+      "doi": "10.1006/jcph.1995.1042",
+      "title": "A Positive Finite-Difference Advection Scheme",
+      "authors": [
+        "Willem Hundsdorfer",
+        "Barry Koren",
+        "M. vanLoon",
+        "Jan G. Verwer"
+      ],
+      "members": [
+        "Barry Koren"
+      ],
+      "year": 1995,
+      "date": "1995-03-01",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Journal of Computational Physics",
+      "volume": "117",
+      "issue": "1",
+      "pages": "35–46",
+      "citedBy": 216,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1006/jcph.1995.1042",
+        "pdf": "https://ir.cwi.nl/pub/1450/1450D.pdf"
+      }
+    },
+    {
+      "id": "W2125429411",
+      "doi": "10.1016/0168-9274(95)00003-d",
+      "title": "Condition improvement for point relaxation in multigrid, subsonic Euler-flow computations",
+      "authors": [
+        "Barry Koren"
+      ],
+      "members": [
+        "Barry Koren"
+      ],
+      "year": 1995,
+      "date": "1995-02-01",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Applied Numerical Mathematics",
+      "volume": "16",
+      "issue": "4",
+      "pages": "457–469",
+      "citedBy": 1,
+      "isOpenAccess": false,
+      "links": {
+        "openAccess": "https://ir.cwi.nl/pub/2242",
+        "doi": "https://doi.org/10.1016/0168-9274(95)00003-d"
+      }
+    },
+    {
+      "id": "W2110294149",
+      "doi": "10.1137/0914058",
+      "title": "Iterative Defect Correction and Multigrid Accelerated Explicit Time Stepping Schemes for the Steady Euler Equations",
+      "authors": [
+        "Marie-Hélène Lallemand",
+        "Barry Koren"
+      ],
+      "members": [
+        "Barry Koren"
+      ],
+      "year": 1993,
+      "date": "1993-07-01",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "SIAM Journal on Scientific Computing",
+      "volume": "14",
+      "issue": "4",
+      "pages": "953–970",
+      "citedBy": 14,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1137/0914058",
+        "pdf": "https://ir.cwi.nl/pub/1539/1539D.pdf"
+      }
+    },
+    {
+      "id": "W2100678640",
+      "doi": "10.1007/bf00418044",
+      "title": "On steady, inviscid shock waves at continuously curved, convex surfaces",
+      "authors": [
+        "Barry Koren",
+        "Eric van der Maarel"
+      ],
+      "members": [
+        "Barry Koren"
+      ],
+      "year": 1993,
+      "date": "1993-05-01",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Theoretical and Computational Fluid Dynamics",
+      "volume": "4",
+      "issue": "4",
+      "pages": "177–195",
+      "citedBy": 4,
+      "isOpenAccess": false,
+      "links": {
+        "doi": "https://doi.org/10.1007/bf00418044"
+      }
+    },
+    {
+      "id": "W2138049110",
+      "doi": "10.1007/3-540-56394-6_198",
+      "title": "Monotone, higher-order accurate, multi-dimensional upwinding",
+      "authors": [
+        "Barry Koren",
+        "H. T. M. van der Maarel"
+      ],
+      "members": [
+        "Barry Koren"
+      ],
+      "year": 1993,
+      "date": "1993-01-01",
+      "type": "book-chapter",
+      "isPreprint": false,
+      "venue": "Lecture notes in physics",
+      "volume": null,
+      "issue": null,
+      "pages": "110–114",
+      "citedBy": 5,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1007/3-540-56394-6_198",
+        "pdf": "https://ir.cwi.nl/pub/9937/9937D.pdf"
+      }
+    },
+    {
+      "id": "W2119001436",
+      "doi": "10.1016/0168-9274(91)90067-a",
+      "title": "Damped, direction-dependent multigrid for hypersonic flow computations",
+      "authors": [
+        "Barry Koren",
+        "Piet Hemker"
+      ],
+      "members": [
+        "Barry Koren"
+      ],
+      "year": 1991,
+      "date": "1991-04-01",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Applied Numerical Mathematics",
+      "volume": "7",
+      "issue": "4",
+      "pages": "309–328",
+      "citedBy": 33,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1016/0168-9274(91)90067-a",
+        "pdf": "https://ir.cwi.nl/pub/1616/1616D.pdf"
+      }
+    },
+    {
+      "id": "W2104604928",
+      "doi": "10.1142/s0129183191000561",
+      "title": "A Computational Tool for Analyzing Strong Viscous-Inviscid Interactions in Gasdynamics",
+      "authors": [
+        "Barry Koren"
+      ],
+      "members": [
+        "Barry Koren"
+      ],
+      "year": 1991,
+      "date": "1991-03-01",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "International Journal of Modern Physics C",
+      "volume": "02",
+      "issue": "01",
+      "pages": "395–399",
+      "citedBy": 0,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1142/s0129183191000561",
+        "pdf": "https://research.tue.nl/files/3539042/914795929089092.pdf"
+      }
+    },
+    {
+      "id": "W1974494025",
+      "doi": "10.1002/fld.1650110107",
+      "title": "Upwind discretization of the steady Navier–Stokes equations",
+      "authors": [
+        "Barry Koren"
+      ],
+      "members": [
+        "Barry Koren"
+      ],
+      "year": 1990,
+      "date": "1990-07-05",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "International Journal for Numerical Methods in Fluids",
+      "volume": "11",
+      "issue": "1",
+      "pages": "99–117",
+      "citedBy": 23,
+      "isOpenAccess": false,
+      "links": {
+        "doi": "https://doi.org/10.1002/fld.1650110107"
+      }
+    },
+    {
+      "id": "W2114656220",
+      "doi": "10.1016/0021-9991(90)90223-n",
+      "title": "Multigrid and defect correction for the steady Navier-Stokes equations",
+      "authors": [
+        "Barry Koren"
+      ],
+      "members": [
+        "Barry Koren"
+      ],
+      "year": 1990,
+      "date": "1990-03-01",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Journal of Computational Physics",
+      "volume": "87",
+      "issue": "1",
+      "pages": "25–46",
+      "citedBy": 92,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1016/0021-9991(90)90223-n",
+        "pdf": "https://ir.cwi.nl/pub/2416/2416D.pdf"
+      }
+    },
+    {
+      "id": "W1892545088",
+      "doi": "10.1007/978-94-009-2125-2_23",
+      "title": "Entropy Errors in the Numerical Approximation of the Euler Flow along a Kinked Wall",
+      "authors": [
+        "Eric van der Maarel",
+        "Barry Koren"
+      ],
+      "members": [
+        "Barry Koren"
+      ],
+      "year": 1990,
+      "date": "1990-01-01",
+      "type": "book-chapter",
+      "isPreprint": false,
+      "venue": null,
+      "volume": null,
+      "issue": null,
+      "pages": "315–328",
+      "citedBy": 0,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1007/978-94-009-2125-2_23",
+        "pdf": "https://ir.cwi.nl/pub/9941/9941D.pdf"
+      }
+    },
+    {
+      "id": "W2100782910",
+      "doi": "10.1007/978-3-322-87875-5_11",
+      "title": "A Non-Linear Multigrid Method for the Steady Euler Equations",
+      "authors": [
+        "Piet Hemker",
+        "Barry Koren"
+      ],
+      "members": [
+        "Barry Koren"
+      ],
+      "year": 1989,
+      "date": "1989-01-01",
+      "type": "book-chapter",
+      "isPreprint": false,
+      "venue": "Notes on numerical fluid mechanics and multidisciplinary design",
+      "volume": null,
+      "issue": null,
+      "pages": "175–196",
+      "citedBy": 14,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1007/978-3-322-87875-5_11",
+        "pdf": "https://ir.cwi.nl/pub/10190/10190D.pdf"
+      }
+    },
+    {
+      "id": "W2128480627",
+      "doi": "10.1002/fld.1650090106",
+      "title": "Euler flow solutions for transonic shock wave–boundary layer interaction",
+      "authors": [
+        "Barry Koren"
+      ],
+      "members": [
+        "Barry Koren"
+      ],
+      "year": 1989,
+      "date": "1989-01-01",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "International Journal for Numerical Methods in Fluids",
+      "volume": "9",
+      "issue": "1",
+      "pages": "59–73",
+      "citedBy": 7,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1002/fld.1650090106",
+        "pdf": "https://ir.cwi.nl/pub/9868"
+      }
+    },
+    {
+      "id": "W2172205085",
+      "doi": "10.1007/978-3-322-87869-4_31",
+      "title": "Upwind Schemes for the Navier-Stokes Equations",
+      "authors": [
+        "Barry Koren"
+      ],
+      "members": [
+        "Barry Koren"
+      ],
+      "year": 1989,
+      "date": "1989-01-01",
+      "type": "book-chapter",
+      "isPreprint": false,
+      "venue": null,
+      "volume": null,
+      "issue": null,
+      "pages": "300–309",
+      "citedBy": 15,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1007/978-3-322-87869-4_31",
+        "pdf": "https://ir.cwi.nl/pub/2677/2677D.pdf"
+      }
+    },
+    {
+      "id": "W2159478200",
+      "doi": "10.1016/0021-9991(88)90162-3",
+      "title": "Defect correction and multigrid for an efficient and accurate computation of airfoil flows",
+      "authors": [
+        "Barry Koren"
+      ],
+      "members": [
+        "Barry Koren"
+      ],
+      "year": 1988,
+      "date": "1988-07-01",
+      "type": "article",
+      "isPreprint": false,
+      "venue": "Journal of Computational Physics",
+      "volume": "77",
+      "issue": "1",
+      "pages": "183–206",
+      "citedBy": 61,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1016/0021-9991(88)90162-3",
+        "pdf": "https://ir.cwi.nl/pub/9869/9869D.pdf"
+      }
+    },
+    {
+      "id": "W2164130823",
+      "doi": "10.1007/978-3-322-89729-9_7",
+      "title": "Multigrid and Defect Correction for the Efficient Solution of the Steady Euler Equations",
+      "authors": [
+        "Barry Koren",
+        "Stefan Spekreijse"
+      ],
+      "members": [
+        "Barry Koren"
+      ],
+      "year": 1987,
+      "date": "1987-01-01",
+      "type": "book-chapter",
+      "isPreprint": false,
+      "venue": null,
+      "volume": null,
+      "issue": null,
+      "pages": "87–100",
+      "citedBy": 6,
+      "isOpenAccess": true,
+      "links": {
+        "doi": "https://doi.org/10.1007/978-3-322-89729-9_7",
+        "pdf": "https://ir.cwi.nl/pub/2014/2014D.pdf"
+      }
+    }
+  ]
+}
