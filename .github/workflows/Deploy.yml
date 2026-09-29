@@ -1,24 +1,26 @@
-# Sample workflow for building and deploying a VitePress site to GitHub Pages
+# Build and deploy the VitePress site to GitHub Pages.
+#
+# The publication list is fetched from OpenAlex as part of the build rather than
+# being committed back to the repository. That keeps this workflow on read-only
+# repository permissions, which matters because an organisation policy can forbid
+# workflows from writing to the repo at all.
 
 name: Deploy VitePress site to Pages
 
 on:
-  # Runs on pushes targeting the `main` branch. Change this to `master` if you're
-  # using the `master` branch as the default branch.
+  # Runs on pushes targeting the `main` branch.
   push:
     branches: [main]
 
-  # Allows you to run this workflow manually from the Actions tab
+  # Allows you to run this workflow manually from the Actions tab.
   workflow_dispatch:
 
-  # A push made by the "Update publications" workflow uses GITHUB_TOKEN, and GitHub
-  # deliberately does not let that re-trigger the `push` event above. So we rebuild
-  # whenever that workflow finishes instead.
-  workflow_run:
-    workflows: ["Update publications"]
-    types: [completed]
+  # Weekly refresh: re-fetches the publications and redeploys, so new papers appear
+  # without anyone pushing. OpenAlex updates roughly weekly, so Monday is plenty.
+  schedule:
+    - cron: "17 5 * * 1"
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+# No `contents: write` needed — nothing is committed back.
 permissions:
   contents: read
   pages: write
@@ -39,24 +41,30 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0 # Not needed if lastUpdated is not enabled
-      # - uses: pnpm/action-setup@v3 # Uncomment this if you're using pnpm
-      # - uses: oven-sh/setup-bun@v1 # Uncomment this if you're using Bun
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: npm # or pnpm / yarn
+          cache: npm
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Install dependencies
-        run: npm ci # or pnpm install / yarn install / bun install
+        run: npm ci
+
+      # If OpenAlex is unreachable this step fails and the build carries on with the
+      # copy of data/publications.generated.json committed to the repository, so a bad
+      # day at OpenAlex cannot blank the publications page. The step is marked in the
+      # run summary either way, so a persistent failure is still visible.
+      - name: Refresh publications from OpenAlex
+        run: npm run publications
+        continue-on-error: true
+
       - name: Build with VitePress
-        run: npm run build # or pnpm docs:build / yarn docs:build / bun run docs:build
+        run: npm run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: .vitepress/dist
-          # path: docs/.vitepress/dist
 
   # Deployment job
   deploy:

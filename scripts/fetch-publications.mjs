@@ -282,14 +282,8 @@ async function main() {
       .join('\n')
   )
 
-  if (DRY) {
-    console.log('\n--dry: nothing written')
-    return
-  }
-
-  // Refuse to replace a good list with a broken one. Without this, a network
-  // failure or an OpenAlex outage during the weekly workflow would quietly commit
-  // an empty file and wipe the publication list off the live site.
+  // Refuse to replace a good list with a broken one. Without this, a network failure
+  // or an OpenAlex outage during a deploy would quietly blank the publications page.
   const previous = fs.existsSync(OUT) ? JSON.parse(fs.readFileSync(OUT, 'utf8')) : null
   const before = previous?.publications?.length ?? 0
   const refuse = []
@@ -302,6 +296,14 @@ async function main() {
   }
   if (before > 0 && publications.length < before * 0.5) {
     refuse.push(`fetched ${publications.length}, less than half the existing ${before} — looks like a partial result`)
+  }
+
+  if (DRY) {
+    console.log('\n--dry: nothing written')
+    for (const r of refuse) console.error('  ! ' + r)
+    // Still fail the run when OpenAlex misbehaved, so a preview that went wrong
+    // shows up red rather than quietly reporting zero publications.
+    process.exit(failures.length ? 1 : 0)
   }
 
   if (refuse.length && !FORCE) {

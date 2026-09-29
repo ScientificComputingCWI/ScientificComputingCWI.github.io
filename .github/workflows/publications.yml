@@ -1,22 +1,20 @@
-name: Update publications
+# Manual check: what would the publication list look like if it were refreshed now?
+#
+# The real refresh happens inside the deploy workflow, which fetches from OpenAlex on
+# every build. This one writes nothing and commits nothing — it just prints the counts,
+# so you can sanity-check a change to data/members.json or data/publications.config.json
+# without deploying, and see whether OpenAlex is reachable and behaving.
+
+name: Preview publication list
 
 on:
-  # Every Monday at 05:17 UTC. OpenAlex updates roughly weekly, so there is no
-  # point running this more often.
-  schedule:
-    - cron: "17 5 * * 1"
-  # Lets you refresh the list on demand from the Actions tab.
   workflow_dispatch:
 
 permissions:
-  contents: write
-
-concurrency:
-  group: update-publications
-  cancel-in-progress: false
+  contents: read
 
 jobs:
-  fetch:
+  preview:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -26,18 +24,21 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
+          cache: npm
 
-      - name: Fetch publications from OpenAlex
-        run: npm run publications
+      - name: Install dependencies
+        run: npm ci
 
-      - name: Commit if the list changed
+      - name: Fetch from OpenAlex (dry run)
         run: |
-          if git diff --quiet -- data/publications.generated.json; then
-            echo "No change in the publication list."
-            exit 0
-          fi
-          git config user.name  "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/publications.generated.json
-          git commit -m "Update publications from OpenAlex"
-          git push
+          npm run publications:dry | tee summary.txt
+
+      - name: Put the summary in the run page
+        if: always()
+        run: |
+          {
+            echo '## Publication list preview'
+            echo '```'
+            cat summary.txt 2>/dev/null || echo 'no output'
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"

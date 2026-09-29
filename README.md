@@ -65,12 +65,21 @@ fetched, so widening the window is a one-character change and needs no refetch.
 
 ### How the automatic list works
 
-`data/members.json` lists each member's OpenAlex author id(s). `scripts/fetch-publications.mjs`
-asks OpenAlex for their work, keeps what is affiliated with CWI, merges each preprint with
-its published version, and writes `data/publications.generated.json`, which is committed to
-the repository. The `.github/workflows/publications.yml` workflow does this every Monday and
-can also be run on demand from the Actions tab; when it commits a change it triggers a
-redeploy.
+`data/members.json` lists each member's OpenAlex author id(s).
+`scripts/fetch-publications.mjs` asks OpenAlex for their work, keeps what is affiliated
+with CWI, merges each preprint with its published version, and writes
+`data/publications.generated.json`.
+
+**The fetch runs as part of the deploy**, not as a separate commit: `Deploy.yml` calls
+`npm run publications` before building, so every deploy — and the weekly scheduled run —
+picks up new papers. Nothing is committed back, which is deliberate: an organisation
+policy can forbid workflows from writing to the repository, and this way the workflow
+only ever needs read permission.
+
+The copy of `data/publications.generated.json` in the repository is the fallback. If
+OpenAlex is unreachable the fetch step fails, the build carries on with the committed
+copy, and the site keeps the list it had rather than going blank. Refresh that fallback
+occasionally by running `npm run publications` locally and committing the result.
 
 To refresh the list locally:
 
@@ -78,6 +87,13 @@ To refresh the list locally:
 npm run publications        # fetch and write the data file
 npm run publications:dry    # fetch and print a summary, write nothing
 ```
+
+The **Preview publication list** workflow runs the dry version on demand from the Actions
+tab and prints the counts in the run summary — useful for checking a change to
+`members.json` or `publications.config.json` without deploying. Both commands refuse to
+write a list that looks broken: if any OpenAlex request failed, or the new list is under
+half the size of the old one, the existing file is left alone and the command exits
+non-zero. Pass `--force` when a drop is genuine.
 
 ### Tuning what appears
 

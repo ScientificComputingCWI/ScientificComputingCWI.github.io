@@ -6,3 +6,4 @@ node_modules/
 .vitepress/dist
 Claude outputs/ # keep that local folder out of the repo
 Claude outputs/ # keep that local folder out of the repo
+Claude outputs/
