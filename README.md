@@ -8,9 +8,8 @@ Edit markdown files (`.md`) directly to add content.
 
 To add more pages in the top bar, edit the `nav` section in  `.vitepress/config.ts`.
 
-To add news, seminars, and publication items, make a new `.md`
-file in the `news`/`seminars`/`publications` folder
-(see existing files for adding date etc.).
+To add a news item, make a new `.md` file in the `news` folder (see the existing
+files for the frontmatter). Publications are fetched automatically — see below.
 
 ## Members
 

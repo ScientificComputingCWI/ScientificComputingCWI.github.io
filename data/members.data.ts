@@ -31,7 +31,7 @@ const here = path.dirname(fileURLToPath(import.meta.url))
 const file = path.join(here, 'members.json')
 
 /** Order the Members page groups by seniority rather than alphabetically. */
-const ROLE_ORDER = ['Group leader', 'Staff', 'Postdoc', 'PhD candidate', 'Visiting postdoc', 'Visiting professor', 'Advisor']
+const ROLE_ORDER = ['Group leader', 'Staff', 'Postdoc', 'PhD candidate', 'Visiting postdoc', 'Visiting professor', 'Advisor', 'Member']
 
 export default defineLoader({
   watch: ['./members.json'],

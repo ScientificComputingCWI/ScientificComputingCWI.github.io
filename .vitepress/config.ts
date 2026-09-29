@@ -34,7 +34,7 @@ export default defineConfig({
       { text: "Members", link: "/members", activeMatch: "/members" },
       { text: "News", link: "/news/", activeMatch: "/news/.*" },
       { text: "Publications", link: "/publications/", activeMatch: "/publications/.*" },
-      { text: "Seminars", link: "/seminars/", activeMatch: "/seminars/.*" },
+      { text: "Projects", link: "/projects", activeMatch: "/projects" },
       { text: "Software", link: "/software" },
     ],
 

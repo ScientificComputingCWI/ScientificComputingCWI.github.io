@@ -18,48 +18,72 @@
       "name": "Benjamin Sanderse",
       "role": "Group leader",
       "orcid": "0000-0001-9483-1988",
-      "openalex": ["A5001549702"],
+      "openalex": [
+        "A5001549702"
+      ],
       "email": "b.sanderse@cwi.nl",
       "github": "bsanderse",
       "website": "https://www.cwi.nl/en/people/benjamin-sanderse/"
     },
     {
+      "name": "Kattelijn Bouma",
+      "role": "Member",
+      "orcid": null,
+      "openalex": [],
+      "note": "Role not stated on the CWI page — set this to the right one (Staff, Group assistant, ...)."
+    },
+    {
       "name": "Wouter Edeling",
       "role": "Staff",
       "orcid": "0000-0003-4734-7960",
-      "openalex": ["A5076493238", "A5143995334"],
+      "openalex": [
+        "A5076493238",
+        "A5143995334"
+      ],
       "email": "wouter.edeling@cwi.nl"
     },
     {
       "name": "Daan Crommelin",
       "role": "Staff",
       "orcid": "0000-0003-0542-6337",
-      "openalex": ["A5037435544", "A5136769067"]
+      "openalex": [
+        "A5037435544",
+        "A5136769067"
+      ]
     },
     {
       "name": "Dimitris Loukrezis",
       "role": "Staff",
       "orcid": "0000-0003-1264-1182",
-      "openalex": ["A5013517565"]
+      "openalex": [
+        "A5013517565"
+      ]
     },
     {
       "name": "Syver Døving Agdestein",
       "role": "PhD candidate",
       "orcid": "0000-0002-1589-2916",
-      "openalex": ["A5067473170", "A5137401380"],
+      "openalex": [
+        "A5067473170",
+        "A5137401380"
+      ],
       "github": "agdestein"
     },
     {
       "name": "Toby van Gastelen",
       "role": "PhD candidate",
       "orcid": "0000-0001-5301-4981",
-      "openalex": ["A5083830004"]
+      "openalex": [
+        "A5083830004"
+      ]
     },
     {
       "name": "Rik Hoekstra",
       "role": "PhD candidate",
       "orcid": "0009-0006-5531-632X",
-      "openalex": ["A5103483355"],
+      "openalex": [
+        "A5103483355"
+      ],
       "strict": true,
       "note": "OpenAlex record is conflated with another researcher; kept strict on purpose."
     },
@@ -67,7 +91,9 @@
       "name": "Pardeep Kumar",
       "role": "PhD candidate",
       "orcid": "0009-0009-7574-7102",
-      "openalex": ["A5103422486"],
+      "openalex": [
+        "A5103422486"
+      ],
       "strict": true,
       "note": "OpenAlex record is conflated with a namesake; kept strict on purpose."
     },
@@ -75,25 +101,35 @@
       "name": "Nikolaj Mücke",
       "role": "Visiting postdoc",
       "orcid": "0000-0002-2635-9586",
-      "openalex": ["A5008977631", "A5093917330"]
+      "openalex": [
+        "A5008977631",
+        "A5093917330"
+      ]
     },
     {
       "name": "Henrik Rosenberger",
       "role": "PhD candidate",
       "orcid": "0000-0003-2963-4544",
-      "openalex": ["A5087816139"]
+      "openalex": [
+        "A5087816139"
+      ]
     },
     {
       "name": "Robin Klein",
       "role": "PhD candidate",
       "orcid": null,
-      "openalex": ["A5087831049", "A5139070675"]
+      "openalex": [
+        "A5087831049",
+        "A5139070675"
+      ]
     },
     {
       "name": "Barry Koren",
       "role": "Advisor",
       "orcid": "0009-0008-1169-1157",
-      "openalex": ["A5013769349"],
+      "openalex": [
+        "A5013769349"
+      ],
       "strict": true,
       "note": "Long CWI back catalogue; strict keeps the list to genuinely CWI-affiliated work."
     },
@@ -101,25 +137,72 @@
       "name": "Bernard Geurts",
       "role": "Visiting professor",
       "orcid": null,
-      "openalex": ["A5111845865"],
+      "openalex": [
+        "A5111845865"
+      ],
       "strict": true
     }
   ],
   "alumni": [
-    { "name": "Anna Ivagnes", "now": "at SISSA" },
-    { "name": "Josep Plana-Riu", "now": "at UPC" },
-    { "name": "Marius Kurz", "now": "at AMD" },
-    { "name": "Kelbij Start", "now": "at Deltares" },
-    { "name": "Laurent van den Bos", "now": "at ASML" },
-    { "name": "Yous van Halder", "now": "at Univé" },
-    { "name": "Anne Eggels", "now": null },
-    { "name": "Svetlana Dubinkina", "now": "at VU" },
-    { "name": "Kees Oosterlee", "now": "at Utrecht University" },
-    { "name": "Barry Koren", "now": "retired from Eindhoven University" },
-    { "name": "Prashant Kumar", "now": null },
-    { "name": "Sangeetika Ruchi", "now": null },
-    { "name": "Bart de Leeuw", "now": null },
-    { "name": "Jesse Dorrestijn", "now": null },
-    { "name": "Keith Meyerscough", "now": null }
+    {
+      "name": "Anna Ivagnes",
+      "now": "at SISSA"
+    },
+    {
+      "name": "Josep Plana-Riu",
+      "now": "at UPC"
+    },
+    {
+      "name": "Marius Kurz",
+      "now": "at AMD"
+    },
+    {
+      "name": "Kelbij Start",
+      "now": "at Deltares"
+    },
+    {
+      "name": "Laurent van den Bos",
+      "now": "at ASML"
+    },
+    {
+      "name": "Yous van Halder",
+      "now": "at Univé"
+    },
+    {
+      "name": "Anne Eggels",
+      "now": null
+    },
+    {
+      "name": "Svetlana Dubinkina",
+      "now": "at VU"
+    },
+    {
+      "name": "Kees Oosterlee",
+      "now": "at Utrecht University"
+    },
+    {
+      "name": "Barry Koren",
+      "now": "retired from Eindhoven University"
+    },
+    {
+      "name": "Prashant Kumar",
+      "now": null
+    },
+    {
+      "name": "Sangeetika Ruchi",
+      "now": null
+    },
+    {
+      "name": "Bart de Leeuw",
+      "now": null
+    },
+    {
+      "name": "Jesse Dorrestijn",
+      "now": null
+    },
+    {
+      "name": "Keith Meyerscough",
+      "now": null
+    }
   ]
 }

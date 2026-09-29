@@ -35,7 +35,6 @@ hero:
 <script setup>
 import { data as news } from '/data/news.data'
 import { data as publications } from '/data/publications.data'
-import { data as seminars } from '/data/seminars.data'
 import { data as members } from '/data/members.data'
 import { data as generated } from '/data/generatedPublications.data'
 import { computed } from 'vue'
@@ -43,7 +42,6 @@ import formatDate from '/.vitepress/theme/utils/formatDate';
 import getSorted from '/.vitepress/theme/utils/getSorted';
 const sortedNews = getSorted( news );
 const sortedPublications = getSorted( publications );
-const sortedSeminars = getSorted( seminars );
 const curatedByDoi = computed(() => {
   const map = {}
   for (const page of publications) {
@@ -69,16 +67,6 @@ Please check our [GitHub page](https://github.com/ScientificComputingCWI) with g
 
 ![SC group at ECCOMAS 2024](/group_picture.jpg)
 
-## Group seminar
-
-To receive news and Zoom links for our group seminar, you can contact Wouter Edeling at `wouter.edeling@cwi.nl`. For more information, see our [seminar page](https://www.cwi.nl/en/groups/scientific-computing/uq-seminar/seminar-ml-uq-sc/).
-
-<!-- <ul> -->
-<!--     <li v-for="post of sortedSeminars"> -->
-<!--         <strong><a :href="post.url">{{ post.frontmatter.title }}</a></strong><br/> -->
-<!--         <span>{{ formatDate( post.frontmatter.date ) }}</span> -->
-<!--     </li> -->
-<!-- </ul> -->
 
 ## Group challenges
 Our group is regularly involved in **group challenges**, in which we, as a group, tackle an outstanding societal challenge that is given to us by a research institute or industry. These are short-term projects, typically 3-6 months in duration, on which we work in a team of approximately 5 people on Friday afternoons. We add value through our extensive knowledge of scientific computing, uncertainty quantification and scientific machine learning, and our strong programming skills in modern languages such as Python and Julia. 
